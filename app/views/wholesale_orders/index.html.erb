@@ -1,0 +1,56 @@
+<h2><% if admin? %>
+	 	All	
+	<% else %>
+		Your
+	<% end %>
+	Wholesale Orders
+</h2>
+
+<% if current_member %>
+	<%= link_to 'New wholesale_order', new_wholesale_order_path %>
+<% else %>
+	<p>Sign in to place a new order.</p>
+<% end %>
+
+<table>
+  <tr>
+    <th>Product name</th>
+	<th>Distributor</th>
+    <th>Product number</th>
+    <th>Quantity</th>
+    <th>Ordered</th>
+    <th>Arrived</th>
+  </tr>
+
+<% @wholesale_orders.each do |wholesale_order| %>
+  <tr>
+    <td><%=h wholesale_order.product_name %></td>
+    <td><%=h wholesale_order.distributor.name %></td>
+    <td><%=h wholesale_order.product_number %></td>
+    <td><%=h wholesale_order.quantity %></td>
+	<% if admin? %>		
+		<td>
+			<% form_for(wholesale_order) do |f| %>
+		  		<%= f.check_box :ordered, {:class => "dynamic_control"}%>
+			<% end %>
+		</td>
+		<td>
+			<% form_for(wholesale_order) do |f| %>
+				<%= f.check_box :arrived, {:class => "dynamic_control"} %>
+			<% end %>
+		</td>
+	<% else %>
+		<td><%=h wholesale_order.ordered? %></td>
+	    <td><%=h wholesale_order.arrived? %></td>
+	<% end %>
+    <td><%= link_to 'Show', wholesale_order %></td>
+	<% if admin? %>
+    	<td><%= link_to 'Edit', edit_wholesale_order_path(wholesale_order) %></td>
+	    <td><%= link_to 'Destroy', wholesale_order, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+

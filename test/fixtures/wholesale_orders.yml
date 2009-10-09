@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_name: MyString
+  product_number: MyString
+  distributor_id: 1
+  quantity: MyString
+  ordered: false
+  arrived: false
+
+two:
+  product_name: MyString
+  product_number: MyString
+  distributor_id: 1
+  quantity: MyString
+  ordered: false
+  arrived: false

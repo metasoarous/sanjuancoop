@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  barter_board_category_id: 1
+  brief_description: MyString
+  details: MyText
+  contact_info: MyString
+  member_id: 1
+
+two:
+  barter_board_category_id: 1
+  brief_description: MyString
+  details: MyText
+  contact_info: MyString
+  member_id: 1

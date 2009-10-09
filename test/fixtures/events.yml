@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  description: MyString
+  details: MyText
+  date: 2009-09-24
+  time: 2009-09-24 22:50:56
+  event_category_id: 1
+
+two:
+  description: MyString
+  details: MyText
+  date: 2009-09-24
+  time: 2009-09-24 22:50:56
+  event_category_id: 1

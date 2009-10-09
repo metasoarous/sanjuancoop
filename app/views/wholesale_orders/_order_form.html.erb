@@ -1,0 +1,20 @@
+<%= f.error_messages %>
+
+<p>
+  <%= f.label :product_name %><br />
+  <%= f.text_field :product_name %>
+</p>
+<p>
+  <%= f.label :distributor_id %><br />
+  <%= f.collection_select(:distributor_id, Distributor.all, :id, :name, {:include_blank => true}) %>
+</p>
+<p>
+  <%= f.label :product_number %><br />
+  <%= f.text_field :product_number %>
+</p>
+<p>
+  <%= f.label :quantity %><br />
+  <%= f.text_field :quantity %>
+</p>
+
+

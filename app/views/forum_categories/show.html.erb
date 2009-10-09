@@ -1,0 +1,9 @@
+<table id="forum_table">
+	<%= render :partial => "category", :locals => {:category => @forum_category, :all_discussions_link => false}%>
+</table>
+
+<% if admin? %>
+	<%= link_to 'Edit', edit_forum_category_path(@forum_category) %> |
+<% end%>
+<br />
+<%= link_to 'Back', forum_categories_path %>

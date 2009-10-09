@@ -1,0 +1,28 @@
+<h1>Listing Barter Board Entries</h1>
+
+<table>
+  <tr>
+    <th>Barter board category</th>
+    <th>Brief description</th>
+    <th>Details</th>
+    <th>Contact info</th>
+    <th>Member</th>
+  </tr>
+
+<% @barter_board_entries.each do |barter_board_entry| %>
+  <tr>
+    <td><%=h barter_board_entry.barter_board_category_id %></td>
+    <td><%=h barter_board_entry.brief_description %></td>
+    <td><%=h barter_board_entry.details %></td>
+    <td><%=h barter_board_entry.contact_info %></td>
+    <td><%=h barter_board_entry.member_id %></td>
+    <td><%= link_to 'Show', barter_board_entry %></td>
+    <td><%= link_to 'Edit', edit_barter_board_entry_path(barter_board_entry) %></td>
+    <td><%= link_to 'Destroy', barter_board_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New barter_board_entry', new_barter_board_entry_path %>

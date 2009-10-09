@@ -1,0 +1,28 @@
+<p>
+  <b>Category:</b>
+  <%=h @barter_board_entry.barter_board_category.name %>
+</p>
+
+<p>
+  <b>Wanted:</b>
+  <%=h @barter_board_entry.wanted %>
+</p>
+
+<p>
+  <b>Offered:</b>
+  <%=h @barter_board_entry.offered %>
+</p>
+
+<p>
+  <b>Details:</b>
+  <%=h @barter_board_entry.details %>
+</p>
+
+<p>
+  <b>Contact info:</b>
+  <%=h @barter_board_entry.contact_info %>
+</p>
+
+
+<%= link_to 'Edit', edit_barter_board_entry_path(@barter_board_entry) %> |
+<%= link_to 'Back', barter_board_categories_path %>

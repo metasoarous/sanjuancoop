@@ -1,0 +1,12 @@
+<h1>Editing newsletter</h1>
+
+<% form_for(@newsletter) do |f| %>
+  <%= render :partial => "newsletter_form", :locals => { :f => f } %>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @newsletter %> |
+<%= link_to 'Destroy', @newsletter, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back', newsletters_path %>

@@ -1,0 +1,28 @@
+<h2>Volunteer Opportunities</h2>
+
+
+
+<h3>First Things First...</h3>
+
+<p>Really, the best way to start helping out around the coop is to come for the weekly deliveries and help unload items and place them on shelves. This helps get you familiar with where everything goes, what goes on behind the scenes, and a better sense of other ways to help. Once you know where things go, you'll start realizing while your shopping that you can take a quick look for items that are in low supply on the shelves that need to be restocked. From there you can start looking for other ways to help. </p>
+
+<p>Of course, helping out with the deliveries is also really fun. There is usually a handful of groovy coopers who are there helping out and chatting. So, if you are at all interested in helping out with the coop, this is a great place to start!</p>
+
+<p>To see what days we will be having deliveries, see the calendar.</p>
+
+<p>Once you are ready, you can start checking out these other volunteer opportunities below. If you see something that interests you or relates to a specific skill set you have click on the "sign up" button next to that volunteer task and you will be put on file as having an interest in that particular volunteer activity.</p>
+
+<% if admin? %>
+	<%= link_to 'New volunteer_task', new_volunteer_task_path %>
+<% end %>
+
+<% @volunteer_tasks.each do |volunteer_task| %>
+    <h3><%=h volunteer_task.name %></h3>
+    <p><%=h volunteer_task.description %></p>
+	<% if admin? %>
+    	<%= link_to 'Edit', edit_volunteer_task_path(volunteer_task) %>
+	    <%= link_to 'Destroy', volunteer_task, :confirm => 'Are you sure?', :method => :delete %>
+	<% end %>
+<% end %>
+
+

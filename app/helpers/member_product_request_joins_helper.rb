@@ -1,0 +1,2 @@
+module MemberProductRequestJoinsHelper
+end

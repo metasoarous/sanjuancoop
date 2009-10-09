@@ -1,0 +1,14 @@
+<h1>Editing wholesale_order</h1>
+
+<% form_for(@wholesale_order) do |f| %>
+  <%= f.error_messages %>
+	
+	<%= render :partial => "order_form", :locals => {:f => f}%>
+	
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @wholesale_order %> |
+<%= link_to 'Back', wholesale_orders_path %>

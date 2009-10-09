@@ -1,0 +1,11 @@
+<h1>Editing barter_board_entry</h1>
+
+<% form_for(@barter_board_entry) do |f| %>
+	<%= render :partial => "entry_form", :locals => {:f => f} %>
+  	<p>
+	    <%= f.submit 'Update' %>
+	</p>
+<% end %>
+
+<%= link_to 'Show', @barter_board_entry %> |
+<%= link_to 'Back', barter_board_entries_path %>

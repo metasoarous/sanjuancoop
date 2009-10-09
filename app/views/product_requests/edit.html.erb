@@ -1,0 +1,17 @@
+<h2>Editing Product Request</h2>
+
+<% form_for(@product_request) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @product_request %> |
+<%= link_to 'Back', product_requests_path %>

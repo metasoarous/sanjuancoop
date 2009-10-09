@@ -1,0 +1,2 @@
+module BarterBoardEntriesHelper
+end

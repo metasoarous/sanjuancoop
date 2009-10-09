@@ -1,0 +1,13 @@
+<p>
+  <b>Body:</b>
+  <%=h @forum_post.body %>
+</p>
+
+<p>
+  <b>Forum topic:</b>
+  <%=h @forum_post.forum_topic_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_forum_post_path(@forum_post) %> |
+<%= link_to 'Back', forum_posts_path %>

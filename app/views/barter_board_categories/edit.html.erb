@@ -1,0 +1,20 @@
+<h2>Editing Barter Board Category</h2>
+
+<% form_for(@barter_board_category) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @barter_board_category %> |
+<%= link_to 'Back', barter_board_categories_path %>

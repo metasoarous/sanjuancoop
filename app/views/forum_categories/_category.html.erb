@@ -1,0 +1,24 @@
+<tr class="category_row">
+    <td><h3><%= category.name %></h3></td>
+	<td></td>
+	<% if admin? %>
+    	<td><%= link_to 'Edit', 
+				edit_forum_category_path(category) %></td>
+	<% end %>
+</tr> 
+<% i= 0%>
+<% fetch_topics(category,10).each do |topic| %>
+	<tr class="row<%= i.modulo 2 %>" class="topic_row">
+		<td class="subject"><%=link_to topic.subject, forum_topic_path(topic) %></td>
+		<td><%= topic.forum_posts.size %> posts</td>
+	</tr>
+	<% i += 1%>
+<% end %>
+<tr class="row<%= i.modulo 2 %>">
+	<% if all_discussions_link %>
+		<td><%= link_to "See all discussions...", 
+				forum_category_path(category), 
+				:class => "category_link" %></td>
+		<td></td>
+	<% end %>
+</tr>

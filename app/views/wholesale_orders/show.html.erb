@@ -1,0 +1,33 @@
+<p>
+  <b>Product name:</b>
+  <%=h @wholesale_order.product_name %>
+</p>
+
+<p>
+  <b>Product number:</b>
+  <%=h @wholesale_order.product_number %>
+</p>
+
+<p>
+  <b>Distributor:</b>
+  <%=h @wholesale_order.distributor.name %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @wholesale_order.quantity %>
+</p>
+
+<p>
+  <b>Ordered:</b>
+  <%=h @wholesale_order.ordered %>
+</p>
+
+<p>
+  <b>Arrived:</b>
+  <%=h @wholesale_order.arrived %>
+</p>
+
+
+<%= link_to 'Edit', edit_wholesale_order_path(@wholesale_order) %> |
+<%= link_to 'Back', wholesale_orders_path %>

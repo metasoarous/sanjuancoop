@@ -1,0 +1,23 @@
+<%= f.error_messages %>
+
+<p>Select the Barter Board Category which best matches the category of what it is that you are offering.</p>
+<p>
+	<%= f.label :barter_board_category_id %><br />
+	<%= f.collection_select :barter_board_category_id, BarterBoardCategory.all, :id, :name, {:prompt => true} %>
+</p>
+<p>
+	<%= f.label :offered %><br />
+	<%= f.text_field :offered %>
+</p>
+<p>
+	<%= f.label :wanted %><br />
+	<%= f.text_field :wanted %>
+</p>
+<p>
+	<%= f.label :details %><br />
+	<%= f.text_area :details %>
+</p>
+<p>
+	<%= f.label :contact_info %><br />
+	<%= f.text_field :contact_info %>
+</p>

@@ -1,0 +1,25 @@
+<h2>The Latest News!</h2>
+
+<div id="newsletters" class="content">
+	<% @newsletters.each do |newsletter| %>
+		<div id="<%=newsletter.id%>" class="newsletter">
+			<div class="news_subject_container">
+				<h3>
+					<%=h newsletter.subject %>	
+				</h3>
+				- <%= newsletter.created_at.strftime("%a, %b %d, %Y") %>
+				<% if admin? %>
+					- <%= link_to("Edit", edit_newsletter_path(newsletter))%>
+				<% end %>
+			</div>
+			<% newsletter.body.lines.each do |line|%>
+				<p><%=h line%></p>
+			<% end %>
+		</div>
+	<% end %>
+</div>
+
+
+<br />
+
+<%= link_to('New newsletter', new_newsletter_path) if admin? %>

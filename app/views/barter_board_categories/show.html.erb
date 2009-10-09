@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @barter_board_category.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @barter_board_category.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_barter_board_category_path(@barter_board_category) %> |
+<%= link_to 'Back', barter_board_categories_path %>

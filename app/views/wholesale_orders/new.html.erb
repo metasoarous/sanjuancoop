@@ -1,0 +1,17 @@
+<h2>New Wholesale Order</h2>
+
+<%= ordering_instructions %>
+	
+</p>
+
+<% form_for(@wholesale_order) do |f| %>
+  <%= f.error_messages %>
+
+	<%= render :partial => "order_form", :locals => {:f => f}%>
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', wholesale_orders_path %>
