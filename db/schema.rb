@@ -9,22 +9,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091004080541) do
+ActiveRecord::Schema.define(:version => 20091004080129) do
 
   create_table "barter_board_categories", :force => true do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "barter_board_entries", :force => true do |t|
-    t.integer  "barter_board_category_id"
-    t.string   "wanted"
-    t.string   "offered"
-    t.text     "details"
-    t.string   "contact_info"
-    t.integer  "member_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

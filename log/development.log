@@ -48951,3 +48951,284 @@ Rendered product_requests/_status (2.9ms)
   [4;36;1mProductRequest Load (0.3ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 4) [0m
 Rendered product_requests/_status (1.8ms)
 Completed in 48ms (View: 23, DB: 14) | 200 OK [http://0.0.0.0/product_requests]
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateBarterBoardEntries (20091004080541)
+  [4;36;1mSQL (25.9ms)[0m   [0;1mDROP TABLE `barter_board_entries`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20091004080541'[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `barter_board_categories`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `distributors`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `distributors`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `distributors`[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW FIELDS FROM `event_categories`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `event_categories`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `event_categories`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `forum_categories`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `forum_categories`[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW KEYS FROM `forum_categories`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `forum_posts`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `forum_posts`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `forum_posts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `forum_topics`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `forum_topics`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `forum_topics`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `members`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `members`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `members_product_requests`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `members_product_requests`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `members_product_requests`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `newsletters`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `newsletters`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `product_request_statuses`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `product_request_statuses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `product_request_statuses`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `product_requests`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `product_requests`[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW KEYS FROM `product_requests`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `volunteer_tasks`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `volunteer_tasks`[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW KEYS FROM `volunteer_tasks`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `wholesale_orders`[0m
+  [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `wholesale_orders`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `wholesale_orders`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BarterBoardCategoriesController#index (for 127.0.0.1 at 2009-10-09 01:36:26) [GET]
+  Parameters: {"controller"=>"barter_board_categories", "action"=>"index"}
+  [4;35;1mBarterBoardCategory Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+Rendering template within layouts/application
+Rendering barter_board_categories/index
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+  [4;36;1mBarterBoardCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `barter_board_categories`[0m
+  [4;35;1mBarterBoardEntry Load (0.0ms)[0m   [0mMysql::Error: Table 'sjifoodcoop_development.barter_board_entries' doesn't exist: SELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.barter_board_category_id = 1) [0m
+
+ActionView::TemplateError (Mysql::Error: Table 'sjifoodcoop_development.barter_board_entries' doesn't exist: SELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.barter_board_category_id = 1) ) on line #27 of app/views/barter_board_categories/index.html.erb:
+24: 			<td><h4>Wanted</h4></td>
+25: 		</tr>
+26: 		<% i= 0%>
+27: 		<% category.barter_board_entries.each do |entry| %>
+28: 			<tr class="row<%= i.modulo 2 %>" class="topic_row">
+29: 				<td><%= link_to entry.offered, barter_board_entry_path(entry) %></td>
+30: 				<td><%= h entry.wanted %></td>
+
+    app/views/barter_board_categories/index.html.erb:27:in `block in _run_erb_app47views47barter_board_categories47index46html46erb'
+    app/views/barter_board_categories/index.html.erb:14:in `each'
+    app/views/barter_board_categories/index.html.erb:14
+    app/controllers/barter_board_categories_controller.rb:7:in `index'
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (147.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WholesaleOrdersController#index (for 127.0.0.1 at 2009-10-09 01:59:33) [GET]
+  Parameters: {"controller"=>"wholesale_orders", "action"=>"index"}
+  [4;36;1mMember Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+  [4;36;1mWholesaleOrder Load (0.3ms)[0m   [0;1mSELECT * FROM `wholesale_orders` [0m
+Rendering template within layouts/application
+Rendering wholesale_orders/index
+  [4;35;1mWholesaleOrder Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `wholesale_orders`[0m
+  [4;36;1mDistributor Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `distributors`[0m
+  [4;35;1mDistributor Load (0.7ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 1) [0m
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2) [0m
+Completed in 45ms (View: 24, DB: 9) | 200 OK [http://0.0.0.0/wholesale_orders]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing VolunteerTasksController#index (for 127.0.0.1 at 2009-10-09 01:59:34) [GET]
+  Parameters: {"controller"=>"volunteer_tasks", "action"=>"index"}
+  [4;36;1mVolunteerTask Load (0.5ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+  [4;35;1mVolunteerTask Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `volunteer_tasks`[0m
+Completed in 22ms (View: 11, DB: 5) | 200 OK [http://0.0.0.0/volunteer_tasks]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProductRequestsController#index (for 127.0.0.1 at 2009-10-09 01:59:36) [GET]
+  Parameters: {"controller"=>"product_requests", "action"=>"index"}
+  [4;36;1mProductRequest Load (0.5ms)[0m   [0;1mSELECT * FROM `product_requests` [0m
+  [4;35;1mProductRequestStatus Load (0.3ms)[0m   [0mSELECT * FROM `product_request_statuses` [0m
+Rendering template within layouts/application
+Rendering product_requests/index
+  [4;36;1mProductRequestStatus Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `product_request_statuses`[0m
+  [4;35;1mMember Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 1) [0m
+  [4;36;1mProductRequest Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `product_requests`[0m
+Rendered product_requests/_status (20.9ms)
+  [4;35;1mProductRequest Load (0.4ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 2) [0m
+Rendered product_requests/_status (0.9ms)
+  [4;36;1mProductRequest Load (0.2ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 3) [0m
+Rendered product_requests/_status (2.8ms)
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 4) [0m
+Rendered product_requests/_status (1.8ms)
+Completed in 83ms (View: 23, DB: 8) | 200 OK [http://0.0.0.0/product_requests]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2009-10-09 01:59:37) [GET]
+  Parameters: {"controller"=>"forum_categories", "action"=>"index"}
+  [4;36;1mForumCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_categories` [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;35;1mMember Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+  [4;35;1mForumCategory Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `forum_categories`[0m
+  [4;36;1mForumTopic Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 1) [0m
+  [4;35;1mForumTopic Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `forum_topics`[0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 1) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mForumPost Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `forum_posts`[0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 2) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 2) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mForumPost Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 8) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 1) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 8) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 8) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 2) [0m
+Rendered forum_categories/_category (27.4ms)
+  [4;36;1mForumTopic Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 2) [0m
+  [4;35;1mForumPost Load (0.2ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 6) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mForumPost Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 10) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 10) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mForumPost Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 12) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mForumPost Load (0.2ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 9) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 10) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 6) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 9) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 12) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 10) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 9) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 6) [0m
+Rendered forum_categories/_category (6.7ms)
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 7) [0m
+Rendered forum_categories/_category (1.5ms)
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 4) [0m
+  [4;36;1mForumPost Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 5) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mForumPost Load (0.3ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 11) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 11) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mForumPost Load (0.2ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 13) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 13) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 11) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 5) [0m
+Rendered forum_categories/_category (4.6ms)
+Completed in 54ms (View: 35, DB: 14) | 200 OK [http://0.0.0.0/forum_categories]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2009-10-09 01:59:38) [GET]
+  Parameters: {"controller"=>"newsletters", "action"=>"index"}
+  [4;35;1mNewsletter Load (0.4ms)[0m   [0mSELECT * FROM `newsletters` [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;36;1mNewsletter Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mMember Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 21ms (View: 12, DB: 5) | 200 OK [http://0.0.0.0/newsletters]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-10-09 01:59:39) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 65ms (View: 60, DB: 3) | 200 OK [http://0.0.0.0/welcome]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2009-10-09 01:59:44) [GET]
+  Parameters: {"controller"=>"newsletters", "action"=>"index"}
+  [4;35;1mNewsletter Load (0.4ms)[0m   [0mSELECT * FROM `newsletters` [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;36;1mNewsletter Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mMember Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 22ms (View: 13, DB: 5) | 200 OK [http://0.0.0.0/newsletters]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-10-09 01:59:45) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 14ms (View: 8, DB: 3) | 200 OK [http://0.0.0.0/welcome]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2009-10-09 02:01:45) [GET]
+  Parameters: {"controller"=>"newsletters", "action"=>"index"}
+  [4;35;1mNewsletter Load (1.1ms)[0m   [0mSELECT * FROM `newsletters` [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;36;1mNewsletter Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mMember Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 22ms (View: 13, DB: 6) | 200 OK [http://0.0.0.0/newsletters]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2009-10-09 02:01:45) [GET]
+  Parameters: {"controller"=>"newsletters", "action"=>"index"}
+  [4;35;1mNewsletter Load (0.3ms)[0m   [0mSELECT * FROM `newsletters` [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-10-09 02:01:46) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
+Completed in 14ms (View: 9, DB: 3) | 200 OK [http://0.0.0.0/welcome]
