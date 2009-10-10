@@ -2,12 +2,16 @@
 
 <p>Select the Barter Board Category which best matches the category of what it is that you are offering.</p>
 <p>
-	<%= f.label :barter_board_category_id %><br />
-	<%= f.collection_select :barter_board_category_id, BarterBoardCategory.all, :id, :name, {:prompt => true} %>
+	<%= f.label :offered_category_id %><br />
+	<%= f.collection_select :offered_category_id, BarterBoardCategory.all, :id, :name, {:prompt => true} %>
 </p>
 <p>
 	<%= f.label :offered %><br />
 	<%= f.text_field :offered %>
+</p>
+<p>
+	<%= f.label :wanted_category_id %><br />
+	<%= f.collection_select :wanted_category_id, BarterBoardCategory.all, :id, :name, {:prompt => true} %>
 </p>
 <p>
 	<%= f.label :wanted %><br />

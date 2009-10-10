@@ -3,6 +3,15 @@ class BarterBoardEntriesController < ApplicationController
   # GET /barter_board_entries.xml
   def index
     @barter_board_entries = BarterBoardEntry.all
+    @barter_board_entries_hash = Hash.new
+    BarterBoardCategory.all.each do |cat|
+      case params[:sort_by]
+      when "offered"
+        @barter_board_entries_hash[cat] = BarterBoardEntry.find_all_by_offered_category_id(cat.id)
+      when "wanted"
+        @barter_board_entries_hash[cat] = BarterBoardEntry.find_all_by_wanted_category_id(cat.id)
+      end
+    end
 
     respond_to do |format|
       format.html # index.html.erb

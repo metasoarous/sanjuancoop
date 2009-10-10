@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @board_member.name %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%=h @board_member.role %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @board_member.description %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%=h @board_member.image_url %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%=h @board_member.active %>
+</p>
+
+
+<%= link_to 'Edit', edit_board_member_path(@board_member) %> |
+<%= link_to 'Back', board_members_path %>

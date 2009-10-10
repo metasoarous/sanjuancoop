@@ -1,28 +1,42 @@
-<h1>Listing Barter Board Entries</h1>
 
-<table>
-  <tr>
-    <th>Barter board category</th>
-    <th>Brief description</th>
-    <th>Details</th>
-    <th>Contact info</th>
-    <th>Member</th>
-  </tr>
+<h2>The Barter Board</h2>
 
-<% @barter_board_entries.each do |barter_board_entry| %>
-  <tr>
-    <td><%=h barter_board_entry.barter_board_category_id %></td>
-    <td><%=h barter_board_entry.brief_description %></td>
-    <td><%=h barter_board_entry.details %></td>
-    <td><%=h barter_board_entry.contact_info %></td>
-    <td><%=h barter_board_entry.member_id %></td>
-    <td><%= link_to 'Show', barter_board_entry %></td>
-    <td><%= link_to 'Edit', edit_barter_board_entry_path(barter_board_entry) %></td>
-    <td><%= link_to 'Destroy', barter_board_entry, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<p><b>Sort by</b></p>
+
+<% if current_member %>
+	<%= link_to "Create a new Barter Board Entry", new_barter_board_entry_path %>
 <% end %>
+
+<br />
+
+<table class="groovy_table">
+	<% @barter_board_entries_hash.each do |cat, entries| %>
+		<tr class="category_row">
+			<% if true%>
+			    <td><h3><%= cat.name %></h3></td>
+				<td></td>
+			<% else %>
+			<% end %>
+		</tr> 
+		<tr  class="category_row">
+			<td><h4>Offered</h4></td>
+			<td><h4>Wanted</h4></td>
+		</tr>
+		<% i= 0%>
+		<% entries.each do |entry| %>
+			<tr class="row<%= i.modulo 2 %>" class="topic_row">
+				<td><%= link_to entry.offered, barter_board_entry_path(entry) %></td>
+				<td><%= h entry.wanted %></td>
+			</tr>
+			<% i += 1 %>
+		<% end %>
+	<% end %>
 </table>
 
 <br />
 
-<%= link_to 'New barter_board_entry', new_barter_board_entry_path %>
+
+
+<% if admin? %>
+	Admin Only - <%= link_to 'New barter_board_category', new_barter_board_category_path %>
+<% end %>

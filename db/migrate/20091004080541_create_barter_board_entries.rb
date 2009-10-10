@@ -1,7 +1,8 @@
 class CreateBarterBoardEntries < ActiveRecord::Migration
   def self.up
     create_table :barter_board_entries do |t|
-      t.integer :barter_board_category_id
+      t.integer :wanted_category_id
+      t.integer :offered_category_id
       t.string :wanted
       t.string :offered
       t.text :details

@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :board_members
+
+  map.resources :faqs
+
   map.resources :barter_board_entries
 
   map.resources :barter_board_categories

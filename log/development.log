@@ -49232,3 +49232,100 @@ Rendering welcome/index
   [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
   [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 13) LIMIT 1[0m
 Completed in 14ms (View: 9, DB: 3) | 200 OK [http://0.0.0.0/welcome]
+** TabsOnRails: initialized properly
+** TabsOnRails: initialized properly
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090911223904)
+Migrating to CreateNewsletters (20090918055256)
+Migrating to CreateForumCategories (20090918060211)
+Migrating to CreateForumTopics (20090918061402)
+Migrating to CreateForumPosts (20090918062036)
+Migrating to CreateProductRequests (20090920073513)
+Migrating to CreateComments (20090920074103)
+Migrating to CreateMemberProductRequestJoins (20090920075208)
+Migrating to AddFieldsToProductRequests (20090925034937)
+Migrating to CreateDistributors (20090925042045)
+Migrating to CreateWholesaleOrders (20090925043950)
+Migrating to CreateVolunteerTasks (20090925054854)
+Migrating to CreateEvents (20090925055056)
+Migrating to CreateEventCategories (20090925055144)
+Migrating to FixMembersProductRequestsJoin (20090925063932)
+Migrating to AddAdminToMembers (20090928061447)
+Migrating to AddFirstAndLastNameToMembers (20090928063825)
+Migrating to AddMemberIdToForumPosts (20090928073017)
+Migrating to AddMailToNewsletters (20090928210229)
+Migrating to CreateProductRequestStatuses (20091002070639)
+Migrating to AddStatusToProductRequests (20091002070753)
+Migrating to AddAddressToAndRemoveAdressFromDistributors (20091002224458)
+Migrating to AddMemberIdToWholesaleOrders (20091004073251)
+Migrating to CreateBarterBoardCategories (20091004080129)
+Migrating to CreateBarterBoardEntries (20091004080541)
+  [4;36;1mSQL (106.9ms)[0m   [0;1mCREATE TABLE `barter_board_entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `wanted_category_id` int(11), `offered_category_id` int(11), `wanted` varchar(255), `offered` varchar(255), `details` text, `contact_info` varchar(255), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091004080541')[0m
+Migrating to CreateFaqs (20091009091247)
+  [4;36;1mSQL (173.1ms)[0m   [0;1mCREATE TABLE `faqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091009091247')[0m
+Migrating to CreateBoardMembers (20091009214804)
+  [4;36;1mSQL (137.7ms)[0m   [0;1mCREATE TABLE `board_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `role` varchar(255), `description` text, `image_url` varchar(255), `active` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091009214804')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `barter_board_categories`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mSHOW FIELDS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `barter_board_entries`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `board_members`[0m
+  [4;36;1mSQL (3.6ms)[0m   [0;1mdescribe `board_members`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `board_members`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `distributors`[0m
+  [4;36;1mSQL (2.5ms)[0m   [0;1mdescribe `distributors`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `distributors`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `event_categories`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `event_categories`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `event_categories`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `faqs`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `faqs`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `faqs`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `forum_categories`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `forum_categories`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `forum_categories`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `forum_posts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `forum_posts`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `forum_posts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `forum_topics`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `forum_topics`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `forum_topics`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSHOW FIELDS FROM `members_product_requests`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `members_product_requests`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `members_product_requests`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mdescribe `newsletters`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `newsletters`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `product_request_statuses`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `product_request_statuses`[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW KEYS FROM `product_request_statuses`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `product_requests`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `product_requests`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `product_requests`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `volunteer_tasks`[0m
+  [4;36;1mSQL (1.8ms)[0m   [0;1mdescribe `volunteer_tasks`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `volunteer_tasks`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `wholesale_orders`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mdescribe `wholesale_orders`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW KEYS FROM `wholesale_orders`[0m
