@@ -1,28 +1,26 @@
-<h1>Listing board_members</h1>
+<h2>Coop Board Members</h2>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Role</th>
-    <th>Description</th>
-    <th>Image url</th>
-    <th>Active</th>
-  </tr>
 
 <% @board_members.each do |board_member| %>
-  <tr>
-    <td><%=h board_member.name %></td>
-    <td><%=h board_member.role %></td>
-    <td><%=h board_member.description %></td>
-    <td><%=h board_member.image_url %></td>
-    <td><%=h board_member.active %></td>
-    <td><%= link_to 'Show', board_member %></td>
-    <td><%= link_to 'Edit', edit_board_member_path(board_member) %></td>
-    <td><%= link_to 'Destroy', board_member, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<% if admin? or board_member.active? %>
+		<div class="board_member">
+			<% image_url = board_member.image_url %>
+			<% unless image_url.nil? or image_url.empty? %>
+				<%= image_tag image_url, :alt => "picture"%>
+			<% end %>
+			<h4><%=h board_member.name %> - 
+				<%=h board_member.role %> 
+				<% if admin? %>
+					- <%= link_to "Edit", edit_board_member_path(board_member) %>
+				<% end %>
+			</h4>
+			<p><%=h board_member.description %></p>
+		</div>
+	<% end %>
 <% end %>
-</table>
 
 <br />
 
-<%= link_to 'New board_member', new_board_member_path %>
+<% if admin? %>
+	<%= link_to 'New board_member', new_board_member_path %>
+<% end %>

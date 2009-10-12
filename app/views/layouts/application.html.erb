@@ -45,12 +45,27 @@
 				:forum			=> forum_categories_path,
 				:requests 		=> product_requests_path,
 				:wholesale_orders => wholesale_orders_path,
-				:barter_board	=> barter_board_categories_path,
+				:barter_board	=> barter_board_entries_path << "?sort_by=offered",
 				:volunteer		=> volunteer_tasks_path %>
 		</div>
 		<div id="content">
 			<p style="color: green"><%= flash[:notice] %></p>
-			<%= yield %>	
+			<% if active_tab(request.path_parameters[:controller]) == :home %>
+				<div id="home_content">
+					<div id="home_sidebar">
+						<p><%= link_to("Home", "/")%></p>
+						<p><%= link_to("FAQs", faqs_path)%></p>
+						<p><%= link_to("Coop Board", board_members_path)%></p>
+					</div>
+					<div id="inner_home_content">
+						<%= yield %>
+					</div>
+					<div id="placeholder">
+					</div>
+				</div>
+			<% else %>
+				<%= yield %>
+			<% end %>
 		</div>
 	</div>
 	<div id="promo">

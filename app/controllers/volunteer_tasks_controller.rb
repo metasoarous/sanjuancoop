@@ -3,7 +3,7 @@ class VolunteerTasksController < ApplicationController
   # GET /volunteer_tasks.xml
   def index
     @volunteer_tasks = VolunteerTask.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @volunteer_tasks }

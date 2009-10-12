@@ -23,6 +23,7 @@
   <%=h @board_member.active %>
 </p>
 
-
-<%= link_to 'Edit', edit_board_member_path(@board_member) %> |
+<% if admin? %>
+	<%= link_to 'Edit', edit_board_member_path(@board_member) %> |
+<% end %>
 <%= link_to 'Back', board_members_path %>

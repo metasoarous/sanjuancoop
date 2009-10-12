@@ -1,22 +1,18 @@
-<h1>Listing faqs</h1>
-
-<table>
-  <tr>
-    <th>Question</th>
-    <th>Answer</th>
-  </tr>
+<h2>Frequently Asked Questions</h2>
 
 <% @faqs.each do |faq| %>
-  <tr>
-    <td><%=h faq.question %></td>
-    <td><%=h faq.answer %></td>
-    <td><%= link_to 'Show', faq %></td>
-    <td><%= link_to 'Edit', edit_faq_path(faq) %></td>
-    <td><%= link_to 'Destroy', faq, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  	<h4><%=h faq.question %></h4>
+	<p><%=h faq.answer %></p>
+	<% if admin? %>
+		<p>
+			<%= link_to "Edit", edit_faq_path(faq) %> |
+			<%= link_to "Delete", faq, :confirm => "Are you sure?", :method => :delete %>
+		</p>
+	<% end %>
 <% end %>
-</table>
 
 <br />
 
-<%= link_to 'New faq', new_faq_path %>
+<% if admin? %>
+	<%= link_to 'New faq', new_faq_path %>
+<% end %>

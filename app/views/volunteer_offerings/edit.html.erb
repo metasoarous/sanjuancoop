@@ -1,0 +1,24 @@
+<h1>Editing volunteer_offering</h1>
+
+<% form_for(@volunteer_offering) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :member_id %><br />
+    <%= f.text_field :member_id %>
+  </p>
+  <p>
+    <%= f.label :volunteer_task_id %><br />
+    <%= f.text_field :volunteer_task_id %>
+  </p>
+  <p>
+    <%= f.label :alt_contact %><br />
+    <%= f.text_field :alt_contact %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @volunteer_offering %> |
+<%= link_to 'Back', volunteer_offerings_path %>

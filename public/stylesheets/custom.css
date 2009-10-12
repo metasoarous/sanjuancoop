@@ -127,11 +127,21 @@ pre {
 }
 #inner_home_content {
 	float: left;
-	width: 450px;
+	width: 500px;
 	margin-left: 30px;
 }
 #placeholder {
 	clear: both;
+}
+
+
+
+div.board_member {
+	width: 500px;
+}
+div.board_member img {
+	float: left;
+	margin-right: 10px;
 }
 
 

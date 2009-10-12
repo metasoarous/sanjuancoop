@@ -7,10 +7,13 @@ module ApplicationHelper
             :forum_categories     => :forum,
             :members              => :home,
             :welcome              => :home,
+            :faqs                 => :home,
+            :board_members        => :home,
             :newsletters          => :news,
             :product_requests     => :requests,
             :wholesale_orders     => :wholesale_orders,
             :volunteer_tasks      => :volunteer,
+            :volunteer_offers     => :volunteer,
             :barter_board_entries => :barter_board,
             :barter_board_categories => :barter_board} 
     return hash[ controller.to_sym ]

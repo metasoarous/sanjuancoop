@@ -1,28 +1,40 @@
 <h2>Volunteer Opportunities</h2>
 
-
-
 <h3>First Things First...</h3>
 
-<p>Really, the best way to start helping out around the coop is to come for the weekly deliveries and help unload items and place them on shelves. This helps get you familiar with where everything goes, what goes on behind the scenes, and a better sense of other ways to help. Once you know where things go, you'll start realizing while your shopping that you can take a quick look for items that are in low supply on the shelves that need to be restocked. From there you can start looking for other ways to help. </p>
+<p>The best way to start helping out around the coop is to come for the weekly deliveries and help unload items and stock them. This will help familiarize you with where everything goes and how things work. As you get a feel for this, you'll start finding little ways to help when you come in to shop (noticing that certain items are in low supplies on the shelf etc). Aside from it being a great place to start, unloading is a fun way to meet and get to know your fellow coop members.</p>
 
-<p>Of course, helping out with the deliveries is also really fun. There is usually a handful of groovy coopers who are there helping out and chatting. So, if you are at all interested in helping out with the coop, this is a great place to start!</p>
+<p>To see what days we will be having deliveries, see the calendar (coming soon).</p>
 
-<p>To see what days we will be having deliveries, see the calendar.</p>
-
-<p>Once you are ready, you can start checking out these other volunteer opportunities below. If you see something that interests you or relates to a specific skill set you have click on the "sign up" button next to that volunteer task and you will be put on file as having an interest in that particular volunteer activity.</p>
+<p>Once you feel ready, you can start checking out these other volunteer opportunities below. If you see something that interests you or relates to a specific skill set you have click on the "Sign up" button next to that volunteer task (must be signed in) and you will be put on file as having an interest in that particular volunteer activity. </p>
 
 <% if admin? %>
 	<%= link_to 'New volunteer_task', new_volunteer_task_path %>
 <% end %>
 
-<% @volunteer_tasks.each do |volunteer_task| %>
-    <h3><%=h volunteer_task.name %></h3>
-    <p><%=h volunteer_task.description %></p>
-	<% if admin? %>
-    	<%= link_to 'Edit', edit_volunteer_task_path(volunteer_task) %>
-	    <%= link_to 'Destroy', volunteer_task, :confirm => 'Are you sure?', :method => :delete %>
+<div id="volunteer_tasks">
+	<% @volunteer_tasks.each do |volunteer_task| %>
+	    <h3><%=h volunteer_task.name %></h3>
+	    <p><%=h volunteer_task.description %></p>
+		<% if current_member %>
+			<% if current_member.volunteer_tasks.include? volunteer_task %>
+				<p>
+					You are currently listed as willing to volunteer for this task.
+			    	<%= link_to 'Remove this availability.', volunteer_offering(volunteer_task, current_member), :confirm => 'Are you sure you don\'t want to help anymore?', :method => :delete %>
+				</p>
+			<% else %>
+				<% volunteer_signup_form(volunteer_task) do |f| %>
+					<%= f.hidden_field(:member_id) %>
+					<%= f.hidden_field(:volunteer_task_id) %>
+					<%= submit_tag "Sign up!"%>
+				<% end %>
+			<% end %>
+		<% end %>
+		<% if admin? %>
+	    	<%= link_to 'Edit', edit_volunteer_task_path(volunteer_task) %>
+		    <%= link_to 'Destroy', volunteer_task, :confirm => 'Are you sure?', :method => :delete %>
+		<% end %>
 	<% end %>
-<% end %>
+</div>
 
 

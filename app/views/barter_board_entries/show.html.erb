@@ -1,3 +1,5 @@
+<h3>Barter Board Entry</h3>
+
 <p>
   <b>Offered:</b>
   <%=h @barter_board_entry.offered_category.name %> - <%=h @barter_board_entry.offered %>
@@ -20,5 +22,6 @@
 
 <% if admin? or current_member == @barter_board_entry.member %>
 	<%= link_to 'Edit', edit_barter_board_entry_path(@barter_board_entry) %> |
+	<%= link_to 'Delete', @barter_board_entry, :confirm => 'Are you sure?', :method => :delete %> | 
 <% end %>
 <%= link_to 'Back', barter_board_entries_path %>

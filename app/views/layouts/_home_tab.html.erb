@@ -1,0 +1,12 @@
+<div id="home_content">
+	<div id="home_sidebar">
+		<p><%= link_to("Home", "/")%></p>
+		<p><%= link_to("FAQs", faqs_path)%></p>
+		<p><%= link_to("Coop Board", board_members_path)%></p>
+	</div>
+	<div id="inner_home_content">
+		<%= yield %>
+	</div>
+	<div id="placeholder">
+	</div>
+</div>

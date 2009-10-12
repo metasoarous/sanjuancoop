@@ -11,6 +11,8 @@ class Member < ActiveRecord::Base
   has_many :comments
   has_many :forum_posts
   has_many :wholesale_orders
+  has_many :volunteer_offerings
+  has_many :volunteer_tasks, :through => :volunteer_offerings
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
@@ -55,6 +57,10 @@ class Member < ActiveRecord::Base
 
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
+  end
+  
+  def name
+    return first_name + " " + last_name
   end
 
   protected
