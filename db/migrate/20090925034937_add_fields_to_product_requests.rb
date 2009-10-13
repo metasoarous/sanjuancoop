@@ -8,6 +8,6 @@ class AddFieldsToProductRequests < ActiveRecord::Migration
   def self.down
     remove_column :product_requests, :in_stock
     remove_column :product_requests, :product_number
-    remove_column :product_requests, :distributor_id,
+    remove_column :product_requests, :distributor_id
   end
 end
