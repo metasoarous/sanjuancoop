@@ -3,7 +3,7 @@ class NewsletterMailer < ActionMailer::Base
     @recipients = member.email
     @subject = newsletter.subject
     @sent_on = sent_at
-    @from = "San Juan Islands Food Coop"
+    @from = "SJI-COOP"
     @headers = {}
     @body[:body] = newsletter.body
     content_type "text/html"

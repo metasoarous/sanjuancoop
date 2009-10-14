@@ -1,5 +1,9 @@
 <h2>The Latest News!</h2>
 
+<p><%= link_to('New newsletter', new_newsletter_path) if admin? %></p>
+
+<br />
+
 <div id="newsletters" class="content">
 	<% @newsletters.each do |newsletter| %>
 		<div id="<%=newsletter.id%>" class="newsletter">
@@ -10,6 +14,7 @@
 				- <%= newsletter.created_at.strftime("%a, %b %d, %Y") %>
 				<% if admin? %>
 					- <%= link_to("Edit", edit_newsletter_path(newsletter))%>
+					- <%= link_to 'Destroy', newsletter, :confirm => 'Are you sure?', :method => :delete %>
 				<% end %>
 			</div>
 			<% newsletter.body.lines.each do |line|%>
@@ -20,6 +25,3 @@
 </div>
 
 
-<br />
-
-<%= link_to('New newsletter', new_newsletter_path) if admin? %>
