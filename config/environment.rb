@@ -51,3 +51,9 @@ Rails::Initializer.run do |config|
   
   config.active_record.observers = :member_observer, :newsletter_observer
 end
+
+class String
+  def lines
+    self.split("\n") - [""]
+  end
+end
