@@ -28,4 +28,4 @@ config.action_view.cache_template_loading            = true
 # config.threadsafe!
 
 #Set the website adress for the prod environment
-WEBSITEURL = "www.sanjuancoop.org"
+WEBSITEURL = "sanjuancoop.heroku.com"

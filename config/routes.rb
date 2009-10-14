@@ -37,7 +37,7 @@ ActionController::Routing::Routes.draw do |map|
   map.login '/login', :controller => 'sessions', :action => 'new'
   map.register '/register', :controller => 'members', :action => 'create'
   map.signup '/signup', :controller => 'members', :action => 'new'
-  map.activate '/activate/:activation_code', :controller => "users", :action => "activate", :activation_code => nil
+  map.activate '/activate/:activation_code', :controller => "members", :action => "activate", :activation_code => nil
   
   map.resources :members, :member => {:suspend => :put, :unsuspend => :put, :purge => :delete}
 

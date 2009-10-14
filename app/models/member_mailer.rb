@@ -14,8 +14,8 @@ class MemberMailer < ActionMailer::Base
   protected
     def setup_email(member)
       @recipients  = "#{member.email}"
-      @from        = "San Juan Island Coop"
-      @subject     = "Website Registration"
+      @from        = "SJI-COOP"
+      @subject     = "Website Registration: "
       @sent_on     = Time.now
       @body[:member] = member
     end

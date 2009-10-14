@@ -50703,3 +50703,10 @@ Migrating to CreateVolunteerOfferings (20091012053928)
   [4;35;1mSQL (2.0ms)[0m   [0mSHOW FIELDS FROM `wholesale_orders`[0m
   [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `wholesale_orders`[0m
   [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `wholesale_orders`[0m
+  [4;35;1mMember Load (0.0ms)[0m   [0mMysql::Error: MySQL server has gone away: SELECT * FROM `members` [0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (16.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mMember Load (35.8ms)[0m   [0;1mSELECT * FROM `members` [0m
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` [0m
