@@ -1,3 +1,11 @@
+
+<% if logged_in? %>
+	<%= link_to 'Begin a New Discussion', new_forum_topic_path, :id => "new_topic_link" %>
+<% else %>
+	<%= link_to 'Log in to post', new_session_path, :id => "new_topic_link" %>
+<% end %>
+
+
 <table id="forum_table">
 	<%= render :partial => "category", :locals => {:category => @forum_category, :all_discussions_link => false}%>
 </table>

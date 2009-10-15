@@ -45,7 +45,7 @@ class BarterBoardCategoriesController < ApplicationController
     respond_to do |format|
       if @barter_board_category.save
         flash[:notice] = 'BarterBoardCategory was successfully created.'
-        format.html { redirect_to(@barter_board_category) }
+        format.html { redirect_to(barter_board_entries_path) }
         format.xml  { render :xml => @barter_board_category, :status => :created, :location => @barter_board_category }
       else
         format.html { render :action => "new" }

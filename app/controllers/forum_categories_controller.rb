@@ -45,7 +45,7 @@ class ForumCategoriesController < ApplicationController
     respond_to do |format|
       if @forum_category.save
         flash[:notice] = 'ForumCategory was successfully created.'
-        format.html { redirect_to(@forum_category) }
+        format.html { redirect_to(forum_categories_path) }
         format.xml  { render :xml => @forum_category, :status => :created, :location => @forum_category }
       else
         format.html { render :action => "new" }

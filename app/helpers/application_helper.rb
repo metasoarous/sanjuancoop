@@ -20,11 +20,11 @@ module ApplicationHelper
   end
   
   #Helper method for creating a whole set of tabs
-  def create_tabs(active, hash)
+  def create_tabs(active, *tabs)
     string = "<ul id='tabs'> \n"
-    hash.each do |key, href|
-      string += key == active ? create_tab(key, href, :active => true) : 
-                                create_tab(key, href)
+    tabs.each do |tab|
+      string += tab.first == active ? create_tab(tab.first, tab.last, :active => true) : 
+                                create_tab(tab.first, tab.last)
       string += "\n"
     end
     string += "</ul>"
