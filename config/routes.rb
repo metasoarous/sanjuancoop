@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :distributors
+
   map.resources :content_items
 
   map.resources :content_items

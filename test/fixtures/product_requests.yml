@@ -1,11 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  description: MyString
-  ordered: false
-  failed: 
+  description: Funions
+  product_request_status_id: 1
 
 two:
-  description: MyString
-  ordered: false
-  failed: 
+  description: Potatoe chips!
+  product_request_status_id: 1

@@ -8,27 +8,41 @@ class MemberTest < ActiveSupport::TestCase
 
   def test_should_create_member
     assert_difference 'Member.count' do
-      member = create_member
+      member = create_member(:first_name => "Bob", :last_name => "Johnson")
       assert !member.new_record?, "#{member.errors.full_messages.to_sentence}"
     end
   end
 
   def test_should_initialize_activation_code_upon_creation
-    member = create_member
+    member = create_member(:first_name => "Bob", :last_name => "Johnson")
     member.reload
     assert_not_nil member.activation_code
   end
 
   def test_should_create_and_start_in_pending_state
-    member = create_member
+    member = create_member(:first_name => "Bob", :last_name => "Johnson")
     member.reload
     assert member.pending?
+  end
+  
+  def test_should_require_first_name
+    assert_no_difference 'Member.count' do
+      u = create_member(:login => "billybob", :last_name => "Johnson")
+      assert u.errors.on(:first_name)
+    end
+  end
+  
+  def test_should_require_last_name
+    assert_no_difference 'Member.count' do
+      u = create_member(:login => "billybob", :first_name => "Bob")
+      assert u.errors.on(:last_name)
+    end
   end
 
 
   def test_should_require_login
     assert_no_difference 'Member.count' do
-      u = create_member(:login => nil)
+      u = create_member(:login => nil, :first_name => "Bob", :last_name => "Johnson")
       assert u.errors.on(:login)
     end
   end
