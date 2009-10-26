@@ -1,15 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  barter_board_category_id: 1
-  brief_description: MyString
-  details: MyText
-  contact_info: MyString
+  wanted_category_id: 1
+  offered_category_id: 2
+  details: Much experience - very nice and well groomed
+  contact_info: 317-4181
   member_id: 1
 
 two:
-  barter_board_category_id: 1
-  brief_description: MyString
-  details: MyText
+  wanted_category_id: 2
+  offered_category_id: 1
+  details: It's 3 miles long
   contact_info: MyString
-  member_id: 1
+  member_id: 2

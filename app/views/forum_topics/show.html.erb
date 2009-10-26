@@ -11,7 +11,7 @@
 <div id="posts">
 	<% @forum_topic.forum_posts.each do |post| %>
 		<div class="post">
-			<b>Posted by: </b>
+			<b>Posted by: <%= post.member.name if post.member %></b>
 			<% post.body.lines.each do |line| %>
 				<p><%= line %></p>
 			<% end %>

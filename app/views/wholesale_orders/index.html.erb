@@ -1,3 +1,25 @@
+
+<div id="ordering_instructions">
+	<h2>Ordering Instructions</h2>
+	<div id="preamble">
+		<h3>PLEASE READ ALL OF THESE INSTRUCTIONS CAREFULLY BEFORE CONTINUING! Failure to do so may result in additional charges!</h3>
+		<%= display_content(@content[:wholesale_ordering_preamble])%>
+	</div>
+	<div id="specific_instr">
+		<div id="unfi_instr">
+			<h3>UNFI</h3>
+			<%= display_content(@content[:wholesale_ordering_unfi])%>
+		</div>
+		<div id="azures_instr">
+			<h3>Azures</h3>
+			<%= display_content(@content[:wholesale_ordering_azures])%>
+		</div>
+	</div>
+	<div id="the_rest">
+		<%= display_content(@content[:wholesale_ordering_rest])%>
+	</div>
+</div>
+
 <h2><% if admin? %>
 	 	All	
 	<% else %>
@@ -5,8 +27,6 @@
 	<% end %>
 	Wholesale Orders
 </h2>
-
-<p>To place a new wholesale order, visit the UNFI or Azure website, sign in, place the order, and then fill out the order form. This may seem redundant, but it helps Anna keep things organized, and anything we can do to make things easier for her is a good thing : )</p>
 
 <% if current_member %>
 	<%= link_to 'New wholesale_order', new_wholesale_order_path %>

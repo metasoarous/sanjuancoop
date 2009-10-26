@@ -1,0 +1,19 @@
+<h1>New content_item</h1>
+
+<% form_for(@content_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', content_items_path %>

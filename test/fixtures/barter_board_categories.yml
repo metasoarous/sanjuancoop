@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  description: MyText
+  name: Money
+  description: Make Money Money
 
 two:
-  name: MyString
-  description: MyText
+  name: Work
+  description: Get off yer ass!

@@ -9,7 +9,14 @@ class WholesaleOrdersController < ApplicationController
     else
       @wholesale_orders = []
     end
-      
+    
+    @content = Hash.new
+    [:wholesale_ordering_preamble, 
+      :wholesale_ordering_unfi, 
+      :wholesale_ordering_azures, 
+      :wholesale_ordering_rest].each do |item|
+        @content[item] = ContentItem.find_by_tag(item.to_s)
+    end
 
     respond_to do |format|
       format.html # index.html.erb

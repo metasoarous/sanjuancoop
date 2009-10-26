@@ -44,7 +44,11 @@ pre {
 #header img {
 	position: relative;
 	top: 20px;
+	width:22%;
+	height: 22%;
 }
+
+
 
 
 
@@ -245,6 +249,23 @@ div.post {
 	background-color: #C7C0CC;
 	margin: 0 2em 0.8em 0;
 	padding: 0.3em 1em 0 0.5em;
+}
+
+
+
+div#ordering_instructions div#specific_instr {
+	
+}
+div#ordering_instructions div#specific_instr div#unfi_instr {
+	float: left;
+	width: 43%;
+}
+div#ordering_instructions div#specific_instr div#azures_instr {
+	float: right;
+	width: 50%;
+}
+div#ordering_instructions div#the_rest {
+	clear: both;
 }
 
 

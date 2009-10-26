@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :content_items
+
+  map.resources :content_items
+
   map.resources :volunteer_offerings
 
   map.resources :board_members

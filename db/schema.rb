@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091012053928) do
+ActiveRecord::Schema.define(:version => 20091024200131) do
 
   create_table "barter_board_categories", :force => true do |t|
     t.string   "name"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20091012053928) do
     t.integer  "commentable_id"
     t.text     "body"
     t.integer  "member_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "content_items", :force => true do |t|
+    t.string   "tag"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

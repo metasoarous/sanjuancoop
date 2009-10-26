@@ -1,15 +1,15 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  role: MyString
-  description: MyText
-  image_url: MyString
-  active: false
+  name: Chris Small
+  role: Web Wizard
+  description: A man of great magic and power
+  image_url: 
+  active: true
 
 two:
-  name: MyString
-  role: MyString
-  description: MyText
+  name: Anna Spears
+  role: Manager
+  description: Woman with amazing powers of jewelry making - not technically board member
   image_url: MyString
-  active: false
+  active: true

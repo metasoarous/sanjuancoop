@@ -5,9 +5,42 @@ TESTING
 Write tests for:
 	- after_destroy on ForumPost to make sure we don't have any topics without posts.
 	- after fixing validations on volunteer_offering, write test
+	- duplicate email entry testing
 	
 
 VALIDATIONS
 
 Create validations for:
 	- volunteer_offerings; started on this, but didn't work so need to fix it. Need to make sure that if there is already a volunteer offering for a given individual that we don't create another.
+	- create a duplicate email entry validation 
+	
+
+CONTENT
+
+Clean up:
+	- The explanation of the wholesale orders procedure in the wholesale orders page
+	- Make the Sign Up a little more obvious
+	- Make contact info easier to find
+	- Make sure that the forum posts have a the posters name
+	- Contact us at the bottom of the home page
+	- Hide wholesale order and fix up before continuing on that thread
+	- Refactor the Coop Board Member listing into members?
+Implement:
+	- Create a Admin section nav bar thing
+	- Consider across tab navbar and make the inner wider
+	- Consider other styling themes, swigly removal and the apple.
+	- members section
+	
+	
+EMAIL 
+
+Find solution to the payment issue:
+	- hopefully hear back from Tim
+	- Contact Cloud and see what she says
+Mail junking problem:
+	- Add some message to the effect of "Check your junk mail and instruct your provider not to junk this sender"
+	- Contact providers who seem to be junking us (and sendgrid about them also)
+		* centurytel
+Make it clearer what should be done when people with html turned off try to log in.
+	- Look into the coop address thing.
+	- Make it clear that you cannot respond to emails.

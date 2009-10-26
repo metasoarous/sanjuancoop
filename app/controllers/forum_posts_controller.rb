@@ -40,7 +40,7 @@ class ForumPostsController < ApplicationController
   # POST /forum_posts
   # POST /forum_posts.xml
   def create
-    @forum_post = ForumPost.new(params[:forum_post])
+    @forum_post = ForumPost.new(params[:forum_post].merge(:member_id => current_member.id))
 
     respond_to do |format|
       if @forum_post.save

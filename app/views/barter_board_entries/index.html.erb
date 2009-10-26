@@ -15,8 +15,8 @@
 	<% @barter_board_entries_hash.each do |cat, entries| %>
 
 		<tr  class="category_row">
-			<td><h4>Offered - <%= cat.name unless params[:sort_by] == "wanted"%></h4></td>
-			<td><h4>Wanted - <%= cat.name if params[:sort_by] == "wanted"%></h4></td>
+			<td><h4>Offered <%= " - " + cat.name unless params[:sort_by] == "wanted"%></h4></td>
+			<td><h4>Wanted <%= " - " + cat.name if params[:sort_by] == "wanted"%></h4></td>
 		</tr>
 		<% i= 0%>
 		<% entries.each do |entry| %>

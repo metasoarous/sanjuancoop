@@ -19,6 +19,18 @@ module ApplicationHelper
     return hash[ controller.to_sym ]
   end
   
+  def display_content(content_item)
+    string = ""
+    content_item.content.lines.each do |line|
+      if line.first == "<"
+        string += line
+      else
+        string += "<p>#{line}</p>" 
+      end
+    end
+    return string
+  end
+  
   #Helper method for creating a whole set of tabs
   def create_tabs(active, *tabs)
     string = "<ul id='tabs'> \n"
