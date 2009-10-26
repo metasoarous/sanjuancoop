@@ -51681,3 +51681,347 @@ Migrating to DestroyDistribuitors (20091026094849)
   [4;36;1mSQL (2.2ms)[0m   [0;1mdescribe `wholesale_orders`[0m
   [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `wholesale_orders`[0m
 ** TabsOnRails: initialized properly
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (55.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `sjifoodcoop_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `sjifoodcoop_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (98.2ms)[0m   [0mCREATE TABLE `barter_board_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (18.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (187.3ms)[0m   [0mCREATE TABLE `barter_board_entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `wanted_category_id` int(11), `offered_category_id` int(11), `wanted` varchar(255), `offered` varchar(255), `details` text, `contact_info` varchar(255), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (111.6ms)[0m   [0mCREATE TABLE `board_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `role` varchar(255), `description` text, `image_url` varchar(255), `active` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (108.7ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `commentable_type` varchar(255), `commentable_id` int(11), `body` text, `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.5ms)[0m   [0mCREATE TABLE `content_items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE `event_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (185.3ms)[0m   [0mCREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `details` text, `date` date, `time` time, `event_category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mCREATE TABLE `faqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (131.9ms)[0m   [0mCREATE TABLE `forum_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (7.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (177.1ms)[0m   [0mCREATE TABLE `forum_posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `body` text, `forum_topic_id` int(11), `created_at` datetime, `updated_at` datetime, `member_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (158.8ms)[0m   [0mCREATE TABLE `forum_topics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject` varchar(255), `forum_category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.6ms)[0m   [0mCREATE TABLE `members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `state` varchar(255) DEFAULT 'passive', `deleted_at` datetime, `admin` tinyint(1), `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (120.2ms)[0m   [0;1mCREATE UNIQUE INDEX `index_members_on_login` ON `members` (`login`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (129.6ms)[0m   [0;1mCREATE TABLE `members_product_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `member_id` int(11), `product_request_id` int(11), `ordered` tinyint(1), `failed` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (141.8ms)[0m   [0;1mCREATE TABLE `newsletters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject` varchar(255), `body` text, `created_at` datetime, `updated_at` datetime, `mail` tinyint(1)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (143.9ms)[0m   [0;1mCREATE TABLE `product_request_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (108.7ms)[0m   [0;1mCREATE TABLE `product_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `created_at` datetime, `updated_at` datetime, `product_number` varchar(255), `distributor_id` int(11), `product_request_status_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mCREATE TABLE `volunteer_offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `volunteer_task_id` int(11), `alt_contact` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (120.3ms)[0m   [0;1mCREATE TABLE `volunteer_tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (110.5ms)[0m   [0;1mCREATE TABLE `wholesale_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_name` varchar(255), `product_number` varchar(255), `quantity` varchar(255), `ordered` tinyint(1), `arrived` tinyint(1), `created_at` datetime, `updated_at` datetime, `distributor_id` int(11), `member_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (142.9ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (159.9ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091026094849')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090911223904')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090918055256')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090918060211')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090918061402')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090918062036')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090920073513')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090920074103')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090920075208')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925034937')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925042045')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925043950')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925054854')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925055056')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925055144')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925063932')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090928061447')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090928063825')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090928073017')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090928210229')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002070639')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002070753')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002224458')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091004073251')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091004080129')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091004080541')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091009091247')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091009214804')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091012053928')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091024200131')[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090911223904)
+Migrating to CreateNewsletters (20090918055256)
+Migrating to CreateForumCategories (20090918060211)
+Migrating to CreateForumTopics (20090918061402)
+Migrating to CreateForumPosts (20090918062036)
+Migrating to CreateProductRequests (20090920073513)
+Migrating to CreateComments (20090920074103)
+Migrating to CreateMemberProductRequestJoins (20090920075208)
+Migrating to AddFieldsToProductRequests (20090925034937)
+Migrating to CreateDistributors (20090925042045)
+Migrating to CreateWholesaleOrders (20090925043950)
+Migrating to CreateVolunteerTasks (20090925054854)
+Migrating to CreateEvents (20090925055056)
+Migrating to CreateEventCategories (20090925055144)
+Migrating to FixMembersProductRequestsJoin (20090925063932)
+Migrating to AddAdminToMembers (20090928061447)
+Migrating to AddFirstAndLastNameToMembers (20090928063825)
+Migrating to AddMemberIdToForumPosts (20090928073017)
+Migrating to AddMailToNewsletters (20090928210229)
+Migrating to CreateProductRequestStatuses (20091002070639)
+Migrating to AddStatusToProductRequests (20091002070753)
+Migrating to AddAddressToAndRemoveAdressFromDistributors (20091002224458)
+Migrating to AddMemberIdToWholesaleOrders (20091004073251)
+Migrating to CreateBarterBoardCategories (20091004080129)
+Migrating to CreateBarterBoardEntries (20091004080541)
+Migrating to CreateFaqs (20091009091247)
+Migrating to CreateBoardMembers (20091009214804)
+Migrating to CreateVolunteerOfferings (20091012053928)
+Migrating to CreateContentItems (20091024200131)
+Migrating to DestroyDistribuitors (20091026094849)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mdescribe `barter_board_categories`[0m
+  [4;35;1mSQL (4.3ms)[0m   [0mSHOW KEYS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (23.1ms)[0m   [0;1mSHOW FIELDS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (16.9ms)[0m   [0mdescribe `barter_board_entries`[0m
+  [4;36;1mSQL (16.9ms)[0m   [0;1mSHOW KEYS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (32.3ms)[0m   [0mSHOW FIELDS FROM `board_members`[0m
+  [4;36;1mSQL (7.3ms)[0m   [0;1mdescribe `board_members`[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSHOW KEYS FROM `board_members`[0m
+  [4;36;1mSQL (20.1ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `content_items`[0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mdescribe `content_items`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `content_items`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `event_categories`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `event_categories`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `event_categories`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `events`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `events`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `events`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `faqs`[0m
+  [4;35;1mSQL (2.4ms)[0m   [0mdescribe `faqs`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `faqs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `forum_categories`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `forum_categories`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `forum_categories`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `forum_posts`[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mdescribe `forum_posts`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `forum_posts`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `forum_topics`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mdescribe `forum_topics`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `forum_topics`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mdescribe `members`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW KEYS FROM `members`[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW FIELDS FROM `members_product_requests`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `members_product_requests`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW KEYS FROM `members_product_requests`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `newsletters`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `newsletters`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `product_request_statuses`[0m
+  [4;36;1mSQL (1.6ms)[0m   [0;1mdescribe `product_request_statuses`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `product_request_statuses`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `product_requests`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mdescribe `product_requests`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `product_requests`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `volunteer_offerings`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `volunteer_offerings`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `volunteer_offerings`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `volunteer_tasks`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mdescribe `volunteer_tasks`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `volunteer_tasks`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `wholesale_orders`[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mdescribe `wholesale_orders`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `wholesale_orders`[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DestroyDistribuitors (20091026094849)
+  [4;36;1mSQL (121.6ms)[0m   [0;1mCREATE TABLE `distributors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `website` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20091026094849'[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW FIELDS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `barter_board_categories`[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSHOW KEYS FROM `barter_board_categories`[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW FIELDS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `barter_board_entries`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `barter_board_entries`[0m
+  [4;35;1mSQL (11.2ms)[0m   [0mSHOW FIELDS FROM `board_members`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mdescribe `board_members`[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSHOW KEYS FROM `board_members`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `content_items`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mdescribe `content_items`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `content_items`[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1mSHOW FIELDS FROM `distributors`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `distributors`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `distributors`[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSHOW FIELDS FROM `event_categories`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mdescribe `event_categories`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `event_categories`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW FIELDS FROM `events`[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mdescribe `events`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW KEYS FROM `events`[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mSHOW FIELDS FROM `faqs`[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mdescribe `faqs`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `faqs`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `forum_categories`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `forum_categories`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `forum_categories`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mSHOW FIELDS FROM `forum_posts`[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mdescribe `forum_posts`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `forum_posts`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `forum_topics`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `forum_topics`[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW KEYS FROM `forum_topics`[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mdescribe `members`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW KEYS FROM `members`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `members_product_requests`[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mdescribe `members_product_requests`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW KEYS FROM `members_product_requests`[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mdescribe `newsletters`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW KEYS FROM `newsletters`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `product_request_statuses`[0m
+  [4;35;1mSQL (2.5ms)[0m   [0mdescribe `product_request_statuses`[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW KEYS FROM `product_request_statuses`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `product_requests`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mdescribe `product_requests`[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSHOW KEYS FROM `product_requests`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `volunteer_offerings`[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mdescribe `volunteer_offerings`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW KEYS FROM `volunteer_offerings`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW FIELDS FROM `volunteer_tasks`[0m
+  [4;36;1mSQL (2.1ms)[0m   [0;1mdescribe `volunteer_tasks`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW KEYS FROM `volunteer_tasks`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW FIELDS FROM `wholesale_orders`[0m
+  [4;35;1mSQL (2.1ms)[0m   [0mdescribe `wholesale_orders`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `wholesale_orders`[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (155.2ms)[0m   [0;1mDROP DATABASE IF EXISTS `sjifoodcoop_test`[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE DATABASE `sjifoodcoop_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (215.7ms)[0m   [0mCREATE TABLE `barter_board_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (92.8ms)[0m   [0mCREATE TABLE `barter_board_entries` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `wanted_category_id` int(11), `offered_category_id` int(11), `wanted` varchar(255), `offered` varchar(255), `details` text, `contact_info` varchar(255), `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mCREATE TABLE `board_members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `role` varchar(255), `description` text, `image_url` varchar(255), `active` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.3ms)[0m   [0mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `commentable_type` varchar(255), `commentable_id` int(11), `body` text, `member_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (110.1ms)[0m   [0mCREATE TABLE `content_items` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tag` varchar(255), `content` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (108.6ms)[0m   [0mCREATE TABLE `distributors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `address` varchar(255), `website` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (119.7ms)[0m   [0mCREATE TABLE `event_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (121.0ms)[0m   [0mCREATE TABLE `events` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `details` text, `date` date, `time` time, `event_category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (148.7ms)[0m   [0mCREATE TABLE `faqs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `answer` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (137.4ms)[0m   [0mCREATE TABLE `forum_categories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (132.1ms)[0m   [0mCREATE TABLE `forum_posts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `body` text, `forum_topic_id` int(11), `created_at` datetime, `updated_at` datetime, `member_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.2ms)[0m   [0mCREATE TABLE `forum_topics` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject` varchar(255), `forum_category_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (120.5ms)[0m   [0mCREATE TABLE `members` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(40), `email` varchar(100), `crypted_password` varchar(40), `salt` varchar(40), `created_at` datetime, `updated_at` datetime, `remember_token` varchar(40), `remember_token_expires_at` datetime, `activation_code` varchar(40), `activated_at` datetime, `state` varchar(255) DEFAULT 'passive', `deleted_at` datetime, `admin` tinyint(1), `first_name` varchar(255), `last_name` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (124.6ms)[0m   [0;1mCREATE UNIQUE INDEX `index_members_on_login` ON `members` (`login`)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (135.7ms)[0m   [0;1mCREATE TABLE `members_product_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `member_id` int(11), `product_request_id` int(11), `ordered` tinyint(1), `failed` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (102.5ms)[0m   [0;1mCREATE TABLE `newsletters` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `subject` varchar(255), `body` text, `created_at` datetime, `updated_at` datetime, `mail` tinyint(1)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.5ms)[0m   [0;1mCREATE TABLE `product_request_statuses` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (120.3ms)[0m   [0;1mCREATE TABLE `product_requests` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` varchar(255), `created_at` datetime, `updated_at` datetime, `product_number` varchar(255), `distributor_id` int(11), `product_request_status_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (109.8ms)[0m   [0;1mCREATE TABLE `volunteer_offerings` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `member_id` int(11), `volunteer_task_id` int(11), `alt_contact` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (130.0ms)[0m   [0;1mCREATE TABLE `volunteer_tasks` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (88.7ms)[0m   [0;1mCREATE TABLE `wholesale_orders` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `product_name` varchar(255), `product_number` varchar(255), `quantity` varchar(255), `ordered` tinyint(1), `arrived` tinyint(1), `created_at` datetime, `updated_at` datetime, `distributor_id` int(11), `member_id` int(11)) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (120.8ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (147.4ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM `schema_migrations`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091024200131')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090911223904')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090918055256')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090918060211')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090918061402')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090918062036')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090920073513')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090920074103')[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090920075208')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925034937')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925042045')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925043950')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925054854')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925055056')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090925055144')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090925063932')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090928061447')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090928063825')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20090928073017')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20090928210229')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002070639')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091002070753')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091002224458')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091004073251')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091004080129')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091004080541')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091009091247')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20091009214804')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20091012053928')[0m

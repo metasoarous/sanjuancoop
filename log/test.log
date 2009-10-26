@@ -2689,3 +2689,2022 @@ quentin, your account has been activated.
   [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
   [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
   [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Create (2.5ms)[0m   [0;1mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`) VALUES('quire', 'quire@example.com', 'a03afb8ea777b5ef670a541f66ff894b5ce89e9c', '04279fc89f81e8a22d5a529f93c4211aae894761', '2009-10-26 21:41:16', '2009-10-26 21:41:16', NULL, NULL, '7695f69f9b158f282451b487e57b53d832f48a74', NULL, 'pending', NULL, NULL, 'Bob', 'Johnson')[0m
+Sent mail to quire@example.com
+
+Date: Mon, 26 Oct 2009 14:41:16 -0700
+From: SJI-COOP
+To: quire@example.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: quire69
+
+Visit this url to activate your account:
+
+  http://0.0.0.0:3000/activate/7695f69f9b158f282451b487e57b53d832f48a74
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 4) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Create (0.3ms)[0m   [0mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`) VALUES('quire', 'quire@example.com', 'fdfa639fcf825e3bfe445d194b0ee7d93e138eb2', '9e0623c48b30ccada8d3e50e443cd2a4ebd105d3', '2009-10-26 21:41:16', '2009-10-26 21:41:16', NULL, NULL, '8bee4d01439dc16556392561b964fd78d4150f15', NULL, 'pending', NULL, NULL, 'Bob', 'Johnson')[0m
+Sent mail to quire@example.com
+
+Date: Mon, 26 Oct 2009 14:41:16 -0700
+From: SJI-COOP
+To: quire@example.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: quire69
+
+Visit this url to activate your account:
+
+  http://0.0.0.0:3000/activate/8bee4d01439dc16556392561b964fd78d4150f15
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE `members` SET `deleted_at` = '2009-10-26 21:41:16', `state` = 'deleted', `updated_at` = '2009-10-26 21:41:16' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Create (0.3ms)[0m   [0mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`) VALUES('quire', 'quire@example.com', 'd2a5084d0facaccf68ed7a76d65331296b7b5fb6', '567455616c0198197d200a623df39d32cdc5ce64', '2009-10-26 21:41:17', '2009-10-26 21:41:17', NULL, NULL, '38a9b9add8e70a64c8c283580d59510c72c899b0', NULL, 'pending', NULL, NULL, 'Bob', 'Johnson')[0m
+Sent mail to quire@example.com
+
+Date: Mon, 26 Oct 2009 14:41:17 -0700
+From: SJI-COOP
+To: quire@example.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: quire69
+
+Visit this url to activate your account:
+
+  http://0.0.0.0:3000/activate/38a9b9add8e70a64c8c283580d59510c72c899b0
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 6) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quentin2' AND `members`.id <> 1) LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quentin@example.com' AND `members`.id <> 1) LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE `members` SET `login` = 'quentin2', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin2') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Create (0.3ms)[0m   [0;1mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`) VALUES('quire', 'quire@example.com', 'd3b1e7ede9d3a6f6b67615b388c18c32bc85d6d0', 'f0a07a204c55a9007eaa1edd79eb1ffadde593bd', '2009-10-26 21:41:17', '2009-10-26 21:41:17', NULL, NULL, '425acc403ce10326bb894911d63b0cc40a96501d', NULL, 'pending', NULL, NULL, NULL, NULL)[0m
+Sent mail to quire@example.com
+
+Date: Mon, 26 Oct 2009 14:41:17 -0700
+From: SJI-COOP
+To: quire@example.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Your account has been created.
+
+  Username: quire
+  Password: new password
+
+Visit this url to activate your account:
+
+  http://0.0.0.0:3000/activate/425acc403ce10326bb894911d63b0cc40a96501d
+  [4;35;1mSQL (0.3ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:17', `remember_token` = '4d312f96717b78c1fe1eb73cb632c2952ac48b05', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.5ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-11-02 21:41:17', `remember_token` = '58f949882870cbf35655ba0dc7f0829a0a4d7f48', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-11-02 21:41:17', `remember_token` = '12bc96e0588fcb3459d605a3ef33e31c4c080f6d', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (2.5ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'billybob') LIMIT 1[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'billybob') LIMIT 1[0m
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` IS NULL) LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (1.5ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quentin' AND `members`.id <> 1) LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quentin@example.com' AND `members`.id <> 1) LIMIT 1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `crypted_password` = 'ebe26b95b7fb927ffb705fafe4a3cfcedef6a517', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:17', `remember_token` = '7bcda57c6191b4c0841e1eddbcc6956a05e03055', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `state` = 'suspended', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:17', `remember_token` = '1152b31ac0a8ffaf2a51eddba5cb315b36e564f8', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (1.6ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = NULL, `remember_token` = NULL, `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (4.8ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE `members` SET `state` = 'suspended', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `activated_at` = '2009-10-26 21:41:17', `state` = 'active', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+Sent mail to quentin@example.com
+
+Date: Mon, 26 Oct 2009 14:41:17 -0700
+From: SJI-COOP
+To: quentin@example.com
+Subject: Website Registration: Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+quentin, your account has been activated.
+
+  http://0.0.0.0:3000/
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (4.0ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `state` = 'suspended', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `activation_code` = 'foo-bar', `activated_at` = NULL [0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `activation_code` = 'ab14993933dc8ed59723dd2b4bae8b4b7ff5e86c', `state` = 'pending', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.5ms)[0m   [0;1mUPDATE `members` SET `state` = 'suspended', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `activation_code` = NULL, `activated_at` = NULL [0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.2ms)[0m   [0mUPDATE `members` SET `state` = 'passive', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `state` = 'suspended', `updated_at` = '2009-10-26 21:41:17' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+** TabsOnRails: initialized properly
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `barter_board_categories` [0m
+
+
+Processing BarterBoardCategoriesController#create (for 0.0.0.0 at 2009-10-26 14:41:21) [POST]
+  Parameters: {"barter_board_category"=>{}, "action"=>"create", "controller"=>"barter_board_categories"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mBarterBoardCategory Create (0.3ms)[0m   [0mINSERT INTO `barter_board_categories` (`name`, `description`, `created_at`, `updated_at`) VALUES(NULL, NULL, '2009-10-26 21:41:21', '2009-10-26 21:41:21')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/barter_board_entries
+Completed in 16ms (DB: 80) | 302 Found [http://test.host/barter_board_categories?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `barter_board_categories` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `barter_board_categories` [0m
+  [4;35;1mBarterBoardCategory Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardCategoriesController#destroy (for 0.0.0.0 at 2009-10-26 14:41:21) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"barter_board_categories"}
+  [4;36;1mBarterBoardCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mBarterBoardCategory Destroy (0.3ms)[0m   [0;1mDELETE FROM `barter_board_categories` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/barter_board_categories
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/barter_board_categories/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `barter_board_categories` [0m
+  [4;35;1mSQL (1.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBarterBoardCategory Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardCategoriesController#edit (for 0.0.0.0 at 2009-10-26 14:41:21) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"barter_board_categories"}
+  [4;36;1mBarterBoardCategory Load (1.2ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering barter_board_categories/edit
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing BarterBoardCategoriesController#index (for 0.0.0.0 at 2009-10-26 14:41:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"barter_board_categories"}
+  [4;35;1mBarterBoardCategory Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+Rendering template within layouts/application
+Rendering barter_board_categories/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing BarterBoardCategoriesController#new (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"barter_board_categories"}
+Rendering template within layouts/application
+Rendering barter_board_categories/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBarterBoardCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardCategoriesController#show (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"barter_board_categories"}
+  [4;35;1mBarterBoardCategory Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering barter_board_categories/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBarterBoardCategory Load (0.4ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardCategoriesController#update (for 0.0.0.0 at 2009-10-26 14:41:22) [PUT]
+  Parameters: {"barter_board_category"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"barter_board_categories"}
+  [4;35;1mBarterBoardCategory Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/barter_board_categories/2053932785
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/barter_board_categories/2053932785?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `barter_board_entries` [0m
+
+
+Processing BarterBoardEntriesController#create (for 0.0.0.0 at 2009-10-26 14:41:22) [POST]
+  Parameters: {"barter_board_entry"=>{}, "action"=>"create", "controller"=>"barter_board_entries"}
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `barter_board_entries` [0m
+  [4;36;1mBarterBoardEntry Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardEntriesController#destroy (for 0.0.0.0 at 2009-10-26 14:41:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardEntry Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mBarterBoardEntry Destroy (0.3ms)[0m   [0mDELETE FROM `barter_board_entries` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/barter_board_entries
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/barter_board_entries/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `barter_board_entries` [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBarterBoardEntry Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardEntriesController#edit (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardEntry Load (5.2ms)[0m   [0mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+  [4;36;1mBarterBoardCategory Load (4.7ms)[0m   [0;1mSELECT * FROM `barter_board_categories` [0m
+Rendering template within layouts/application
+Rendering barter_board_entries/edit
+  [4;35;1mBarterBoardCategory Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+  [4;36;1mBarterBoardCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_categories` [0m
+Rendered barter_board_entries/_entry_form (9.0ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing BarterBoardEntriesController#index (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardEntry Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_entries` [0m
+  [4;36;1mBarterBoardCategory Load (0.2ms)[0m   [0;1mSELECT * FROM `barter_board_categories` [0m
+  [4;35;1mBarterBoardEntry Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`offered_category_id` = 298486374) [0m
+  [4;36;1mBarterBoardEntry Load (0.2ms)[0m   [0;1mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`offered_category_id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering barter_board_entries/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing BarterBoardEntriesController#new (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardCategory Load (0.4ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+Rendering template within layouts/application
+Rendering barter_board_entries/new
+  [4;36;1mBarterBoardCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_categories` [0m
+  [4;35;1mBarterBoardCategory Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+Rendered barter_board_entries/_entry_form (4.1ms)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mBarterBoardEntry Load (0.4ms)[0m   [0;1mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardEntriesController#show (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardEntry Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering barter_board_entries/show
+  [4;36;1mBarterBoardCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBarterBoardEntry Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+
+
+Processing BarterBoardEntriesController#update (for 0.0.0.0 at 2009-10-26 14:41:22) [PUT]
+  Parameters: {"barter_board_entry"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"barter_board_entries"}
+  [4;36;1mBarterBoardEntry Load (0.4ms)[0m   [0;1mSELECT * FROM `barter_board_entries` WHERE (`barter_board_entries`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mBarterBoardCategory Load (0.2ms)[0m   [0;1mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 1) [0m
+  [4;35;1mBarterBoardCategory Load (0.2ms)[0m   [0mSELECT * FROM `barter_board_categories` WHERE (`barter_board_categories`.`id` = 2) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/application
+Rendering barter_board_entries/edit
+  [4;35;1mBarterBoardCategory Load (0.3ms)[0m   [0mSELECT * FROM `barter_board_categories` [0m
+  [4;36;1mBarterBoardCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `barter_board_categories` [0m
+Rendered barter_board_entries/_entry_form (4.9ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM `board_members` [0m
+
+
+Processing BoardMembersController#create (for 0.0.0.0 at 2009-10-26 14:41:22) [POST]
+  Parameters: {"board_member"=>{}, "action"=>"create", "controller"=>"board_members"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mBoardMember Create (0.3ms)[0m   [0mINSERT INTO `board_members` (`name`, `role`, `description`, `image_url`, `active`, `created_at`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, NULL, '2009-10-26 21:41:22', '2009-10-26 21:41:22')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/board_members/2053932786
+Completed in 8ms (DB: 2) | 302 Found [http://test.host/board_members?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `board_members` [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `board_members` [0m
+  [4;35;1mBoardMember Load (0.3ms)[0m   [0mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+
+
+Processing BoardMembersController#destroy (for 0.0.0.0 at 2009-10-26 14:41:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"board_members"}
+  [4;36;1mBoardMember Load (0.4ms)[0m   [0;1mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mBoardMember Destroy (0.2ms)[0m   [0;1mDELETE FROM `board_members` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/board_members
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/board_members/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `board_members` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBoardMember Load (0.4ms)[0m   [0mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+
+
+Processing BoardMembersController#edit (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"board_members"}
+  [4;36;1mBoardMember Load (0.3ms)[0m   [0;1mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering board_members/edit
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing BoardMembersController#index (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"board_members"}
+  [4;35;1mBoardMember Load (0.4ms)[0m   [0mSELECT * FROM `board_members` [0m
+Rendering template within layouts/application
+Rendering board_members/index
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+
+
+Processing BoardMembersController#new (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"board_members"}
+Rendering template within layouts/application
+Rendering board_members/new
+  [4;36;1mSQL (11.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBoardMember Load (0.3ms)[0m   [0;1mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+
+
+Processing BoardMembersController#show (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"board_members"}
+  [4;35;1mBoardMember Load (0.3ms)[0m   [0mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering board_members/show
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBoardMember Load (0.3ms)[0m   [0;1mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+
+
+Processing BoardMembersController#update (for 0.0.0.0 at 2009-10-26 14:41:22) [PUT]
+  Parameters: {"board_member"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"board_members"}
+  [4;35;1mBoardMember Load (0.4ms)[0m   [0mSELECT * FROM `board_members` WHERE (`board_members`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/board_members/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/board_members/2053932785?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+
+
+Processing CommentsController#create (for 0.0.0.0 at 2009-10-26 14:41:22) [POST]
+  Parameters: {"comment"=>{}, "action"=>"create", "controller"=>"comments"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mComment Create (0.3ms)[0m   [0;1mINSERT INTO `comments` (`commentable_type`, `commentable_id`, `body`, `member_id`, `created_at`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, '2009-10-26 21:41:22', '2009-10-26 21:41:22')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/comments/2053932786
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/comments?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+
+
+Processing CommentsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"comments"}
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mComment Destroy (0.3ms)[0m   [0mDELETE FROM `comments` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/comments
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/comments/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+
+
+Processing CommentsController#edit (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"comments"}
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering comments/edit
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing CommentsController#index (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"comments"}
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM `comments` [0m
+Rendering template within layouts/application
+Rendering comments/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing CommentsController#new (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"comments"}
+Rendering template within layouts/application
+Rendering comments/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.3ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+
+
+Processing CommentsController#show (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"comments"}
+  [4;36;1mComment Load (0.3ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering comments/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Load (0.4ms)[0m   [0mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+
+
+Processing CommentsController#update (for 0.0.0.0 at 2009-10-26 14:41:22) [PUT]
+  Parameters: {"comment"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"comments"}
+  [4;36;1mComment Load (0.4ms)[0m   [0;1mSELECT * FROM `comments` WHERE (`comments`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/comments/2053932785
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/comments/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `content_items` [0m
+
+
+Processing ContentItemsController#create (for 0.0.0.0 at 2009-10-26 14:41:22) [POST]
+  Parameters: {"content_item"=>{}, "action"=>"create", "controller"=>"content_items"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mContentItem Load (0.3ms)[0m   [0mSELECT `content_items`.id FROM `content_items` WHERE (`content_items`.`tag` IS NULL) LIMIT 1[0m
+  [4;36;1mContentItem Create (0.4ms)[0m   [0;1mINSERT INTO `content_items` (`tag`, `content`, `created_at`, `updated_at`) VALUES(NULL, NULL, '2009-10-26 21:41:22', '2009-10-26 21:41:22')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/content_items/2053932786
+Completed in 8ms (DB: 2) | 302 Found [http://test.host/content_items?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `content_items` [0m
+  [4;35;1mSQL (1.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `content_items` [0m
+  [4;36;1mContentItem Load (0.2ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+
+
+Processing ContentItemsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:22) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"content_items"}
+  [4;35;1mContentItem Load (0.3ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mContentItem Destroy (0.3ms)[0m   [0mDELETE FROM `content_items` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/content_items
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/content_items/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `content_items` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mContentItem Load (0.3ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+
+
+Processing ContentItemsController#edit (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"content_items"}
+  [4;35;1mContentItem Load (0.3ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering content_items/edit
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ContentItemsController#index (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"content_items"}
+  [4;36;1mContentItem Load (0.4ms)[0m   [0;1mSELECT * FROM `content_items` [0m
+Rendering template within layouts/application
+Rendering content_items/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ContentItemsController#new (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"content_items"}
+Rendering template within layouts/application
+Rendering content_items/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContentItem Load (0.4ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+
+
+Processing ContentItemsController#show (for 0.0.0.0 at 2009-10-26 14:41:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"content_items"}
+  [4;36;1mContentItem Load (0.3ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering content_items/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContentItem Load (0.4ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+
+
+Processing ContentItemsController#update (for 0.0.0.0 at 2009-10-26 14:41:22) [PUT]
+  Parameters: {"content_item"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"content_items"}
+  [4;36;1mContentItem Load (0.4ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mContentItem Load (0.4ms)[0m   [0;1mSELECT `content_items`.id FROM `content_items` WHERE (`content_items`.`tag` = BINARY 'MyString' AND `content_items`.id <> 2053932785) LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/application
+Rendering content_items/edit
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `distributors` [0m
+
+
+Processing DistributorsController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"distributor"=>{}, "action"=>"create", "controller"=>"distributors"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mDistributor Create (0.3ms)[0m   [0;1mINSERT INTO `distributors` (`name`, `address`, `website`, `created_at`, `updated_at`) VALUES(NULL, NULL, NULL, '2009-10-26 21:41:23', '2009-10-26 21:41:23')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/distributors/2053932786
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/distributors?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `distributors` [0m
+  [4;35;1mSQL (1.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `distributors` [0m
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+
+
+Processing DistributorsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"distributors"}
+  [4;35;1mDistributor Load (0.3ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mDistributor Destroy (0.2ms)[0m   [0mDELETE FROM `distributors` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/distributors
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/distributors/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `distributors` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+
+
+Processing DistributorsController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"distributors"}
+  [4;35;1mDistributor Load (0.3ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering distributors/edit
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing DistributorsController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"distributors"}
+  [4;36;1mDistributor Load (0.4ms)[0m   [0;1mSELECT * FROM `distributors` [0m
+Rendering template within layouts/application
+Rendering distributors/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing DistributorsController#new (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"distributors"}
+Rendering template within layouts/application
+Rendering distributors/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDistributor Load (0.3ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+
+
+Processing DistributorsController#show (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"distributors"}
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering distributors/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mDistributor Load (0.3ms)[0m   [0mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+
+
+Processing DistributorsController#update (for 0.0.0.0 at 2009-10-26 14:41:23) [PUT]
+  Parameters: {"distributor"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"distributors"}
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/distributors/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/distributors/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `event_categories` [0m
+
+
+Processing EventCategoriesController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"event_category"=>{}, "action"=>"create", "controller"=>"event_categories"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEventCategory Create (0.3ms)[0m   [0mINSERT INTO `event_categories` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2009-10-26 21:41:23', '2009-10-26 21:41:23')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/event_categories/2053932786
+Completed in 8ms (DB: 1) | 302 Found [http://test.host/event_categories?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `event_categories` [0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `event_categories` [0m
+  [4;35;1mEventCategory Load (0.3ms)[0m   [0mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+
+
+Processing EventCategoriesController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"event_categories"}
+  [4;36;1mEventCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mEventCategory Destroy (0.2ms)[0m   [0;1mDELETE FROM `event_categories` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/event_categories
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/event_categories/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `event_categories` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEventCategory Load (0.3ms)[0m   [0mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+
+
+Processing EventCategoriesController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"event_categories"}
+  [4;36;1mEventCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering event_categories/edit
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing EventCategoriesController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"event_categories"}
+  [4;35;1mEventCategory Load (0.3ms)[0m   [0mSELECT * FROM `event_categories` [0m
+Rendering template within layouts/application
+Rendering event_categories/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing EventCategoriesController#new (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"event_categories"}
+Rendering template within layouts/application
+Rendering event_categories/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEventCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+
+
+Processing EventCategoriesController#show (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"event_categories"}
+  [4;35;1mEventCategory Load (0.3ms)[0m   [0mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering event_categories/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEventCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+
+
+Processing EventCategoriesController#update (for 0.0.0.0 at 2009-10-26 14:41:23) [PUT]
+  Parameters: {"event_category"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"event_categories"}
+  [4;35;1mEventCategory Load (0.3ms)[0m   [0mSELECT * FROM `event_categories` WHERE (`event_categories`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/event_categories/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/event_categories/2053932785?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `events` [0m
+
+
+Processing EventsController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"event"=>{}, "action"=>"create", "controller"=>"events"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mEvent Create (0.3ms)[0m   [0;1mINSERT INTO `events` (`description`, `details`, `date`, `time`, `event_category_id`, `created_at`, `updated_at`) VALUES(NULL, NULL, NULL, NULL, NULL, '2009-10-26 21:41:23', '2009-10-26 21:41:23')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events/2053932786
+Completed in 8ms (DB: 3) | 302 Found [http://test.host/events?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `events` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `events` [0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+
+
+Processing EventsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"events"}
+  [4;35;1mEvent Load (0.3ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mEvent Destroy (0.2ms)[0m   [0mDELETE FROM `events` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/events/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `events` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mEvent Load (0.3ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+
+
+Processing EventsController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"events"}
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering events/edit
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing EventsController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"events"}
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` [0m
+Rendering template within layouts/application
+Rendering events/index
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing EventsController#new (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"events"}
+Rendering template within layouts/application
+Rendering events/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+
+
+Processing EventsController#show (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"events"}
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering events/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mEvent Load (0.4ms)[0m   [0mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+
+
+Processing EventsController#update (for 0.0.0.0 at 2009-10-26 14:41:23) [PUT]
+  Parameters: {"event"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"events"}
+  [4;36;1mEvent Load (0.4ms)[0m   [0;1mSELECT * FROM `events` WHERE (`events`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/events/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `faqs` [0m
+
+
+Processing FaqsController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"faq"=>{}, "action"=>"create", "controller"=>"faqs"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mFaq Create (0.3ms)[0m   [0mINSERT INTO `faqs` (`question`, `answer`, `created_at`, `updated_at`) VALUES(NULL, NULL, '2009-10-26 21:41:23', '2009-10-26 21:41:23')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/faqs/2053932786
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/faqs?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `faqs` [0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `faqs` [0m
+  [4;35;1mFaq Load (0.2ms)[0m   [0mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+
+
+Processing FaqsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"faqs"}
+  [4;36;1mFaq Load (0.3ms)[0m   [0;1mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mFaq Destroy (0.2ms)[0m   [0;1mDELETE FROM `faqs` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/faqs
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/faqs/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `faqs` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFaq Load (0.3ms)[0m   [0mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+
+
+Processing FaqsController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"faqs"}
+  [4;36;1mFaq Load (0.3ms)[0m   [0;1mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering faqs/edit
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing FaqsController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"faqs"}
+  [4;35;1mFaq Load (0.4ms)[0m   [0mSELECT * FROM `faqs` [0m
+Rendering template within layouts/application
+Rendering faqs/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing FaqsController#new (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"faqs"}
+Rendering template within layouts/application
+Rendering faqs/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFaq Load (0.3ms)[0m   [0;1mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+
+
+Processing FaqsController#show (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"faqs"}
+  [4;35;1mFaq Load (0.3ms)[0m   [0mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering faqs/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mFaq Load (0.3ms)[0m   [0;1mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+
+
+Processing FaqsController#update (for 0.0.0.0 at 2009-10-26 14:41:23) [PUT]
+  Parameters: {"faq"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"faqs"}
+  [4;35;1mFaq Load (0.3ms)[0m   [0mSELECT * FROM `faqs` WHERE (`faqs`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/faqs/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/faqs/2053932785?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_categories` [0m
+
+
+Processing ForumCategoriesController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"forum_category"=>{}, "action"=>"create", "controller"=>"forum_categories"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mForumCategory Create (0.3ms)[0m   [0;1mINSERT INTO `forum_categories` (`name`, `created_at`, `updated_at`) VALUES(NULL, '2009-10-26 21:41:23', '2009-10-26 21:41:23')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_categories
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/forum_categories?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_categories` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_categories` [0m
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+
+
+Processing ForumCategoriesController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"forum_categories"}
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mForumCategory Destroy (0.2ms)[0m   [0mDELETE FROM `forum_categories` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_categories
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/forum_categories/2053932785]
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_categories` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+
+
+Processing ForumCategoriesController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"forum_categories"}
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_categories/edit
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mBEGIN[0m
+
+
+Processing ForumCategoriesController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 298486374) [0m
+Rendered forum_categories/_category (3.1ms)
+  [4;36;1mForumTopic Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 2053932785) [0m
+Rendered forum_categories/_category (1.9ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ForumCategoriesController#new (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_categories"}
+Rendering template within layouts/application
+Rendering forum_categories/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+
+
+Processing ForumCategoriesController#show (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_categories/show
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.forum_category_id = 2053932785) [0m
+Rendered forum_categories/_category (0.9ms)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+
+
+Processing ForumCategoriesController#update (for 0.0.0.0 at 2009-10-26 14:41:23) [PUT]
+  Parameters: {"forum_category"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"forum_categories"}
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_categories/2053932785
+Completed in 3ms (DB: 2) | 302 Found [http://test.host/forum_categories/2053932785?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM `forum_posts` [0m
+
+
+Processing ForumPostsController#create (for 0.0.0.0 at 2009-10-26 14:41:23) [POST]
+  Parameters: {"forum_post"=>{}, "action"=>"create", "controller"=>"forum_posts"}
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_posts` [0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+
+
+Processing ForumPostsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:23) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"forum_posts"}
+  [4;35;1mForumPost Load (0.4ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mForumPost Destroy (0.3ms)[0m   [0mDELETE FROM `forum_posts` WHERE `id` = 2053932785[0m
+  [4;36;1mForumTopic Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+
+
+Processing ForumPostsController#edit (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"forum_posts"}
+  [4;35;1mForumPost Load (0.4ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_posts/edit
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing ForumPostsController#index (for 0.0.0.0 at 2009-10-26 14:41:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_posts"}
+  [4;36;1mForumPost Load (18.2ms)[0m   [0;1mSELECT * FROM `forum_posts` [0m
+Rendering template within layouts/application
+Rendering forum_posts/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ForumPostsController#new (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_posts"}
+Rendering template within layouts/application
+Rendering forum_posts/new
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mForumPost Load (0.5ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+
+
+Processing ForumPostsController#show (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"forum_posts"}
+  [4;36;1mForumPost Load (0.6ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_posts/show
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mForumPost Load (0.3ms)[0m   [0mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+
+
+Processing ForumPostsController#update (for 0.0.0.0 at 2009-10-26 14:41:24) [PUT]
+  Parameters: {"forum_post"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"forum_posts"}
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_posts/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/forum_posts/2053932785?]
+  [4;35;1mSQL (3.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_topics` [0m
+
+
+Processing ForumTopicsController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"forum_topic"=>{}, "action"=>"create", "controller"=>"forum_topics"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK TO SAVEPOINT active_record_1[0m
+Rendering template within layouts/application
+Rendering forum_topics/new
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` [0m
+Rendered forum_topics/_topic_form (2.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_topics` [0m
+  [4;36;1mForumTopic Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+
+
+Processing ForumTopicsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:24) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.4ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mForumTopic Destroy (0.3ms)[0m   [0mDELETE FROM `forum_topics` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_topics
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/forum_topics/2053932785]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `forum_topics` [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mForumTopic Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+
+
+Processing ForumTopicsController#edit (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_topics/edit
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` [0m
+Rendered forum_topics/_topic_form (1.7ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ForumTopicsController#index (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.4ms)[0m   [0mSELECT * FROM `forum_topics` [0m
+Rendering template within layouts/application
+Rendering forum_topics/index
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+
+
+Processing ForumTopicsController#new (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+Rendering template within layouts/application
+Rendering forum_topics/new
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_categories` [0m
+Rendered forum_topics/_topic_form (1.6ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mForumTopic Load (0.4ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+
+
+Processing ForumTopicsController#show (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"forum_topics"}
+  [4;36;1mForumTopic Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering forum_topics/show
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mForumTopic Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+
+
+Processing ForumTopicsController#update (for 0.0.0.0 at 2009-10-26 14:41:24) [PUT]
+  Parameters: {"forum_topic"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM `forum_topics` WHERE (`forum_topics`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mForumCategory Load (0.3ms)[0m   [0mSELECT * FROM `forum_categories` WHERE (`forum_categories`.`id` = 1) [0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_posts` WHERE (`forum_posts`.forum_topic_id = 2053932785) [0m
+  [4;35;1mSQL (3.8ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/forum_topics/2053932785
+Completed in 8ms (DB: 6) | 302 Found [http://test.host/forum_topics/2053932785?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (13.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (9.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (17.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (18.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (8.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (5.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (11.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (14.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`login` = 'aaron') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 2) [0m
+
+
+Processing MembersController#activate (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"activate", "activation_code"=>"1b6453892473a467d07372d45eb05abc2031647a", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`activation_code` = '1b6453892473a467d07372d45eb05abc2031647a') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `activated_at` = '2009-10-26 21:41:24', `activation_code` = NULL, `state` = 'active', `updated_at` = '2009-10-26 21:41:24' WHERE `id` = 2[0m
+Sent mail to aaron@example.com
+
+Date: Mon, 26 Oct 2009 14:41:24 -0700
+From: SJI-COOP
+To: aaron@example.com
+Subject: Website Registration: Your account has been activated!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+aaron, your account has been activated.
+
+  http://0.0.0.0:3000/
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/login
+Completed in 11ms (DB: 227) | 302 Found [http://test.host/activate/1b6453892473a467d07372d45eb05abc2031647a]
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MembersController#activate (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"activate", "activation_code"=>"", "controller"=>"members"}
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/activate/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MembersController#activate (for 0.0.0.0 at 2009-10-26 14:41:24) [GET]
+  Parameters: {"action"=>"activate", "controller"=>"members"}
+Redirected to http://test.host/
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/activate]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>nil, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` IS NULL) LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;35;1mSQL (1.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>nil, "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` IS NULL) LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;35;1mMember Load (6.0ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing MembersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"member"=>{"login"=>"quire", "email"=>"quire@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "action"=>"create", "controller"=>"members"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'quire') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'quire@example.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `newsletters` [0m
+
+
+Processing NewslettersController#create (for 0.0.0.0 at 2009-10-26 14:41:24) [POST]
+  Parameters: {"newsletter"=>{}, "action"=>"create", "controller"=>"newsletters"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mNewsletter Create (0.3ms)[0m   [0;1mINSERT INTO `newsletters` (`subject`, `body`, `created_at`, `updated_at`, `mail`) VALUES(NULL, NULL, '2009-10-26 21:41:24', '2009-10-26 21:41:24', NULL)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/newsletters
+Completed in 17ms (DB: 2) | 302 Found [http://test.host/newsletters?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `newsletters` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `newsletters` [0m
+  [4;36;1mNewsletter Load (0.3ms)[0m   [0;1mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+
+
+Processing NewslettersController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"newsletters"}
+  [4;35;1mNewsletter Load (0.3ms)[0m   [0mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mNewsletter Destroy (0.2ms)[0m   [0mDELETE FROM `newsletters` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/newsletters
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/newsletters/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `newsletters` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNewsletter Load (0.3ms)[0m   [0;1mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+
+
+Processing NewslettersController#edit (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"newsletters"}
+  [4;35;1mNewsletter Load (0.3ms)[0m   [0mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering newsletters/edit
+Rendered newsletters/_newsletter_form (1.7ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (2.2ms)[0m   [0mBEGIN[0m
+
+
+Processing NewslettersController#index (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (0.6ms)[0m   [0;1mSELECT * FROM `newsletters` [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;35;1mSQL (4.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+
+
+Processing NewslettersController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"newsletters"}
+Rendering template within layouts/application
+Rendering newsletters/new
+Rendered newsletters/_newsletter_form (0.9ms)
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Load (0.4ms)[0m   [0mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+
+
+Processing NewslettersController#show (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (0.3ms)[0m   [0;1mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering newsletters/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Load (0.3ms)[0m   [0mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+
+
+Processing NewslettersController#update (for 0.0.0.0 at 2009-10-26 14:41:25) [PUT]
+  Parameters: {"newsletter"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (0.3ms)[0m   [0;1mSELECT * FROM `newsletters` WHERE (`newsletters`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/newsletters/2053932785
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/newsletters/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `product_requests` [0m
+
+
+Processing ProductRequestsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"product_request"=>{}, "action"=>"create", "controller"=>"product_requests"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mProductRequest Create (0.3ms)[0m   [0mINSERT INTO `product_requests` (`description`, `created_at`, `updated_at`, `product_number`, `distributor_id`, `product_request_status_id`) VALUES(NULL, '2009-10-26 21:41:25', '2009-10-26 21:41:25', NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/product_requests
+Completed in 7ms (DB: 1) | 302 Found [http://test.host/product_requests?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `product_requests` [0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `product_requests` [0m
+  [4;35;1mProductRequest Load (0.2ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+
+
+Processing ProductRequestsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"product_requests"}
+  [4;36;1mProductRequest Load (0.3ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mProductRequest Destroy (0.2ms)[0m   [0;1mDELETE FROM `product_requests` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/product_requests
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/product_requests/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `product_requests` [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+
+
+Processing ProductRequestsController#edit (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"product_requests"}
+  [4;36;1mProductRequest Load (0.3ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering product_requests/edit
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProductRequestsController#index (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"product_requests"}
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` [0m
+  [4;36;1mProductRequestStatus Load (0.2ms)[0m   [0;1mSELECT * FROM `product_request_statuses` [0m
+Rendering template within layouts/application
+Rendering product_requests/index
+  [4;35;1mProductRequest Load (0.4ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 298486374) [0m
+Rendered product_requests/_status (49.5ms)
+  [4;36;1mProductRequest Load (0.3ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.product_request_status_id = 2053932785) [0m
+Rendered product_requests/_status (0.7ms)
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing ProductRequestsController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"product_requests"}
+  [4;35;1mProductRequestStatus Load (0.4ms)[0m   [0mSELECT * FROM `product_request_statuses` WHERE (`product_request_statuses`.`name` = 'Unordered') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering product_requests/new
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mProductRequest Load (0.3ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+
+
+Processing ProductRequestsController#show (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"product_requests"}
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering product_requests/show
+  [4;36;1mProductRequestStatus Load (0.3ms)[0m   [0;1mSELECT * FROM `product_request_statuses` WHERE (`product_request_statuses`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+
+
+Processing ProductRequestsController#update (for 0.0.0.0 at 2009-10-26 14:41:25) [PUT]
+  Parameters: {"product_request"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"product_requests"}
+  [4;36;1mProductRequest Load (1.1ms)[0m   [0;1mSELECT * FROM `product_requests` WHERE (`product_requests`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/product_requests/2053932785
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/product_requests/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://test.host/
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/logout]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:25', `remember_token` = 'dfe7faeddd6fa582a99de5eccc294c41382a59c1', `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mMember Load (0.8ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`remember_token` = 'invalid_auth_token') LIMIT 1[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:25', `remember_token` = 'a89d22674d448d3b4343140411306f445189f063', `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-10-26 21:36:25', `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`remember_token` = 'a89d22674d448d3b4343140411306f445189f063') LIMIT 1[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"[FILTERED]", "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'quentin' from 0.0.0.0 at 2009-10-26 21:41:25 UTC
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"[FILTERED]", "action"=>"create", "controller"=>"sessions"}
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = NULL, `remember_token` = NULL, `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed in 4ms (DB: 1) | 302 Found [http://test.host/session?login=quentin&password=monkey]
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:25', `remember_token` = 'fb2aa388f1e891a200de87bc5aa51306450e5d21', `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+
+
+Processing SessionsController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`remember_token` = 'fb2aa388f1e891a200de87bc5aa51306450e5d21') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mMember Update (0.3ms)[0m   [0;1mUPDATE `members` SET `remember_token_expires_at` = NULL, `remember_token` = NULL, `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+
+
+Processing SessionsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://test.host/
+Completed in 0ms (DB: 2) | 302 Found [http://test.host/logout]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"[FILTERED]", "remember_me"=>"0", "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = NULL, `remember_token` = NULL, `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/session?login=quentin&password=monkey&remember_me=0]
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing SessionsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"login"=>"quentin", "password"=>"[FILTERED]", "remember_me"=>"1", "action"=>"create", "controller"=>"sessions"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`login` = 'quentin') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = '2009-11-09 21:41:25', `remember_token` = '3e35031c87a5a196620e8c91fb119eaeb0cdc08e', `updated_at` = '2009-10-26 21:41:25' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/
+Completed in 4ms (DB: 2) | 302 Found [http://test.host/session?login=quentin&password=monkey&remember_me=1]
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `volunteer_offerings` [0m
+
+
+Processing VolunteerOfferingsController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"volunteer_offering"=>{}, "action"=>"create", "controller"=>"volunteer_offerings"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mVolunteerOffering Create (0.3ms)[0m   [0mINSERT INTO `volunteer_offerings` (`member_id`, `volunteer_task_id`, `alt_contact`, `created_at`, `updated_at`) VALUES(NULL, NULL, NULL, '2009-10-26 21:41:25', '2009-10-26 21:41:25')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_tasks
+Completed in 7ms (DB: 2) | 302 Found [http://test.host/volunteer_offerings?]
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `volunteer_offerings` [0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `volunteer_offerings` [0m
+  [4;35;1mVolunteerOffering Load (0.2ms)[0m   [0mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+
+
+Processing VolunteerOfferingsController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"volunteer_offerings"}
+  [4;36;1mVolunteerOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mVolunteerOffering Destroy (0.2ms)[0m   [0;1mDELETE FROM `volunteer_offerings` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_tasks
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/volunteer_offerings/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `volunteer_offerings` [0m
+  [4;35;1mSQL (0.7ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVolunteerOffering Load (0.3ms)[0m   [0mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+
+
+Processing VolunteerOfferingsController#edit (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"volunteer_offerings"}
+  [4;36;1mVolunteerOffering Load (0.3ms)[0m   [0;1mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering volunteer_offerings/edit
+  [4;35;1mSQL (0.4ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing VolunteerOfferingsController#index (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"volunteer_offerings"}
+  [4;35;1mVolunteerOffering Load (0.3ms)[0m   [0mSELECT * FROM `volunteer_offerings` [0m
+Rendering template within layouts/application
+Rendering volunteer_offerings/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 1) [0m
+  [4;35;1mVolunteerTask Load (0.2ms)[0m   [0mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 1) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing VolunteerOfferingsController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"volunteer_offerings"}
+Rendering template within layouts/application
+Rendering volunteer_offerings/new
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVolunteerOffering Load (0.4ms)[0m   [0;1mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+
+
+Processing VolunteerOfferingsController#show (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"volunteer_offerings"}
+  [4;35;1mVolunteerOffering Load (0.3ms)[0m   [0mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering volunteer_offerings/show
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVolunteerOffering Load (0.3ms)[0m   [0;1mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+
+
+Processing VolunteerOfferingsController#update (for 0.0.0.0 at 2009-10-26 14:41:25) [PUT]
+  Parameters: {"volunteer_offering"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"volunteer_offerings"}
+  [4;35;1mVolunteerOffering Load (0.3ms)[0m   [0mSELECT * FROM `volunteer_offerings` WHERE (`volunteer_offerings`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_offerings/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/volunteer_offerings/2053932785?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `volunteer_tasks` [0m
+
+
+Processing VolunteerTasksController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"volunteer_task"=>{}, "action"=>"create", "controller"=>"volunteer_tasks"}
+  [4;35;1mSQL (0.2ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mVolunteerTask Create (0.9ms)[0m   [0;1mINSERT INTO `volunteer_tasks` (`name`, `description`, `created_at`, `updated_at`) VALUES(NULL, NULL, '2009-10-26 21:41:25', '2009-10-26 21:41:25')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_tasks/2053932786
+Completed in 8ms (DB: 2) | 302 Found [http://test.host/volunteer_tasks?]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `volunteer_tasks` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `volunteer_tasks` [0m
+  [4;36;1mVolunteerTask Load (0.3ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+
+
+Processing VolunteerTasksController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"volunteer_tasks"}
+  [4;35;1mVolunteerTask Load (0.3ms)[0m   [0mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSAVEPOINT active_record_1[0m
+  [4;35;1mVolunteerTask Destroy (0.2ms)[0m   [0mDELETE FROM `volunteer_tasks` WHERE `id` = 2053932785[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_tasks
+Completed in 2ms (DB: 3) | 302 Found [http://test.host/volunteer_tasks/2053932785]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `volunteer_tasks` [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mVolunteerTask Load (10.6ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+
+
+Processing VolunteerTasksController#edit (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"volunteer_tasks"}
+  [4;35;1mVolunteerTask Load (0.4ms)[0m   [0mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/edit
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing VolunteerTasksController#index (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"volunteer_tasks"}
+  [4;36;1mVolunteerTask Load (0.4ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/index
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing VolunteerTasksController#new (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"volunteer_tasks"}
+Rendering template within layouts/application
+Rendering volunteer_tasks/new
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVolunteerTask Load (0.4ms)[0m   [0mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+
+
+Processing VolunteerTasksController#show (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"volunteer_tasks"}
+  [4;36;1mVolunteerTask Load (0.4ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/show
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mVolunteerTask Load (0.4ms)[0m   [0mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+
+
+Processing VolunteerTasksController#update (for 0.0.0.0 at 2009-10-26 14:41:25) [PUT]
+  Parameters: {"volunteer_task"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"volunteer_tasks"}
+  [4;36;1mVolunteerTask Load (0.3ms)[0m   [0;1mSELECT * FROM `volunteer_tasks` WHERE (`volunteer_tasks`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/volunteer_tasks/2053932785
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/volunteer_tasks/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+
+
+Processing WelcomeController#index (for 0.0.0.0 at 2009-10-26 14:41:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `wholesale_orders` [0m
+
+
+Processing WholesaleOrdersController#create (for 0.0.0.0 at 2009-10-26 14:41:25) [POST]
+  Parameters: {"wholesale_order"=>{}, "action"=>"create", "controller"=>"wholesale_orders"}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM `wholesale_orders` [0m
+  [4;35;1mWholesaleOrder Load (0.3ms)[0m   [0mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+
+
+Processing WholesaleOrdersController#destroy (for 0.0.0.0 at 2009-10-26 14:41:25) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"2053932785", "controller"=>"wholesale_orders"}
+  [4;36;1mWholesaleOrder Load (0.7ms)[0m   [0;1mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mWholesaleOrder Destroy (0.3ms)[0m   [0;1mDELETE FROM `wholesale_orders` WHERE `id` = 2053932785[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/wholesale_orders
+Completed in 3ms (DB: 3) | 302 Found [http://test.host/wholesale_orders/2053932785]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `wholesale_orders` [0m
+  [4;35;1mSQL (1.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWholesaleOrder Load (0.3ms)[0m   [0mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+
+
+Processing WholesaleOrdersController#edit (for 0.0.0.0 at 2009-10-26 14:41:26) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2053932785", "controller"=>"wholesale_orders"}
+  [4;36;1mWholesaleOrder Load (0.3ms)[0m   [0;1mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering wholesale_orders/edit
+  [4;35;1mDistributor Load (0.4ms)[0m   [0mSELECT * FROM `distributors` [0m
+Rendered wholesale_orders/_order_form (2.8ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing WholesaleOrdersController#index (for 0.0.0.0 at 2009-10-26 14:41:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"wholesale_orders"}
+  [4;36;1mContentItem Load (0.4ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`tag` = 'wholesale_ordering_preamble') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.6ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`tag` = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.2ms)[0m   [0;1mSELECT * FROM `content_items` WHERE (`content_items`.`tag` = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.2ms)[0m   [0mSELECT * FROM `content_items` WHERE (`content_items`.`tag` = 'wholesale_ordering_rest') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering wholesale_orders/index
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+
+
+Processing WholesaleOrdersController#new (for 0.0.0.0 at 2009-10-26 14:41:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"wholesale_orders"}
+Rendering template within layouts/application
+Rendering wholesale_orders/new
+  [4;36;1mDistributor Load (0.4ms)[0m   [0;1mSELECT * FROM `distributors` [0m
+  [4;35;1mDistributor Load (0.3ms)[0m   [0mSELECT * FROM `distributors` [0m
+Rendered wholesale_orders/_order_form (1.6ms)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mWholesaleOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+
+
+Processing WholesaleOrdersController#show (for 0.0.0.0 at 2009-10-26 14:41:26) [GET]
+  Parameters: {"action"=>"show", "id"=>"2053932785", "controller"=>"wholesale_orders"}
+  [4;35;1mWholesaleOrder Load (0.3ms)[0m   [0mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+Rendering template within layouts/application
+Rendering wholesale_orders/show
+  [4;36;1mDistributor Load (0.3ms)[0m   [0;1mSELECT * FROM `distributors` WHERE (`distributors`.`id` = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mWholesaleOrder Load (0.4ms)[0m   [0mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+
+
+Processing WholesaleOrdersController#update (for 0.0.0.0 at 2009-10-26 14:41:26) [PUT]
+  Parameters: {"wholesale_order"=>{}, "action"=>"update", "id"=>"2053932785", "controller"=>"wholesale_orders"}
+  [4;36;1mWholesaleOrder Load (0.4ms)[0m   [0;1mSELECT * FROM `wholesale_orders` WHERE (`wholesale_orders`.`id` = 2053932785) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSAVEPOINT active_record_1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/wholesale_orders/2053932785
+Completed in 3ms (DB: 3) | 302 Found [http://test.host/wholesale_orders/2053932785?]
+  [4;35;1mSQL (0.2ms)[0m   [0mROLLBACK[0m
