@@ -17,7 +17,7 @@ class BarterBoardCategoriesControllerTest < ActionController::TestCase
       post :create, :barter_board_category => { }
     end
 
-    assert_redirected_to barter_board_category_path(assigns(:barter_board_category))
+    assert_redirected_to barter_board_entries_path
   end
 
   test "should show barter_board_category" do

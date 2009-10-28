@@ -11,4 +11,6 @@ class BarterBoardEntry < ActiveRecord::Base
   validates_presence_of :offered
   validates_presence_of :wanted
   validates_presence_of :contact_info
+  
+  validates_numericality_of :member_id
 end

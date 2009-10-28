@@ -1,17 +1,29 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  product_name: MyString
-  product_number: MyString
+  product_name: Cheese-whiz
+  product_number: CW12323
+  member_id: 1
   distributor_id: 1
-  quantity: MyString
+  quantity: 7 cans
   ordered: false
   arrived: false
 
+
 two:
-  product_name: MyString
-  product_number: MyString
+  product_name: Puff-Balls
+  product_number: 32345DD
+  member_id: 2
   distributor_id: 1
-  quantity: MyString
-  ordered: false
+  quantity: 6 pounds
+  ordered: true
   arrived: false
+  
+two:
+  product_name: Crab cakes
+  product_number: CC99234
+  distributor_id: 2
+  member_id: 1
+  quantity: 60 pounds
+  ordered: true
+  arrived: true

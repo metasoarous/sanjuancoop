@@ -1,6 +1,6 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper 
-  #Here is where I map controllers to corresponding tabs
+  #Here we map controllers to corresponding tabs
   def active_tab(controller)
     hash = {:forum_topics         => :forum,
             :forum_posts          => :forum,
@@ -16,7 +16,9 @@ module ApplicationHelper
             :volunteer_offers     => :volunteer,
             :barter_board_entries => :barter_board,
             :barter_board_categories => :barter_board} 
-    return hash[ controller.to_sym ]
+    # Shouldn't have to do these conditionals, but we had errors in the tests evaluating controller to nil. Hmm...
+    return hash[ controller.to_sym ] unless controller.nil?
+    return :home
   end
   
   def display_content(content_item)

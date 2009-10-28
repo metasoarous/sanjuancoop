@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class BarterBoardEntriesControllerTest < ActionController::TestCase
+  
   test "should get index" do
     get :index
     assert_response :success
@@ -14,7 +15,7 @@ class BarterBoardEntriesControllerTest < ActionController::TestCase
 
   test "should create barter_board_entry" do
     assert_difference('BarterBoardEntry.count') do
-      post :create, :barter_board_entry => { }
+      post :create, :barter_board_entry => barter_board_entries(:one)
     end
 
     assert_redirected_to barter_board_entry_path(assigns(:barter_board_entry))
@@ -31,7 +32,7 @@ class BarterBoardEntriesControllerTest < ActionController::TestCase
   end
 
   test "should update barter_board_entry" do
-    put :update, :id => barter_board_entries(:one).to_param, :barter_board_entry => { }
+    put :update, :id => barter_board_entries(:one).to_param, :barter_board_entry => barter_board_entries(:one)
     assert_redirected_to barter_board_entry_path(assigns(:barter_board_entry))
   end
 

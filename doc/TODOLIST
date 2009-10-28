@@ -6,6 +6,7 @@ Write tests for:
 	- after_destroy on ForumPost to make sure we don't have any topics without posts.
 	- after fixing validations on volunteer_offering, write test
 	- duplicate email entry testing
+	- write test for making sure email is entered in unit
 	
 
 VALIDATIONS
@@ -30,6 +31,8 @@ Implement:
 	- Consider across tab navbar and make the inner wider
 	- Consider other styling themes, swigly removal and the apple.
 	- members section
+	- add editing volunteer task ability
+	- volunteer hour tracking (even if just reference)
 	
 	
 EMAIL 

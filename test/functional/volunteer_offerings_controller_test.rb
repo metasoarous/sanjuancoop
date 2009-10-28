@@ -17,7 +17,7 @@ class VolunteerOfferingsControllerTest < ActionController::TestCase
       post :create, :volunteer_offering => { }
     end
 
-    assert_redirected_to volunteer_offering_path(assigns(:volunteer_offering))
+    assert_redirected_to volunteer_tasks_path
   end
 
   test "should show volunteer_offering" do
@@ -32,7 +32,7 @@ class VolunteerOfferingsControllerTest < ActionController::TestCase
 
   test "should update volunteer_offering" do
     put :update, :id => volunteer_offerings(:one).to_param, :volunteer_offering => { }
-    assert_redirected_to volunteer_offering_path(assigns(:volunteer_offering))
+    assert_redirected_to volunteer_tasks_path
   end
 
   test "should destroy volunteer_offering" do
@@ -40,6 +40,6 @@ class VolunteerOfferingsControllerTest < ActionController::TestCase
       delete :destroy, :id => volunteer_offerings(:one).to_param
     end
 
-    assert_redirected_to volunteer_offerings_path
+    assert_redirected_to volunteer_tasks_path
   end
 end
