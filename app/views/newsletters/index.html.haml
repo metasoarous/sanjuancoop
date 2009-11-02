@@ -1,0 +1,17 @@
+%h2 The Latest News
+%p= link_to("New Newsletter", new_newsletter_path) if admin?
+%br/
+
+#newsletters
+	- @page_results.each do |newsletter|
+		.newsletter(id="#{newsletter.id}")
+			.news_subject_container
+				%h3= newsletter.subject
+				= "- #{newsletter.created_at.strftime('%a, %b %d, %Y"')}"
+				- if admin?
+					= "- " + link_to("Edit", edit_newsletter_path(newsletter)) + " - "
+					= link_to 'Destroy', newsletter, :confirm => 'Are you sure?', :method => :delete
+			- newsletter.body.lines.each do |line|
+				%p= line
+
+= will_paginate @page_results

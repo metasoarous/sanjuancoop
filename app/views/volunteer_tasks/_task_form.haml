@@ -1,0 +1,6 @@
+= f.error_messages
+%p
+	%b= f.label :name
+	%br/
+	= f.text_field :name
+= render :partial => "partials/textile_form", :locals => {:object => "volunteer_task", :method => "description"}

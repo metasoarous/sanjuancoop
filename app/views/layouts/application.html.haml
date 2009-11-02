@@ -1,0 +1,40 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+%html(xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en")
+	%head
+		%meta(http-equiv="content-type" content="text/html;charset=UTF-8")
+		%title= "SJIFoodCoop: #{controller.action_name}"
+		= stylesheet_link_tag 'application'
+		= javascript_include_tag :defaults
+		
+	%body
+		#wrapper
+			#user_panel
+				- if logged_in?
+					%p= "Hi #{current_member.first_name}! | #{link_to("Logout", "/logout")}"
+				- else
+					%p= "Login or Sign Up - #{link_to("Login", "/login")} | #{link_to("Sign Up", "/signup")}"
+			#wrapper2
+				#header
+					%h1 San Juan Island Food Co-op
+				#tabs_container
+					= create_tabs active_tab(request.path_parameters[:controller]), [:home, "/welcome"], [:news, newsletters_path], [:forum, forum_categories_path], [:requests, product_requests_path], [:wholesale_orders, wholesale_orders_path], [:barter_board, barter_board_entries_path << "?sort_by=offered"], [:volunteer, volunteer_tasks_path]
+				#content
+					%p(style="color: green")= flash[:notice]
+					- if active_tab(request.path_parameters[:controller]) == :home or true
+						#home_content
+							#home_sidebar
+								%h3 Within
+								%p= link_to("Home", "/")
+								%p= link_to("FAQs", faqs_path)
+								%p= link_to("Coop Board", board_members_path)
+								- if admin?
+									%h3 Admin
+									%p= link_to("Content Items", content_items_path)
+									%p= link_to("Member Index", members_path)
+							#inner_home_content
+								= yield
+							#placeholder
+					- else
+						= yield

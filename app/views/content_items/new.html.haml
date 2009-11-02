@@ -1,0 +1,7 @@
+%h2 New Content Item
+
+- form_for @content_item do |f|
+	= render :partial => "item_form", :locals => {:f => f}
+	%p= f.submit "Create"
+	
+= link_to "See All Content Items", content_items_path

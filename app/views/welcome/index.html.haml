@@ -1,0 +1,62 @@
+
+%h2 Welcome to the SJI Food Co-Op Website!
+
+- unless current_member
+	%h5 
+		Thanks for visiting! If you are a coop member you are invited to
+		= link_to("sign up", "/signup")
+		or 
+		= link_to("login", "/login")
+		in order to get full access to all of this web site's features. If you are not yet a member, you can find out about becoming one here.
+
+#mission
+	%h3 Mission Statement
+	%p The San Juan Island Food Co-op's Mission is to establish an alternative food distribution framework - a community based, democratically managed, cooperatively owned grocery store that supports local and organic production, fosters conscientious consumption, and builds community connections.
+
+
+#hours
+	%h3 Hours of Operation
+	%table
+		%tr
+			%td <strong>Members: </strong>
+			%td 24/7
+		%tr
+			%td <strong>Non Members: </strong>
+			%td Monday
+			%td 11-12
+		%tr
+			%td/
+			%td Tuesday
+			%td 10-12
+		%tr
+			%td/
+			%td Wednesday
+			%td 9:30-2
+		%tr
+			%td/
+			%td Thursday
+			%td 10-12
+		%tr
+			%td/
+			%td Friday
+			%td 11-12
+		%tr
+			%td/
+			%td Saturday
+			%td 1-2
+
+
+#contact
+	%h3 Contact Information
+	%table
+		%tr
+			%td <strong>Address: </strong>
+			%td Surina Business Park, Malcom Street
+		%tr
+			%td/
+			%td Friday Harbor, WA 98250
+		%tr
+			%td <strong>Email: </strong>
+			%td 
+				%a(href="mailto:sanjuancoop@gmail.com") sanjuancoop@gmail.com
+

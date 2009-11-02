@@ -1,0 +1,220 @@
+body {
+  background-color: #1f0f10;
+  color: #333;
+  padding-right: 6em;
+  padding-left: 6em;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+textarea {
+  width: 500px; }
+
+a {
+  color: #2F0F0F; }
+  a:visited {
+    color: #4F2222; }
+  a:hover {
+    color: #7E7F37; }
+
+h4 {
+  font-size: 12px; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+  text-align: center; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff; }
+  #errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px; }
+  #errorExplanation ul li {
+    font-size: 12px;
+    list-style: square; }
+
+#wrapper {
+  width: 800px;
+  margin: 0px auto; }
+
+#wrapper2 {
+  background-color: #3f1b1d;
+  margin: 0;
+  padding: 10px; }
+
+#header {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  background-color: #cccc99;
+  background: url(../images/sentry2.jpg); }
+  #header h1 {
+    position: relative;
+    left: -84px;
+    top: -3px;
+    font-size: 38px;
+    font-family: fantasy; }
+    #header h1 img {
+      position: relative;
+      top: 20px;
+      width: 22%;
+      height: 22%;
+      padding: 0; }
+
+#user_panel {
+  text-align: right;
+  left: 600px;
+  color: white; }
+  #user_panel p {
+    margin: 1px 0 5px 0;
+    font-size: 14px; }
+  #user_panel a {
+    color: #61DFD1; }
+
+#content {
+  margin-top: 3px;
+  padding: 3.5em 5.5em 3.5em 1em;
+  background-color: #efefd1; }
+  #content div {
+    padding-bottom: 1.3em; }
+  #content h2 {
+    margin-bottom: 2em; }
+
+#placeholder {
+  clear: both; }
+
+
+#tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0.6em auto 5px auto; }
+  #tabs li {
+    display: inline; }
+    #tabs li .active {
+      background-color: #efefd1;
+      padding-bottom: 6px; }
+    #tabs li a {
+      margin: 0;
+      padding: 4px 0.8em 4px 0.8em;
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+      background-color: #cccc99; }
+      #tabs li a:hover {
+        background-color: #dfdfb5; }
+      #tabs li a .active:hover {
+        background-color: white; }
+  #tabs .spacer {
+    background-color: #9F9AA4; }
+
+
+#home_sidebar {
+  float: left;
+  width: 100px;
+  margin: 30px 0 0 10px;
+  padding: 8px 15px 8px 10px;
+  position: relative;
+  left: -10px;
+  background-color: #cccc99; }
+  #home_sidebar p {
+    padding: 0;
+    margin: 5px; }
+
+#inner_home_content {
+  float: left;
+  width: 500px;
+  margin-left: 30px; }
+
+#newsletters div.newsletter .news_subject_container h3 {
+  display: inline; }
+  #newsletters div.newsletter .news_subject_container h3 .newsletter {
+    margin-bottom: 1em; }
+
+p#tab_info {
+  padding-right: 220px; }
+
+#new_topic_link {
+  position: relative;
+  left: 340px;
+  margin-bottom: 2px; }
+
+#textile_form {
+  margin: 1px;
+  background-color: #FOFOEE; }
+
+.groovy_table {
+  margin-top: 5px;
+  border: 1px;
+  border-color: #959D9F;
+  border-collapse: collapse; }
+  .groovy_table tr.category_row {
+    background-color: #8E868F; }
+    .groovy_table tr.category_row td {
+      padding: 8px 0 5px 0; }
+  .groovy_table tr h3, .groovy_table tr h4 {
+    margin: 50px 10px 4px 5px;
+    display: inline; }
+  .groovy_table tr td {
+    padding: 3px 0 3px 0; }
+    .groovy_table tr td a {
+      text-decoration: none;
+      padding: 2px 20px 2px 5px; }
+    .groovy_table tr td.subject {
+      width: 450px; }
+  .groovy_table tr.row1 {
+    background-color: #dfdfb5; }
+  .groovy_table a.category_link {
+    position: relative;
+    left: 130px;
+    color: black; }
+    .groovy_table a.category_link:hover {
+      color: #7E7F37; }
+
+div.content {
+  background-color: #dbdfc4;
+  padding: 1px 9px 7px 9px;
+  margin-top: 9px; }
+
+div.board_member {
+  width: 500px; }
+  div.board_member img {
+    float: left;
+    margin-right: 10px; }
+div.post {
+  background-color: #dbdfc4;
+  margin: 0 2em 0.8em 0;
+  padding: 0.3em 1em 0 0.5em; }
+div#ordering_instructions div#specific_instr div#unfi_instr {
+  float: left;
+  width: 43%; }
+div#ordering_instructions div#specific_instr div#azures_instr {
+  float: right;
+  width: 50%; }
+div#ordering_instructions div#the_rest {
+  clear: both; }

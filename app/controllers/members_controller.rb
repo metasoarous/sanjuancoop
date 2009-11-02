@@ -6,6 +6,25 @@ class MembersController < ApplicationController
   # before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge]
   before_filter :find_member, :only => [:suspend, :unsuspend, :destroy, :purge]
   
+  def index
+    @members = Member.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @content_items }
+    end
+  end
+
+  # GET /content_items/1
+  # GET /content_items/1.xml
+  def show
+    @member = Member.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @content_item }
+    end
+  end
 
   # render new.rhtml
   def new
@@ -19,7 +38,7 @@ class MembersController < ApplicationController
     success = @member && @member.valid?
     if success && @member.errors.empty?
       redirect_back_or_default('/')
-      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code."
+      flash[:notice] = "Thanks for signing up!  We're sending you an email with your activation code. (The email should show up within a few minutes - if it doesn't, check your spam folder or email us at sanjuancoop@gmail.com)"
     else
       flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
       render :action => 'new'

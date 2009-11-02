@@ -1,0 +1,9 @@
+%h2 Editing Content Item
+
+- form_for(@content_item) do |f|
+	= render :partial => "item_form", :locals => {:f => f}
+	%p= f.submit "Update"
+	
+= link_to "Show", @content_item
+= "|"
+= link_to "Back", content_items_path

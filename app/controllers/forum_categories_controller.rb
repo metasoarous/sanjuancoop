@@ -14,6 +14,10 @@ class ForumCategoriesController < ApplicationController
   # GET /forum_categories/1.xml
   def show
     @forum_category = ForumCategory.find(params[:id])
+    page_results = @forum_category.forum_topics.sort do |top1, top2|
+      top2.forum_posts.last.created_at <=> top1.forum_posts.last.created_at
+    end
+    @page_results = page_results.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # show.html.erb

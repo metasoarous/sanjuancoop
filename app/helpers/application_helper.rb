@@ -21,19 +21,22 @@ module ApplicationHelper
     return :home
   end
   
-  def display_content(content_item)
-    string = ""
-    content_item.content.lines.each do |line|
-      if line.first == "<"
-        string += line
-      else
-        string += "<p>#{line}</p>" 
-      end
-    end
-    return string
+  # This is a groovy little method which sorts a collection based on a given attribute (or method chain return). Should put this one in a little reusable helper gem or something.
+  def sort(collection, attribute)
+    collection.sort {|a,b| a.send(attribute) <=> b.send(attribute)}
   end
   
-  #Helper method for creating a whole set of tabs
+  # Cleans things up just a little bit with respect to displaying content items
+  def display_content(content_item)
+    display_textile(content_item.content)
+  end
+  
+  # Cleaner way to diplay textile content
+  def display_textile(text)
+    RedCloth.new(text).to_html
+  end
+  
+  # Helper method for creating a whole set of tabs
   def create_tabs(active, *tabs)
     string = "<ul id='tabs'> \n"
     tabs.each do |tab|

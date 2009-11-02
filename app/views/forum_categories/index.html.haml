@@ -1,0 +1,17 @@
+%h2 Discussion Forum
+
+- if logged_in?
+	= link_to 'Begin a New Discussion', new_forum_topic_path, :id => "new_topic_link"
+- else
+	= link_to 'Log in to post', new_session_path, :id => "new_topic_link"
+
+%table.groovy_table#forum_table
+	- @forum_categories.each do |category|
+		- topics = fetch_topics(category, 10)
+		- more_topics = topics.size >= 10
+		= render_forum_topic_index(category, topics, more_topics)
+%br/
+
+- if admin?
+	= #link_to('New Forum Category', new_forum_category_path)
+	- #uncomment the above if you decide to give access to creating categories to admins

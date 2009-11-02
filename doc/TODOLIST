@@ -18,28 +18,51 @@ Create validations for:
 
 CONTENT
 
-Clean up:
-	- The explanation of the wholesale orders procedure in the wholesale orders page
-	- Make the Sign Up a little more obvious
-	- Make contact info easier to find
-	- Make sure that the forum posts have a the posters name
-	- Contact us at the bottom of the home page
-	- Hide wholesale order and fix up before continuing on that thread
-	- Refactor the Coop Board Member listing into members?
+Complete
+	=- The explanation of the wholesale orders procedure in the wholesale orders page
+	=- Make the Sign Up a little more obvious
+	=- Create a Admin section nav bar thing
+	=- Consider across tab navbar and make the inner wider
+	=- Consider other styling themes, swigly removal and the apple.
+	=- Make sure that the forum posts have a the posters name
+	=- Hide wholesale order and fix up before continuing on that thread
+	=- add editing volunteer task ability
+	=- rearrange the design and colors
+	=- switch from current methods on the content_data to one that uses redcloth
+	=- Contact us at the bottom of the home page
+	
+	
 Implement:
-	- Create a Admin section nav bar thing
-	- Consider across tab navbar and make the inner wider
-	- Consider other styling themes, swigly removal and the apple.
-	- members section
-	- add editing volunteer task ability
+	?- Make contact info easier to find
+	?- exit buttons for the wholesale orders explanations for admins
+	?- admin area with create new stuff links
+	?- give members phone numbers?
+	?- decide on sidebar design
+	
+	=- members section
+		- implement features from subscriptions
+		?- implement features from hour tracking
 	- volunteer hour tracking (even if just reference)
+	- subscribing to forum_topics, categories, etc
+		- implement forum observer (forum post, forum topic, forum cat?)
+		- create a join model
+		
+Later:
+	- Last post date shown in category view
+	
+	
+	
+MEMBER DATABASE - how can we dovetail the existing members database into this database.
+
+Right now:
+	- create a membership scaffolding
+	
 	
 	
 EMAIL 
 
 Find solution to the payment issue:
 	- hopefully hear back from Tim
-	- Contact Cloud and see what she says
 Mail junking problem:
 	- Add some message to the effect of "Check your junk mail and instruct your provider not to junk this sender"
 	- Contact providers who seem to be junking us (and sendgrid about them also)

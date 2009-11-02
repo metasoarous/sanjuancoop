@@ -1,0 +1,34 @@
+%h2 Forum Discussion
+
+%h3= @forum_topic.subject
+%p=
+	%b Forum category
+	= @forum_topic.forum_category.name
+
+#posts
+	- @forum_topic.forum_posts.each do |post|
+		.post
+			%b Posted by: 
+			= post.member.name if post.member
+			- post.body.lines.each do |line|
+					%p= line
+					
+- if logged_in?
+	#new_post
+		%h3 Your Thoughts...
+		- form_for @forum_topic.forum_posts.build do |f|
+			= f.label :body
+			%br/
+			= f.text_area :body
+			= f.hidden_field :forum_topic_id, :value => @forum_topic.id
+			%p= f.submit "Post"
+- else
+	%h3 
+		You must be 
+		= link_to "logged in", "/login"
+		to add to this discussion
+- if admin?
+
+	= link_to "Edit", edit_forum_topic_path @forum_topic
+	|
+= link_to "Main Forum Page", forum_categories_path

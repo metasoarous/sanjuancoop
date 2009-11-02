@@ -1,0 +1,6 @@
+= f.error_messages
+%p
+	= f.label :tag
+	%br/
+	= f.text_field :tag
+= render :partial => "partials/textile_form", :locals => {:object => "content_item", :method => "content"}

@@ -1,0 +1,11 @@
+%h2 Member Info
+
+%p
+	%b Name:
+	= @member.name
+%p 
+	%b Email:
+	= @member.email
+	
+- if admin?
+	= link_to "Back to Members Listing", members_path

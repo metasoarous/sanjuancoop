@@ -1,0 +1,16 @@
+%h2 Listing Content Items
+
+= link_to 'New content_item', new_content_item_path
+
+.content_items
+	- @content_items.each do |content_item|
+		.item
+			%h4= content_item.tag
+			= link_to "Show", content_item
+			|
+			= link_to "Edit", edit_content_item_path(content_item)
+			|
+			= link_to "Destroy", content_item, :confirm => "Are you sure?", :method => :delete
+			.content
+				= display_content content_item
+	

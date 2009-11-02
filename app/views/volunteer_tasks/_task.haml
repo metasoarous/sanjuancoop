@@ -1,0 +1,29 @@
+%h3= volunteer_task.name
+
+-if admin?
+	= link_to 'Edit', edit_volunteer_task_path(volunteer_task)
+	= link_to 'Destroy', volunteer_task, :confirm => 'Are you sure?', :method => :delete
+	
+= display_textile volunteer_task.description
+
+- if current_member
+	- if current_member.volunteer_tasks.include? volunteer_task
+		%h5 
+			You are currently listed as willing to volunteer for this task. Click
+			= link_to "here", volunteer_offering(volunteer_task, current_member), :confirm => "Are you sure you want to remove yourself from the volunteer list?", :method => :delete
+			to modify this status.
+	- else
+		- volunteer_signup_form(volunteer_task) do |f|
+			= f.hidden_field :member_id
+			= f.hidden_field :volunteer_task_id
+			= f.label :alt_contact, "Contact info (other than email): "
+			= f.text_field :alt_contact
+			= submit_tag "Sign up!"
+		
+- if admin?
+	%h4 Volunteer Offerings
+	%ul
+		- volunteer_task.members.each do |member|
+			%li
+				= "#{member.name} - #{member.email} "
+				= ": #{volunteer_offering(volunteer_task, member).alt_contact}"

@@ -1,1 +1,5 @@
 aasm
+haml
+RedCloth
+mislav-will_paginate
+mocha

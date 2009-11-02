@@ -1,0 +1,14 @@
+%h2 Volunteer Opportunities
+
+- if admin?
+	= link_to 'New volunteer_task', new_volunteer_task_path
+
+#volunteer_tasks
+	- @volunteer_tasks.each do |volunteer_task|
+		= render :partial => "task", :locals => {:volunteer_task => volunteer_task}
+				
+		
+			
+	
+
+

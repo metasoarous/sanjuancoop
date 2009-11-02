@@ -1,0 +1,17 @@
+%tr.category_row
+	%td 
+		%h3= category.name
+		- if admin?
+			= link_to 'Edit', edit_forum_category_path(category)
+	%td
+	
+- i = 0
+- topics.each do |topic|
+	%tr.topic_row(class = "row#{i.modulo 2}")
+		%td.subject= link_to topic.subject, forum_topic_path(topic)
+		%td= "#{topic.forum_posts.size} posts"
+		- i += 1
+%tr(class="row#{i.modulo 2}")
+	- if all_discussions_link
+		%td= link_to "More...", forum_category_path(category), :class => "category_link"
+		%td/

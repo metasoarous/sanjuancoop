@@ -2,7 +2,7 @@ class VolunteerTasksController < ApplicationController
   # GET /volunteer_tasks
   # GET /volunteer_tasks.xml
   def index
-    @volunteer_tasks = VolunteerTask.all
+    @volunteer_tasks = VolunteerTask.all.sort {|a,b| a.order <=> b.order}
     
     respond_to do |format|
       format.html # index.html.erb

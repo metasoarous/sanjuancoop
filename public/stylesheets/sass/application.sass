@@ -1,0 +1,78 @@
+
+@import definitions
+@import top_level
+@import layout
+
+#newsletters div.newsletter .news_subject_container h3
+	display: inline
+	.newsletter
+		margin-bottom: 1em
+
+p#tab_info
+	padding-right: 220px
+
+
+#new_topic_link
+	position: relative
+	left: 340px
+	margin-bottom: 2px
+	
+#textile_form
+	margin: 1px
+	background-color: #FOFOEE
+
+.groovy_table
+	margin-top: 5px
+	border: 1px
+	border-color: #959D9F
+	border-collapse: collapse
+	tr
+		&.category_row
+			background-color: #8E868F
+			td 
+				padding: 8px 0 5px 0
+		h3, h4
+			margin: 50px 10px 4px 5px
+			display: inline
+		td
+			padding: 3px 0 3px 0
+			a
+				text-decoration: none
+				padding: 2px 20px 2px 5px
+			&.subject
+				width: 450px
+		&.row1
+			background-color= !hay_col2
+	a.category_link
+		position: relative
+		left: 130px
+		color: black
+		&:hover
+			color: #7E7F37
+
+div
+	&.content
+		background-color= !box_color
+		padding: 1px 9px 7px 9px
+		margin-top: 9px
+
+div
+	&.board_member
+		width: 500px
+		img
+			float: left
+			margin-right: 10px
+	&.post
+		background-color= !box_color
+		margin: 0 2em 0.8em 0
+		padding: 0.3em 1em 0 0.5em
+	&#ordering_instructions div
+		&#specific_instr div
+			&#unfi_instr
+				float: left
+				width: 43%
+			&#azures_instr
+				float: right
+				width: 50%
+		&#the_rest
+			clear: both

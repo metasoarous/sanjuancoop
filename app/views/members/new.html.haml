@@ -1,0 +1,16 @@
+%h2 Sign Up As A New User
+
+- @member.password = @member.password_confirmation = nil
+
+- form_for :member, :url => members_path do |f|
+	= render :partial => "member_form", :locals => {:f => f}
+	
+	%p 
+		= f.label :password
+		%br/
+		= f.text_field :password
+	%p 
+		= f.label :password_confirmation, "Confirm Password"
+		%br/
+		= f.text_field :password_confirmation
+	= submit_tag "Sign Up"

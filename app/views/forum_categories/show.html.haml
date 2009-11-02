@@ -1,0 +1,15 @@
+- if logged_in?
+	= link_to 'Begin a New Discussion', new_forum_topic_path, :id => "new_topic_link"
+- else
+	= link_to 'Log in to post', new_session_path, :id => "new_topic_link"
+	
+%table.groovy_table
+	= render_forum_topic_index(@forum_category, @page_results, false)
+%br/
+	
+- if admin?
+	= link_to "Edit", edit_forum_category_path(@forum_category)
+= link_to 'Back', forum_categories_path
+
+%br/
+= will_paginate @page_results

@@ -3,6 +3,7 @@ class NewslettersController < ApplicationController
   # GET /newsletters.xml
   def index
     @newsletters = Newsletter.all.reverse
+    @page_results = @newsletters.paginate(:page => params[:page], :per_page => 4)
 
     respond_to do |format|
       format.html # index.html.erb
