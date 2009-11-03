@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :forum_category_subscriptions
+
+  map.resources :forum_topic_subscriptions
+
   map.resources :memberships
 
   map.resources :memberships

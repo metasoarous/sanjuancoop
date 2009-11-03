@@ -1,0 +1,4 @@
+%h2 New forum_topic_subscription
+= render :partial => "form", :locals => {:forum_topic_subscription => @forum_topic_subscription}
+%ul
+  %li= link_to 'Back', forum_topic_subscriptions_path

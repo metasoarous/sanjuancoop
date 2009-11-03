@@ -1,0 +1,6 @@
+%h2 Editing forum_topic_subscription
+= render :partial => "form", :locals => {:forum_topic_subscription => @forum_topic_subscription}
+%ul
+  %li= link_to 'Show', @forum_topic_subscription
+  %li= link_to 'Back', forum_topic_subscriptions_path
+  %li= link_to 'Destroy', @forum_topic_subscription, :confirm => 'Are you sure?', :method => :delete  

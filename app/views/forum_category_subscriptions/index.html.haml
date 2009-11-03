@@ -1,0 +1,8 @@
+%h2 Listing forum_category_subscriptions
+- if !@forum_category_subscriptions.empty?
+  .forum_category_subscriptions
+    = render :partial => "forum_category_subscription", :collection => @forum_category_subscriptions
+  = will_paginate(@forum_category_subscriptions)
+- else
+  %p There are no forum_category_subscriptions to show yet.
+= link_to 'New forum_category_subscription', new_forum_category_subscription_path

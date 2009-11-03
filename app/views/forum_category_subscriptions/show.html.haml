@@ -1,0 +1,15 @@
+%h2= "ForumCategorySubscription \"#{@forum_category_subscription.to_param}\""
+- content_tag_for :div, @forum_category_subscription do
+  %ul
+    %li
+      %strong Member:
+      =h @forum_category_subscription.member_id
+    %li
+      %strong Forum category:
+      =h @forum_category_subscription.forum_category_id
+    %li
+      %strong Frequency:
+      =h @forum_category_subscription.frequency
+%ul
+  %li= link_to 'Edit', edit_forum_category_subscription_path(@forum_category_subscription)
+  %li= link_to 'Back', forum_category_subscriptions_path
