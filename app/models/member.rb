@@ -13,6 +13,11 @@ class Member < ActiveRecord::Base
   has_many :wholesale_orders
   has_many :volunteer_offerings
   has_many :volunteer_tasks, :through => :volunteer_offerings
+  has_many :forum_topic_subscriptions
+  has_many :forum_topics, :through => :forum_topic_subscriptions
+  has_many :forum_category_subscriptions
+  has_many :forum_categories, :through => :forum_category_subscriptions
+  
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40

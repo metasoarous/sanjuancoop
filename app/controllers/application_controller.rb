@@ -35,4 +35,7 @@ class ApplicationController < ActionController::Base
     current_member
   end
   
+  def memberified_params(object)
+    
+  end
 end
