@@ -51,11 +51,7 @@ class BarterBoardEntriesController < ApplicationController
   # POST /barter_board_entries
   # POST /barter_board_entries.xml
   def create
-    entry_params = params[:barter_board_entry]
-    if current_member
-      entry_params = {:member_id => current_member.id}.merge(entry_params) 
-    end
-    @barter_board_entry = BarterBoardEntry.new(entry_params)
+    @barter_board_entry = BarterBoardEntry.new(memberified_params(:barter_board_entry))
 
     respond_to do |format|
       if @barter_board_entry.save

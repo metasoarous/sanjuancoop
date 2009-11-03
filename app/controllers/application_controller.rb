@@ -35,7 +35,14 @@ class ApplicationController < ActionController::Base
     current_member
   end
   
+  # This sets up method which allows controllers to either assign a member_id param to 
+  # a specific member_id or to current_member.id if none is supplied
+  # using a merge method on the param hash. Returns the hash that gets fed
+  # into the create method. Helps tests not fuck up...
   def memberified_params(object)
-    
+    entry_params = params[object.to_sym]
+    if current_member
+      entry_params = {:member_id => current_member.id}.merge(entry_params) 
+    end
   end
 end

@@ -46,6 +46,7 @@ Implement:
 	- subscribing to forum_topics, categories, etc
 		- implement forum observer (forum post, forum topic, forum cat?)
 		- create a join model
+	- create "becoming a member" page and link
 
 	
 Later:
