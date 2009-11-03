@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :memberships
+
+  map.resources :memberships
+
+  map.resources :memberships
+
   map.resources :distributors
 
   map.resources :content_items

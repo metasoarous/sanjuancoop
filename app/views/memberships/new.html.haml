@@ -1,0 +1,4 @@
+%h2 New membership
+= render :partial => "form", :locals => {:membership => @membership}
+%ul
+  %li= link_to 'Back', memberships_path

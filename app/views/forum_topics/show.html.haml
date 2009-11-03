@@ -1,8 +1,8 @@
 %h2 Forum Discussion
 
 %h3= @forum_topic.subject
-%p=
-	%b Forum category
+%p
+	%b Forum category: 
 	= @forum_topic.forum_category.name
 
 #posts
@@ -11,7 +11,7 @@
 			%b Posted by: 
 			= post.member.name if post.member
 			- post.body.lines.each do |line|
-					%p= line
+				%p= line
 					
 - if logged_in?
 	#new_post
@@ -28,7 +28,6 @@
 		= link_to "logged in", "/login"
 		to add to this discussion
 - if admin?
-
-	= link_to "Edit", edit_forum_topic_path @forum_topic
-	|
+	= link_to "Edit", edit_forum_topic_path(@forum_topic)
+	= "|"
 = link_to "Main Forum Page", forum_categories_path

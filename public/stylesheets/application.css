@@ -151,6 +151,29 @@ h4 {
   width: 500px;
   margin-left: 30px; }
 
+#footer {
+  margin-top: 15px;
+  padding-bottom: 25px; }
+  #footer #image {
+    padding: 13px 0 5px 200px;
+    float: left;
+    width: 150px; }
+    #footer #image img {
+      margin-left: 34px; }
+    #footer #image p {
+      font-size: 8px;
+      line-height: 9px;
+      position: relative;
+      top: -18px;
+      left: 23px; }
+    #footer #image a {
+      color: #4F4F4F; }
+      #footer #image a:hover {
+        color: #5F5F5F; }
+  #footer #text p {
+    text-align: center;
+    margin: 10px 230px 0 0; }
+
 #newsletters div.newsletter .news_subject_container h3 {
   display: inline; }
   #newsletters div.newsletter .news_subject_container h3 .newsletter {
