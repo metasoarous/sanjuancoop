@@ -33,7 +33,7 @@ class MembershipsController < ApplicationController
   end
 
   def index
-    @memberships = Membership.paginate(:page => params[:page], :per_page => MEMBERSHIPS_PER_PAGE)
+    @memberships = Membership.paginate(:page => params[:page], :per_page => MEMBERSHIPS_PER_PAGE, :order => "last_name")
     respond_to do |format|
       format.html
       format.xml  { render :xml => @memberships }
