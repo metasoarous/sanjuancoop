@@ -136,9 +136,9 @@ h4 {
 
 #home_sidebar {
   float: left;
-  width: 100px;
-  margin: 30px 0 0 10px;
-  padding: 8px 15px 8px 10px;
+  width: 110px;
+  margin: 26px 0 0 8px;
+  padding: 8px 13px 8px 8px;
   position: relative;
   left: -10px;
   background-color: #cccc99; }

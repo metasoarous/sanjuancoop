@@ -33,6 +33,7 @@
 									%h3 Admin
 									%p= link_to("Content Items", content_items_path)
 									%p= link_to("Member Index", members_path)
+									%p= link_to("Membership Index", memberships_path)
 							#inner_home_content
 								= yield
 							#placeholder
@@ -40,7 +41,7 @@
 						= yield
 			#footer
 				#image
-					%img#rails(src="images/rails.png" alt="rails logo")/
+					%img#rails(src="/images/rails.png" alt="rails logo")/
 					%p 
 						This 
 						%a(href="http://railslogo.com/") logo 
