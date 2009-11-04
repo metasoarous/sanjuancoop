@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091103103323) do
+ActiveRecord::Schema.define(:version => 20091104044112) do
 
   create_table "barter_board_categories", :force => true do |t|
     t.string   "name"
@@ -93,12 +93,28 @@ ActiveRecord::Schema.define(:version => 20091103103323) do
     t.datetime "updated_at"
   end
 
+  create_table "forum_category_subscriptions", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "forum_category_id"
+    t.string   "frequency"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "active"
+  end
+
   create_table "forum_posts", :force => true do |t|
     t.text     "body"
     t.integer  "forum_topic_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "member_id"
+  end
+
+  create_table "forum_topic_subscriptions", :force => true do |t|
+    t.integer  "member_id"
+    t.integer  "forum_topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "forum_topics", :force => true do |t|

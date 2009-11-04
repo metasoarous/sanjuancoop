@@ -16,7 +16,9 @@ class Member < ActiveRecord::Base
   has_many :forum_topic_subscriptions
   has_many :forum_topics, :through => :forum_topic_subscriptions
   has_many :forum_category_subscriptions
-  has_many :forum_categories, :through => :forum_category_subscriptions
+  has_many :subscribed_categories, :class_name => "ForumCategory", :through => :forum_category_subscriptions
+  
+  accepts_nested_attributes_for :forum_category_subscriptions, :allow_destroy => true
   
 
   validates_presence_of     :login
@@ -40,7 +42,7 @@ class Member < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :last_name, :first_name, :password, :password_confirmation
+  attr_accessible :login, :email, :last_name, :first_name, :password, :password_confirmation, :forum_category_subscriptions_attributes
 
 
 
@@ -66,6 +68,17 @@ class Member < ActiveRecord::Base
   
   def name
     return first_name + " " + last_name
+  end
+  
+  def self.subscribe_all
+    ForumCategory.all.each do |cat|
+      self.all.each do |mem|
+        if ForumCategorySubscription.find(:all, :conditions => {:member_id => mem.id, :forum_category_id => cat.id}).empty?
+          sub = ForumCategorySubscription.new(:member_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
+          sub.save
+        end
+      end
+    end
   end
 
   protected

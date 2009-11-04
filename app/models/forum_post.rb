@@ -1,8 +1,6 @@
 class ForumPost < ActiveRecord::Base
   belongs_to :forum_topic
   belongs_to :member
-  has_many :forum_post_subscriptions
-  has_many :subscribers, :class_name => "Member", :through => :forum_post_subscriptions
   
   validates_presence_of :body
   

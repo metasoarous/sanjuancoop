@@ -1,0 +1,11 @@
+%h2 New Forum Post
+
+- form_for @forum_topic do |f|
+	= render :partial => "topic_form", :locals => {:f => f}
+	%p
+		- f.fields_for :forum_posts do |post_form|
+			= post_form.label :body
+			%br/
+			= post_form.text_area :body	
+	%p= f.submit "Create"
+= link_to "Back", forum_topics_path

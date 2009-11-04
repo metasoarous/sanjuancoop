@@ -1,7 +1,12 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
 class MemberTest < ActiveSupport::TestCase
-  fixtures :members
+  
+  def test_should_create_blank_member_subscriptions
+    member = create_member(:first_name => "Bob", :last_name => "Johnson")
+    subs = member.forum_category_subscriptions
+    assert subs.size == 2, "Should have had two fresh subscriptions but had #{subs.size}"
+  end
 
   def test_should_create_member
     assert_difference 'Member.count' do
@@ -166,10 +171,4 @@ class MemberTest < ActiveSupport::TestCase
     assert members(:quentin).deleted?
   end
 
-protected
-  def create_member(options = {})
-    record = Member.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))
-    record.register! if record.valid?
-    record
-  end
 end

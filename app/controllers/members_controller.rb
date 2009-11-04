@@ -61,6 +61,20 @@ class MembersController < ApplicationController
       redirect_back_or_default('/')
     end
   end
+  
+  def update
+    @member = Member.find(params[:id])
+    respond_to do |format|
+      if @member.update_attributes(params[:member])
+        flash[:notice] = 'Member info was successfully updated.'
+        format.html { redirect_to @member }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @member.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
 
   def suspend
     @member.suspend! 
