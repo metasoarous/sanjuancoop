@@ -26,9 +26,9 @@ class CoopMailer < ActionMailer::Base
   # Set this up to send out digest style updates
   def forum_category_update(member)
     member.forum_category_subscriptions.each do |sub|
-      sub.forum_category.
+      #crap is not a method - need to work on this
+      sub.forum_category.crap
     end
-    @
   end
   
   protected
