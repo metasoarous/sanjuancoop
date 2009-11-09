@@ -1,0 +1,12 @@
+= f.error_messages
+%p
+	= f.label :subject
+	%br/
+	= f.text_field :subject
+= render :partial => "partials/textile_form", :locals => {:object => "newsletter", :method => "body"}
+%p 
+	= f.label :mail, "Send as Email?"
+	%br/
+	= f.check_box :mail
+
+

@@ -4,6 +4,7 @@ class CreateForumCategorySubscriptions < ActiveRecord::Migration
       t.integer :member_id
       t.integer :forum_category_id
       t.string :frequency
+      t.boolean :active
 
       t.timestamps
     end

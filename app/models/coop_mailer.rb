@@ -19,13 +19,16 @@ class CoopMailer < ActionMailer::Base
   end
   
   # Set this one up to send notifications/updates of a single topics new posts
-  def forum_notification(member)
+  def forum_topic_update(member)
     # Fill in
   end
   
   # Set this up to send out digest style updates
-  def forum_digest(member)
-    # Fill in
+  def forum_category_update(member)
+    member.forum_category_subscriptions.each do |sub|
+      sub.forum_category.
+    end
+    @
   end
   
   protected

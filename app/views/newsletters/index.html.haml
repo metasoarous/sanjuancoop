@@ -7,11 +7,10 @@
 		.newsletter(id="#{newsletter.id}")
 			.news_subject_container
 				%h3= newsletter.subject
-				= "- #{newsletter.created_at.strftime('%a, %b %d, %Y"')}"
+				= "- #{newsletter.created_at.strftime('%a, %b %d, %Y')}"
 				- if admin?
 					= "- " + link_to("Edit", edit_newsletter_path(newsletter)) + " - "
 					= link_to 'Destroy', newsletter, :confirm => 'Are you sure?', :method => :delete
-			- newsletter.body.lines.each do |line|
-				%p= line
+			= display_textile(newsletter.body)
 
 = will_paginate @page_results

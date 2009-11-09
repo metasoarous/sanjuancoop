@@ -1,15 +1,28 @@
 %h2 Forum Discussion
 
-%h3= @forum_topic.subject
-%p
-	%b Forum category: 
-	= @forum_topic.forum_category.name
+#subscriber
+	%h3
+		= @forum_topic.forum_category.name
+		= "::"
+		= @forum_topic.subject
+	%span
+		- if current_member.subscribed_forum_topics.include? @forum_topic
+			You are currently subscribed to this topic - 
+			= link_to("unsubscribe", {:controller => :forum_topic_subscriptions, :id => subscription(current_member, @forum_topic).id, :action => :destroy, :redirect => forum_topic_path(@forum_topic)}, :confirm => "Unsubscribe?", :method => :delete)
+		- else
+			- form_for(@forum_topic_subscription) do |f|
+				= f.hidden_field :forum_topic_id, :value => @forum_topic.id
+				= f.hidden_field :member_id, :value => current_member.id
+				= f.submit "Subscribe to this discussion"
+		
 
 #posts
 	- @forum_topic.forum_posts.each do |post|
 		.post
-			%b Posted by: 
+			%b Posted by -
 			= post.member.name if post.member
+			= "::"
+			= post.created_at.strftime('%a, %b %d, %Y')
 			- post.body.lines.each do |line|
 				%p= line
 					
@@ -17,8 +30,6 @@
 	#new_post
 		%h3 Your Thoughts...
 		- form_for @forum_topic.forum_posts.build do |f|
-			= f.label :body
-			%br/
 			= f.text_area :body
 			= f.hidden_field :forum_topic_id, :value => @forum_topic.id
 			%p= f.submit "Post"

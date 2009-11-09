@@ -1,9 +1,0 @@
-<h2>New newsletter</h2>
-
-<% form_for(@newsletter) do |f| %>
-	<%= render :partial => "newsletter_form", :locals => {:f => f} %>
-
-	<p><%= f.submit 'Create' %></p>
-<% end %>
-
-<%= link_to 'Back', newsletters_path %>

@@ -1,109 +1,98 @@
 
-// MAIN COMPONENTS //
-
+//This wapper centers our content
 #wrapper
 	width: 800px
 	margin: 0px auto
-
-//Brown trim region
-#wrapper2
-	background-color= !brown_trim
-	margin: 0
-	padding: 10px
-
-#header
-	padding-top: 60px
-	padding-bottom: 60px
-	text-align: center
-	background-color= !hay_col1
-	background: url(../images/sentry2.jpg)
-	h1
-		position: relative
-		left: -84px
-		top: -3px
-		font-size: 38px
-		font-family: fantasy
-		img
-			position: relative
-			top: 20px
-			width: 22%
-			height: 22%
-			padding: 0
-
-#user_panel
-	text-align: right
-	left: 600px
-	color: white
-	p
-		margin: 1px 0 5px 0
-		font-size: 14px
-	a
-		color: #61DFD1
-
-#content
-	margin-top: 3px
-	padding: 3.5em 5.5em 3.5em 1em
-	background-color= !hay_col3
-	div
-		padding-bottom: 1.3em
-	h2
-		margin-bottom: 2em
-
-// This just makes sure that columns don't interfere
-#placeholder
-	clear: both
-
-
-// TABS STUFF //
-
-#tabs_container
-	//text-align: center
-
-#tabs
-	list-style: none
-	padding: 0
-	margin: 0.6em auto 5px auto
-	li
-		display: inline
-		.active
-			background-color= !hay_col3
-			padding-bottom: 6px
-		a
-			margin: 0
-			padding: 4px 0.8em 4px 0.8em
-			color: black
-			text-decoration: none
+	//User Panel Features
+	#user_panel
+		text-align: right
+		left: 600px
+		color: white
+		p
+			margin: 1px 0 5px 0
 			font-size: 14px
+		a
+			color: #61DFD1
+			
+	//Brown trim region
+	#wrapper2
+		background-color= !brown_trim
+		margin: 0
+		padding: 10px
+		//flying banner thing
+		#header
+			padding-top: 60px
+			padding-bottom: 60px
+			text-align: center
 			background-color= !hay_col1
-			&:hover
-				background-color= !hay_col2
-			.active:hover
-				background-color: white
-	.spacer
-		background-color: #9F9AA4
+			background: url(../images/sentry2.jpg)
+			h1
+				position: relative
+				left: -84px
+				top: -3px
+				font-size: 38px
+				font-family: fantasy
+				
+		//Here lie tabs...
+		#tabs_container
+			#tabs
+				list-style: none
+				padding: 0
+				margin: 0.6em auto 5px auto
+				li
+					display: inline
+					.active
+						background-color= !hay_col3
+						padding-bottom: 6px
+					a
+						margin: 0
+						padding: 4px 0.8em 4px 0.8em
+						color: black
+						text-decoration: none
+						font-size: 14px
+						background-color= !hay_col1
+						&:hover
+							background-color= !hay_col2
+						.active:hover
+							background-color: white
+				.spacer
+					background-color: #9F9AA4
+		
+		//This contains the sidebar and main content area
+		#content_container
+			margin-top: 3px
+			padding: 3.5em 4em 3.5em 1em
+			background-color= !hay_col3
+			//This helps us get to where we need to go
+			#sidebar
+				float: left
+				width: 110px
+				margin: 26px 0 auto 8px
+				padding: 8px 13px 8px 8px
+				position: relative
+				left: -10px
+				background-color= !hay_col1
+				p
+					padding: 0
+					margin: 3px 0 9px 3px
+					line-height: 14px
+			//This is where the magic happens...
+			#inner_content
+				float: left
+				width: 540px
+				margin-left: 30px
+				div
+					padding-bottom: 1.3em
+				h2
+					margin-bottom: 2em
+			
+				
+		// This just makes sure that columns don't interfere
+		#placeholder
+			clear: both
 
 
-
-#home_content
-	// Insert Stuff Here?
-
-#home_sidebar
-	float: left
-	width: 110px
-	margin: 26px 0 0 8px
-	padding: 8px 13px 8px 8px
-	position: relative
-	left: -10px
-	background-color= !hay_col1
-	p
-		padding: 0
-		margin: 5px
-
-#inner_home_content
-	float: left
-	width: 500px
-	margin-left: 30px
-	
+//RAILS LOGO AND CREATIVE CREDIT//
 #footer
 	margin-top: 15px
 	padding-bottom: 25px

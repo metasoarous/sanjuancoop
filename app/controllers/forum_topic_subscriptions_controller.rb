@@ -8,9 +8,9 @@ class ForumTopicSubscriptionsController < ApplicationController
     @forum_topic_subscription = ForumTopicSubscription.new(params[:forum_topic_subscription])
     respond_to do |format|
       if @forum_topic_subscription.save
-        flash[:notice] = 'ForumTopicSubscription was successfully created.'
-        format.html { redirect_to @forum_topic_subscription }
-        format.xml  { render :xml => @forum_topic_subscription, :status => :created, :location => @forum_topic_subscription }
+        flash[:notice] = 'You are now subscribed to this Forum Discussion'
+        format.html { redirect_to @forum_topic_subscription.forum_topic }
+        format.xml  { render :xml => @forum_topic_subscription.forum_topic, :status => :created, :location => @forum_topic_subscription }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @forum_topic_subscription.errors, :status => :unprocessable_entity }
@@ -19,10 +19,11 @@ class ForumTopicSubscriptionsController < ApplicationController
   end
 
   def destroy
+    redirect = params[:redirect]
     respond_to do |format|
       if @forum_topic_subscription.destroy
-        flash[:notice] = 'ForumTopicSubscription was successfully destroyed.'        
-        format.html { redirect_to forum_topic_subscriptions_path }
+        flash[:notice] = 'You have been successfully unsubscribed.'
+        format.html { redirect_to redirect || current_member }
         format.xml  { head :ok }
       else
         flash[:error] = 'ForumTopicSubscription could not be destroyed.'
@@ -62,7 +63,7 @@ class ForumTopicSubscriptionsController < ApplicationController
     respond_to do |format|
       if @forum_topic_subscription.update_attributes(params[:forum_topic_subscription])
         flash[:notice] = 'ForumTopicSubscription was successfully updated.'
-        format.html { redirect_to @forum_topic_subscription }
+        format.html { redirect_to @forum_topic_subscription.forum_topic }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

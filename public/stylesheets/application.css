@@ -18,7 +18,8 @@ pre {
   font-size: 11px; }
 
 textarea {
-  width: 500px; }
+  width: 510px;
+  height: 250px; }
 
 a {
   color: #2F0F0F; }
@@ -62,94 +63,79 @@ h4 {
 #wrapper {
   width: 800px;
   margin: 0px auto; }
-
-#wrapper2 {
-  background-color: #3f1b1d;
-  margin: 0;
-  padding: 10px; }
-
-#header {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-  background-color: #cccc99;
-  background: url(../images/sentry2.jpg); }
-  #header h1 {
-    position: relative;
-    left: -84px;
-    top: -3px;
-    font-size: 38px;
-    font-family: fantasy; }
-    #header h1 img {
-      position: relative;
-      top: 20px;
-      width: 22%;
-      height: 22%;
-      padding: 0; }
-
-#user_panel {
-  text-align: right;
-  left: 600px;
-  color: white; }
-  #user_panel p {
-    margin: 1px 0 5px 0;
-    font-size: 14px; }
-  #user_panel a {
-    color: #61DFD1; }
-
-#content {
-  margin-top: 3px;
-  padding: 3.5em 5.5em 3.5em 1em;
-  background-color: #efefd1; }
-  #content div {
-    padding-bottom: 1.3em; }
-  #content h2 {
-    margin-bottom: 2em; }
-
-#placeholder {
-  clear: both; }
-
-
-#tabs {
-  list-style: none;
-  padding: 0;
-  margin: 0.6em auto 5px auto; }
-  #tabs li {
-    display: inline; }
-    #tabs li .active {
-      background-color: #efefd1;
-      padding-bottom: 6px; }
-    #tabs li a {
-      margin: 0;
-      padding: 4px 0.8em 4px 0.8em;
-      color: black;
-      text-decoration: none;
-      font-size: 14px;
-      background-color: #cccc99; }
-      #tabs li a:hover {
-        background-color: #dfdfb5; }
-      #tabs li a .active:hover {
-        background-color: white; }
-  #tabs .spacer {
-    background-color: #9F9AA4; }
-
-
-#home_sidebar {
-  float: left;
-  width: 110px;
-  margin: 26px 0 0 8px;
-  padding: 8px 13px 8px 8px;
-  position: relative;
-  left: -10px;
-  background-color: #cccc99; }
-  #home_sidebar p {
-    padding: 0;
-    margin: 5px; }
-
-#inner_home_content {
-  float: left;
-  width: 500px;
-  margin-left: 30px; }
+  #wrapper #user_panel {
+    text-align: right;
+    left: 600px;
+    color: white; }
+    #wrapper #user_panel p {
+      margin: 1px 0 5px 0;
+      font-size: 14px; }
+    #wrapper #user_panel a {
+      color: #61DFD1; }
+  #wrapper #wrapper2 {
+    background-color: #3f1b1d;
+    margin: 0;
+    padding: 10px; }
+    #wrapper #wrapper2 #header {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      text-align: center;
+      background-color: #cccc99;
+      background: url(../images/sentry2.jpg); }
+      #wrapper #wrapper2 #header h1 {
+        position: relative;
+        left: -84px;
+        top: -3px;
+        font-size: 38px;
+        font-family: fantasy; }
+    #wrapper #wrapper2 #tabs_container #tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0.6em auto 5px auto; }
+      #wrapper #wrapper2 #tabs_container #tabs li {
+        display: inline; }
+        #wrapper #wrapper2 #tabs_container #tabs li .active {
+          background-color: #efefd1;
+          padding-bottom: 6px; }
+        #wrapper #wrapper2 #tabs_container #tabs li a {
+          margin: 0;
+          padding: 4px 0.8em 4px 0.8em;
+          color: black;
+          text-decoration: none;
+          font-size: 14px;
+          background-color: #cccc99; }
+          #wrapper #wrapper2 #tabs_container #tabs li a:hover {
+            background-color: #dfdfb5; }
+          #wrapper #wrapper2 #tabs_container #tabs li a .active:hover {
+            background-color: white; }
+      #wrapper #wrapper2 #tabs_container #tabs .spacer {
+        background-color: #9F9AA4; }
+    #wrapper #wrapper2 #content_container {
+      margin-top: 3px;
+      padding: 3.5em 4em 3.5em 1em;
+      background-color: #efefd1; }
+      #wrapper #wrapper2 #content_container #sidebar {
+        float: left;
+        width: 110px;
+        margin: 26px 0 auto 8px;
+        padding: 8px 13px 8px 8px;
+        position: relative;
+        left: -10px;
+        background-color: #cccc99; }
+        #wrapper #wrapper2 #content_container #sidebar p {
+          padding: 0;
+          margin: 3px 0 9px 3px;
+          line-height: 14px; }
+      #wrapper #wrapper2 #content_container #inner_content {
+        float: left;
+        width: 540px;
+        margin-left: 30px; }
+        #wrapper #wrapper2 #content_container #inner_content div {
+          padding-bottom: 1.3em; }
+        #wrapper #wrapper2 #content_container #inner_content h2 {
+          margin-bottom: 2em; }
+    #wrapper #wrapper2 #placeholder {
+      clear: both; }
 
 #footer {
   margin-top: 15px;
@@ -176,8 +162,14 @@ h4 {
 
 #newsletters div.newsletter .news_subject_container h3 {
   display: inline; }
-  #newsletters div.newsletter .news_subject_container h3 .newsletter {
-    margin-bottom: 1em; }
+#newsletters .newsletter {
+  padding: 12px;
+  padding-bottom: 18px;
+  margin-bottom: 2em;
+  background-color: #dbdfc4; }
+
+#subscriber span {
+  margin-top: 20px; }
 
 p#tab_info {
   padding-right: 220px; }

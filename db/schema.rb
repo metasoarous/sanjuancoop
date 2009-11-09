@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091104044112) do
+ActiveRecord::Schema.define(:version => 20091106082457) do
 
   create_table "barter_board_categories", :force => true do |t|
     t.string   "name"
@@ -97,9 +97,9 @@ ActiveRecord::Schema.define(:version => 20091104044112) do
     t.integer  "member_id"
     t.integer  "forum_category_id"
     t.string   "frequency"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "active"
   end
 
   create_table "forum_posts", :force => true do |t|
@@ -140,6 +140,8 @@ ActiveRecord::Schema.define(:version => 20091104044112) do
     t.boolean  "admin"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "phone_number"
+    t.boolean  "accepts_newsletters"
   end
 
   add_index "members", ["login"], :name => "index_members_on_login", :unique => true
@@ -201,18 +203,6 @@ ActiveRecord::Schema.define(:version => 20091104044112) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "order"
-  end
-
-  create_table "wholesale_orders", :force => true do |t|
-    t.string   "product_name"
-    t.string   "product_number"
-    t.string   "quantity"
-    t.boolean  "ordered"
-    t.boolean  "arrived"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "distributor_id"
-    t.integer  "member_id"
   end
 
 end

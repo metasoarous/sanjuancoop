@@ -1,0 +1,92 @@
+Last login: Thu Sep 10 23:01:06 on ttys012
+cts@zorns-lemon ~ $ cd code
+cts@zorns-lemon code $ ls
+HomeHealthDesktop	WebForm1.html		python-pg
+KitchenSink		alephractal		restfulauthentication
+Lib			eclipse_space		sage-poset-nim
+LuxelDB			ensomusic		task_manager
+Other			islandaccessfront	test
+SJIFoodCoop		jquerytest
+cts@zorns-lemon code $ mv restfulauthentication SJIFoodCoop/restful_authentication
+cts@zorns-lemon code $ cd SJIFoodCoop
+cts@zorns-lemon SJIFoodCoop $ .script/generate authenticated member sessions --include-activation --aasm 
+-bash: .script/generate: No such file or directory
+cts@zorns-lemon SJIFoodCoop $ ./script/generate authenticated member sessions --include-activation --aasm 
+Couldn't find 'authenticated' generator
+cts@zorns-lemon SJIFoodCoop $ script/plugin install restful_authentication
+Plugin not found: ["restful_authentication"]
+cts@zorns-lemon SJIFoodCoop $ ./script/plugin install git://github.com/technoweenie/restful-authentication.git
+Plugin not found: ["git://github.com/technoweenie/restful-authentication.git"]
+cts@zorns-lemon SJIFoodCoop $ ./script/generate authenticated member sessions --include-activation --aasm 
+Ready to generate.
+----------------------------------------------------------------------
+Once finished, don't forget to:
+
+- Add an observer to config/environment.rb
+    config.active_record.observers = :member_observer
+- Install the acts_as_state_machine gem:
+    sudo gem sources -a http://gems.github.com (If you haven't already)
+    sudo gem install rubyist-aasm
+- Add routes to these resources. In config/routes.rb, insert routes like:
+    map.signup '/signup', :controller => 'members', :action => 'new'
+    map.login  '/login',  :controller => 'sessions', :action => 'new'
+    map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+    map.activate '/activate/:activation_code', :controller => 'members', :action => 'activate', :activation_code => nil
+  and modify the map.resources :members line to include these actions:
+    map.resources :members, :member => { :suspend => :put, :unsuspend => :put, :purge => :delete }
+
+----------------------------------------------------------------------
+
+We've create a new site key in config/initializers/site_keys.rb.  If you have existing
+user accounts their passwords will no longer work (see README). As always,
+keep this file safe but don't post it in public.
+
+----------------------------------------------------------------------
+      exists  app/models/
+      exists  app/controllers/
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/sessions
+      create  app/views/member_mailer
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/members
+      exists  config/initializers
+      exists  test/functional/
+      exists  test/functional/
+      exists  test/unit/
+      exists  test/fixtures/
+      create  app/models/member.rb
+      create  app/models/member_mailer.rb
+      create  app/models/member_observer.rb
+      create  app/controllers/sessions_controller.rb
+      create  app/controllers/members_controller.rb
+      create  lib/authenticated_system.rb
+      create  lib/authenticated_test_helper.rb
+      create  config/initializers/site_keys.rb
+      create  test/functional/sessions_controller_test.rb
+      create  test/functional/members_controller_test.rb
+      create  test/unit/member_test.rb
+      create  test/unit/member_mailer_test.rb
+      create  test/fixtures/members.yml
+      create  app/helpers/sessions_helper.rb
+      create  app/helpers/members_helper.rb
+      create  app/views/sessions/new.html.erb
+      create  app/views/members/new.html.erb
+      create  app/views/members/_member_bar.html.erb
+      create  app/views/member_mailer/activation.erb
+      create  app/views/member_mailer/signup_notification.erb
+      create  db/migrate
+      create  db/migrate/20090911223904_create_members.rb
+       route  map.resource :session
+       route  map.resources :members
+       route  map.signup '/signup', :controller => 'members', :action => 'new'
+       route  map.register '/register', :controller => 'members', :action => 'create'
+       route  map.login '/login', :controller => 'sessions', :action => 'new'
+       route  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+cts@zorns-lemon SJIFoodCoop $ 
+
+
+
+
+I'll also mention that I am not sure how the -- aasm call works, it may be that things get funky from having used that if I don't install aasm. Just wanted to record this in case anything comes up.

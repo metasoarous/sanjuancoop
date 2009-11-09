@@ -11,7 +11,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.xml  { render :xml => @content_items }
+      format.xml  { render :xml => @members }
     end
   end
 
@@ -19,10 +19,11 @@ class MembersController < ApplicationController
   # GET /content_items/1.xml
   def show
     @member = Member.find(params[:id])
+    @topic_subscriptions = @member.forum_topic_subscriptions.paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @content_item }
+      format.xml  { render :xml => @member }
     end
   end
 
@@ -60,6 +61,10 @@ class MembersController < ApplicationController
       flash[:error]  = "We couldn't find a member with that activation code -- check your email? Or maybe you've already activated -- try signing in."
       redirect_back_or_default('/')
     end
+  end
+  
+  def edit
+    @member = Member.find(params[:id])
   end
   
   def update

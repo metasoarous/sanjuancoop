@@ -6,16 +6,25 @@
 %p 
 	%b Email:
 	= @member.email
+%p
+	%b Phone:
+	= @member.phone_number
+	
+%p= link_to("Edit Information", edit_member_path(@member))
+	
 	
 #subscriptions
 	#categories
 		%h3 Forum Category Subscriptions
+		%p You can get weekly or daily updates about what is going on in the various forum categories.
 		- form_for @member do |member_form|
 			%table.groovy_table
-				%tr 
+				%tr.category_row
 					%td/
-					%td Category
-					%td Subscription Frequency
+					%td 
+						%h4 Category
+					%td
+						%h4 Frequency
 				- member_form.fields_for :forum_category_subscriptions do |sub_form|
 					- category = sub_form.object.forum_category
 					%tr
@@ -24,8 +33,19 @@
 						%td= sub_form.select :frequency, ForumCategorySubscription::FREQUENCIES
 			= submit_tag "Update Subscriptions"
 	#topics
-	
-	
-	
+		%h3 Forum Discussion Subscriptions
+		%p You can also get instant email notifications as people make additions to specific forum discussions. Sign up for these notifications on the pages discussion pages.
+		%table.groovy_table
+			%tr.category_row
+				%td 
+					%h4 Discussion Topic
+				%td 
+			- @topic_subscriptions.each do |topic_sub|
+				- topic = topic_sub.forum_topic
+				%tr 
+					%td= link_to(topic.subject, topic)
+					%td= link_to "Unsubscribe", topic_sub, :confirm => "Unsubscribe?", :method => :delete
+				
+		= will_paginate(@topic_subscriptions)
 - if admin?
 	= link_to "Back to Members Listing", members_path

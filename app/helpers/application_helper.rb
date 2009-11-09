@@ -98,4 +98,22 @@ module ApplicationHelper
     end
     return string
   end
+  
+  # Returns the first subscription between a given member and subscribable object. 
+  # Should put something in place so that only one such object can exist.
+  # Wrote this join differently than the other similar one for volunteer 
+  # offerings - should consider making them the same.
+  def subscription(member, subscribed_object)
+    case subscribed_object
+    when ForumCategory
+      collection = member.forum_category_subscriptions
+      collection = collection.select {|sub| sub.forum_category_id == subscribed_object.id}
+    when ForumTopic
+      collection = member.forum_topic_subscriptions
+      collection = collection.select {|sub| sub.forum_topic_id == subscribed_object.id}
+    else
+      Raise "Inapropriate object class sent to subscription method"
+    end
+    return collection.first
+  end
 end

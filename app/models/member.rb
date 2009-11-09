@@ -14,7 +14,7 @@ class Member < ActiveRecord::Base
   has_many :volunteer_offerings
   has_many :volunteer_tasks, :through => :volunteer_offerings
   has_many :forum_topic_subscriptions
-  has_many :forum_topics, :through => :forum_topic_subscriptions
+  has_many :subscribed_forum_topics, :class_name => "ForumTopic", :through => :forum_topic_subscriptions, :source => :forum_topic
   has_many :forum_category_subscriptions
   has_many :subscribed_categories, :class_name => "ForumCategory", :through => :forum_category_subscriptions
   
@@ -42,7 +42,7 @@ class Member < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :last_name, :first_name, :password, :password_confirmation, :forum_category_subscriptions_attributes
+  attr_accessible :login, :email, :last_name, :first_name, :password, :password_confirmation, :forum_category_subscriptions_attributes, :phone_number
 
 
 

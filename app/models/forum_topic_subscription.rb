@@ -1,4 +1,4 @@
 class ForumTopicSubscription < ActiveRecord::Base
-  belongs_to :members
-  belongs_to :forum_topics
+  belongs_to :member
+  belongs_to :forum_topic
 end

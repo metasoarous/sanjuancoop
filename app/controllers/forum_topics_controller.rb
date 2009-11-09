@@ -14,6 +14,8 @@ class ForumTopicsController < ApplicationController
   # GET /forum_topics/1.xml
   def show
     @forum_topic = ForumTopic.find(params[:id])
+    @forum_posts = @forum_topic.forum_posts.paginate(:page => params[:page], :per_page => 20)
+    @forum_topic_subscription = ForumTopicSubscription.new(:member_id => current_member.id, :forum_topic_id => @forum_topic.id)
 
     respond_to do |format|
       format.html # show.html.erb
