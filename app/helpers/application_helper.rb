@@ -28,7 +28,11 @@ module ApplicationHelper
   
   # Cleans things up just a little bit with respect to displaying content items
   def display_content(content_item)
-    display_textile(content_item.content)
+    html = display_textile(content_item.content)
+    if admin?
+      html += "<p>#{link_to("Edit Content", edit_content_item_path(content_item))}</p> " 
+    end
+    return html
   end
   
   # Cleaner way to diplay textile content
