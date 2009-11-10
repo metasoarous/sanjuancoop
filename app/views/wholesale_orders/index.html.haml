@@ -5,23 +5,15 @@
 		#preamble
 			%h3 PLEASE READ ALL OF THESE INSTRUCTIONS CAREFULLY BEFORE CONTINUING! Failure to do so may result in additional charges!
 			= display_content(@content[:wholesale_ordering_preamble])
-			- if admin?
-				= link_to "Edit", edit_content_item_path(@content[:wholesale_ordering_preamble])
 		#specific_instr
 			#unfi_instr
 				%h3 UNFI
 				= display_content(@content[:wholesale_ordering_unfi])
-				- if admin?
-					= link_to "Edit", edit_content_item_path(@content[:wholesale_ordering_unfi])
 			#azures_instr
 				%h3 Azures
 				= display_content(@content[:wholesale_ordering_azures])
-				- if admin?
-					= link_to "Edit", edit_content_item_path(@content[:wholesale_ordering_azures])
 		#the_rest
 			= display_content(@content[:wholesale_ordering_rest])
-			- if admin?
-				= link_to "Edit", edit_content_item_path(@content[:wholesale_ordering_rest])
 - else
 	%h2 Wholesale Ordering
 	%p 
