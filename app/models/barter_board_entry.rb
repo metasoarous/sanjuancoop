@@ -1,7 +1,7 @@
 class BarterBoardEntry < ActiveRecord::Base
   belongs_to :wanted_category, :class_name => "BarterBoardCategory"
   belongs_to :offered_category, :class_name => "BarterBoardCategory"
-  
+  belongs_to :member  
   validates_associated :wanted_category
   validates_numericality_of :wanted_category_id
   

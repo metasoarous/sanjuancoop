@@ -10,7 +10,7 @@ class Member < ActiveRecord::Base
   has_and_belongs_to_many :product_requests
   has_many :comments
   has_many :forum_posts
-  has_many :wholesale_orders
+  has_many :barter_baord_entries
   has_many :volunteer_offerings
   has_many :volunteer_tasks, :through => :volunteer_offerings
   has_many :forum_topic_subscriptions
