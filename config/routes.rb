@@ -55,6 +55,8 @@ ActionController::Routing::Routes.draw do |map|
   map.signup '/signup', :controller => 'members', :action => 'new'
   map.activate '/activate/:activation_code', :controller => "members", :action => "activate", :activation_code => nil
   
+  map.content "/content/:tag", :controller => "content_items", :action => "show"
+  
   map.resources :members, :member => {:suspend => :put, :unsuspend => :put, :purge => :delete}
 
   map.resource :session

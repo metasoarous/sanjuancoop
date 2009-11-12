@@ -16,7 +16,7 @@
 		- volunteer_signup_form(volunteer_task) do |f|
 			= f.hidden_field :member_id
 			= f.hidden_field :volunteer_task_id
-			= f.label :alt_contact, "Contact info (other than email): "
+			= f.label :alt_contact, "Contact info (if different than on record): "
 			= f.text_field :alt_contact
 			= submit_tag "Sign up!"
 		
@@ -26,4 +26,5 @@
 		- volunteer_task.members.each do |member|
 			%li
 				= "#{member.name} - #{member.email} "
+				= "- #{member.phone_number}" if member.phone_number
 				= ": #{volunteer_offering(volunteer_task, member).alt_contact}"

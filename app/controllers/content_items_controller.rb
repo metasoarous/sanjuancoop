@@ -13,7 +13,17 @@ class ContentItemsController < ApplicationController
   # GET /content_items/1
   # GET /content_items/1.xml
   def show
-    @content_item = ContentItem.find(params[:id])
+    if params[:id]
+      @content_item = ContentItem.find(params[:id])
+    elsif params[:tag]
+      @content_item = ContentItem.find_or_create_by_tag(params[:tag])
+    else
+      HoptoadNotifier.notify(
+        :error_class => "Content Item Error",
+        :error_message => "Neither a tag nor an id were passed into the params hash",
+        :request => {:params => params}
+      )
+    end
 
     respond_to do |format|
       format.html # show.html.erb

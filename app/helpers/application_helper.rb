@@ -9,6 +9,7 @@ module ApplicationHelper
             :welcome              => :home,
             :faqs                 => :home,
             :board_members        => :home,
+            :content_items        => :home,
             :newsletters          => :news,
             :product_requests     => :requests,
             :wholesale_orders     => :wholesale_orders,

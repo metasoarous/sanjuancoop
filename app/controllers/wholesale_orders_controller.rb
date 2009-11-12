@@ -7,7 +7,7 @@ class WholesaleOrdersController < ApplicationController
       :wholesale_ordering_unfi, 
       :wholesale_ordering_azures, 
       :wholesale_ordering_rest].each do |item|
-        @content[item] = ContentItem.find_or_create_by_tag(:tag => item.to_s, :content => "Content has yet to be created")
+        @content[item] = ContentItem.find_or_create_by_tag(item.to_s)
     end
   end
 end
