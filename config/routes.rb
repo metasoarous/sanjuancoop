@@ -54,6 +54,7 @@ ActionController::Routing::Routes.draw do |map|
   map.register '/register', :controller => 'members', :action => 'create'
   map.signup '/signup', :controller => 'members', :action => 'new'
   map.activate '/activate/:activation_code', :controller => "members", :action => "activate", :activation_code => nil
+  map.forgot_password "/forgot_password", :controller => "members", :action => "forgot_password"
   
   map.content "/content/:tag", :controller => "content_items", :action => "show"
   

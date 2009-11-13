@@ -43,7 +43,7 @@ class ProductRequestsController < ApplicationController
   # POST /product_requests
   # POST /product_requests.xml
   def create
-    @product_request = ProductRequest.new(params[:product_request])
+    @product_request = ProductRequest.new(params[:product_request]).reverse
 
     respond_to do |format|
       if @product_request.save

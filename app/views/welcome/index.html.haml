@@ -1,13 +1,19 @@
 
 %h2 Welcome to the SJI Food Co-Op Website!
 
-- unless current_member
+- unless logged_in?
 	%h5 
 		Thanks for visiting! If you are a coop member you are invited to
 		= link_to("sign up", "/signup")
 		or 
 		= link_to("login", "/login")
-		in order to get full access to all of this web site's features. If you are not yet a member, you can find out about becoming one here.
+		in order to get full access to all of this web site's features. If you are not yet a member, you can find out about becoming one
+		= link_to("here.", "/content/becoming_a_member")
+		
+%h5 
+	This site is fresh off the press. If you find anything is not working properly, please send an email to 
+	%a(href="mailto:sanjuancoop@gmail.com") sanjuancoop (at) gmail.com
+	with subject "Attn Chris" and we will try to take care of the issues you are are having as soon as possible.
 
 #mission.content
 	%h3 Mission Statement
@@ -58,5 +64,5 @@
 		%tr
 			%td <strong>Email: </strong>
 			%td 
-				%a(href="mailto:sanjuancoop@gmail.com") sanjuancoop@gmail.com
+				%a(href="mailto:sanjuancoop@gmail.com") sanjuancoop (at) gmail.com
 

@@ -24,8 +24,7 @@
 			= post.member.name if post.member
 			= "::"
 			= post.created_at.strftime('%a, %b %d, %Y')
-			- post.body.lines.each do |line|
-				%p= line
+			= display_post(post)
 					
 - if logged_in?
 	#new_post

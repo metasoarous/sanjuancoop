@@ -14,11 +14,12 @@ class BarterBoardEntriesControllerTest < ActionController::TestCase
   end
 
   test "should create barter_board_entry" do
+    entry = ""
     assert_difference('BarterBoardEntry.count') do
-      post :create, :barter_board_entry => barter_board_entries(:one)
+      entry = Factory(:barter_board_entry)
     end
-
-    assert_redirected_to barter_board_entry_path(assigns(:barter_board_entry))
+    assert_response :success
+    assert_redirected_to barter_board_entries_path
   end
 
   test "should show barter_board_entry" do
@@ -32,7 +33,8 @@ class BarterBoardEntriesControllerTest < ActionController::TestCase
   end
 
   test "should update barter_board_entry" do
-    put :update, :id => barter_board_entries(:one).to_param, :barter_board_entry => barter_board_entries(:one)
+    entry = Factory(:barter_board_entry)
+    put :update, :id => entry.id, :barter_board_entry => {:wanted_category => "2", :offered => "chitlins"}
     assert_redirected_to barter_board_entry_path(assigns(:barter_board_entry))
   end
 

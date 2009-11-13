@@ -27,5 +27,10 @@ config.action_mailer.delivery_method = :test
 # like if you have constraints or database-specific column types
 # config.active_record.schema_format = :sql
 
-#Set the website adress for the test environment
+# Set the website adress for the test environment
 WEBSITEURL = "0.0.0.0:3000"
+
+# Set up testing framework stuff
+config.gem "factory_girl"
+config.gem "webrat"
+config.gem "cucumber"

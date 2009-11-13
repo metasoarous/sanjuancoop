@@ -14,7 +14,7 @@ class BarterBoardCategoriesControllerTest < ActionController::TestCase
 
   test "should create barter_board_category" do
     assert_difference('BarterBoardCategory.count') do
-      post :create, :barter_board_category => { }
+      post :create, :barter_board_category => { :name => "Cat1" }
     end
 
     assert_redirected_to barter_board_entries_path

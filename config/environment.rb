@@ -52,7 +52,7 @@ Rails::Initializer.run do |config|
     :authentication       => :plain
   }
   
-  config.active_record.observers = :member_observer, :newsletter_observer
+  config.active_record.observers = :member_observer, :newsletter_observer, :forum_post_observer
 end
 
 require "will_paginate"

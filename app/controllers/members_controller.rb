@@ -104,7 +104,65 @@ class MembersController < ApplicationController
   # There's no page here to update or destroy a member.  If you add those, be
   # smart -- make sure you check that the visitor is authorized to do so, that they
   # supply their old password along with a new one to update it, etc.
+  
+  # These following password reset etc methods were taken from railsonedge.blogspot.com 
+  # post on Restful Authentication (part 3 of 3)
+  def change_password
+    return unless request.post?
+    if Member.authenticate(current_member.login, params[:old_password])
+      if ((params[:password] == params[:password_confirmation]) && 
+                            !params[:password_confirmation].blank?)
+        current_member.password_confirmation = params[:password_confirmation]
+        current_member.password = params[:password]
 
+        if current_member.save
+          flash[:notice] = "Password successfully updated" 
+          redirect_to profile_url(current_member.login)
+        else
+          flash[:alert] = "Password not changed" 
+        end
+
+      else
+        flash[:alert] = "New Password mismatch" 
+        @old_password = params[:old_password]
+      end
+    else
+      flash[:alert] = "Old password incorrect" 
+    end
+  end
+
+  #gain email address
+  def forgot_password
+    return unless request.post?
+    if @member = Member.find_by_email(params[:member][:email])
+      @member.forgot_password
+      @member.save
+      redirect_back_or_default('/')
+      flash[:notice] = "A password reset link has been sent to your email address" 
+    else
+      flash[:alert] = "Could not find a user with that email address" 
+    end
+  end
+
+  #reset password
+  def reset_password
+    @member = Member.find_by_password_reset_code(params[:id])
+    return if @member unless params[:member]
+
+    if ((params[:member][:password] && params[:member][:password_confirmation]) && 
+                            !params[:member][:password_confirmation].blank?)
+      self.current_member = @member #for the next two lines to work
+      current_member.password_confirmation = params[:member][:password_confirmation]
+      current_member.password = params[:member][:password]
+      @member.reset_password
+      flash[:notice] = current_member.save ? "Password reset success." : "Password reset failed." 
+      redirect_back_or_default('/')
+    else
+      flash[:alert] = "Password mismatch" 
+    end  
+  end
+  
+  
 protected
   def find_member
     @member = Member.find(params[:id])

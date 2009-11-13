@@ -2,7 +2,7 @@ class NewslettersController < ApplicationController
   # GET /newsletters
   # GET /newsletters.xml
   def index
-    @newsletters = Newsletter.all.reverse
+    @newsletters = Newsletter.all.sort {|letter1, letter2| letter2.created_at <=> letter1.created_at}
     @page_results = @newsletters.paginate(:page => params[:page], :per_page => 4)
 
     respond_to do |format|

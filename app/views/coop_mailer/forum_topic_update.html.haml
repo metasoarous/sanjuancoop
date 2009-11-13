@@ -1,0 +1,31 @@
+
+
+%p 
+	Dear
+	= @member.first_name
+	,
+
+%p 
+	The forum discussion
+	= link_to(@post.forum_topic.subject + ".", forum_topic_url(@post.forum_topic, :host => WEBSITEURL))
+	which you are currently subscribed to has been posted to by
+	= @post.member.name + "."
+	Below is the content of the post-
+	
+#post
+	= display_post @post
+	
+%p 
+	To see the rest of this discussion, click
+	= link_to("here.", forum_topic_url(@post.forum_topic, :host => WEBSITEURL))
+	To change your coop forum notification settings 
+	= link_to("log in", "http://#{WEBSITEURL}/login")
+	and then got to
+	= link_to("your settings page.", member_url(@member, :host => WEBSITEURL))
+	
+%p 
+	Sincerely,
+	%br/
+	Reginald
+	%br/
+	Your Friendly Coop Website Robot

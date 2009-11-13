@@ -121,4 +121,12 @@ module ApplicationHelper
     end
     return collection.first
   end
+  
+  #These are methods that make inclusion of javascript and stylesheet files easier
+  def javascript(*files)
+    content_for(:head) { javascript_include_tag(*files) }
+  end
+  def stylesheet(*files)
+    content_for(:head) { stylesheet_link_tag(*files) }
+  end
 end

@@ -7,12 +7,13 @@
 		%title= "SJIFoodCoop: #{controller.action_name}"
 		= stylesheet_link_tag 'application'
 		= javascript_include_tag :defaults
+		= yield(:head)
 		
 	%body
 		#wrapper
 			#user_panel
 				- if logged_in?
-					%p= "Hi #{current_member.first_name}! | #{link_to("Logout", "/logout")}"
+					%p= "Hi #{current_member.first_name}! - #{link_to "Settings", member_path(current_member)} | #{link_to("Logout", "/logout")}"
 				- else
 					%p= "Login or Sign Up - #{link_to("Login", "/login")} | #{link_to("Sign Up", "/signup")}"
 			#wrapper2
@@ -31,6 +32,7 @@
 								%p= link_to("Coop Board", board_members_path)
 								%p= link_to("Links and Resources", "/content/links")
 								%p= link_to("Becoming a Member", "/content/becoming_a_member")
+								%p= link_to("Your Settings", member_path(current_member)) if logged_in?
 								- if admin?
 									%h3 Admin
 									%p= link_to("Content Items", content_items_path)

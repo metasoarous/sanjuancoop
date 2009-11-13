@@ -15,7 +15,11 @@ class ForumTopicsController < ApplicationController
   def show
     @forum_topic = ForumTopic.find(params[:id])
     @forum_posts = @forum_topic.forum_posts.paginate(:page => params[:page], :per_page => 20)
-    @forum_topic_subscription = ForumTopicSubscription.new(:member_id => current_member.id, :forum_topic_id => @forum_topic.id)
+    @forum_topic_subscription = ForumTopicSubscription.new
+    if current_member
+      @forum_topic_subscription.member_id = current_member.id
+      @forum_topic_subscription.forum_topic_id = @forum_topic.id
+    end
 
     respond_to do |format|
       format.html # show.html.erb
