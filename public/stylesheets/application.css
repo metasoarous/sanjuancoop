@@ -168,6 +168,9 @@ h4 {
   margin-bottom: 2em;
   background-color: #dbdfc4; }
 
+.warning p {
+  color: red; }
+
 #subscriber span {
   margin-top: 20px; }
 

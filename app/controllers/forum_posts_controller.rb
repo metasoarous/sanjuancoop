@@ -62,7 +62,7 @@ class ForumPostsController < ApplicationController
     respond_to do |format|
       if @forum_post.update_attributes(params[:forum_post])
         flash[:notice] = 'ForumPost was successfully updated.'
-        format.html { redirect_to(@forum_post) }
+        format.html { redirect_to(@forum_post.forum_topic) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

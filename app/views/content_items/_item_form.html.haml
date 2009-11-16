@@ -3,4 +3,6 @@
 	= f.label :tag
 	%br/
 	= f.text_field :tag
+	.warning 
+		%p WARNING! Once this tag is set, do not change it! Doing so could break the application! You are safe though as long as you only make edits to the text below.
 = render :partial => "partials/textile_form", :locals => {:object => "content_item", :method => "content"}

@@ -25,6 +25,7 @@
 			= "::"
 			= post.created_at.strftime('%a, %b %d, %Y')
 			= display_post(post)
+			= link_to("Edit", edit_forum_post_path(post))
 					
 - if logged_in?
 	#new_post

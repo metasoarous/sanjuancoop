@@ -1,0 +1,12 @@
+%h2 Showing Forum Post
+
+%p 
+	%b Forum topic:
+	= @forum_post.forum_topic.subject
+%p 
+	%b Post Body:
+	= @forum_post.body
+	
+= link_to 'Edit', edit_forum_post_path(@forum_post)
+|
+= link_to 'Back', @forum_post.forum_topic
