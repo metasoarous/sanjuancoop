@@ -1,0 +1,19 @@
+%h2 Coop Board Members
+
+- sort_board_members(@board_members).each do |board_member|
+	- if admin? or board_member.active?
+		.board_member
+			- image_url = board_member.image_url
+			- unless image_url.nil? or image_url.empty?
+				= image_tag image_url, :alt => "picture"
+			%h4
+				= board_member.name
+				= board_member.role
+				- if admin?
+					= "- "
+					= link_to "Edit", edit_board_member_path(board_member)
+			%p= board_member.description
+%br
+- if admin?
+	= link_to "New Board Member", new_board_member_path
+					
