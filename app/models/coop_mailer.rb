@@ -1,6 +1,6 @@
 class CoopMailer < ActionMailer::Base
   
-  helper :forum
+  helper :forum, :application
   
   def signup_notification(member)
     setup_registration_email(member)
