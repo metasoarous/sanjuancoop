@@ -6,19 +6,19 @@ class Newsletter < ActiveRecord::Base
     when :all
       emails = []
       Member.all.each do |member|
-        CoopMailer.deliver_newsletter(member, newsletter)
+        CoopMailer.deliver_newsletter(member, self)
         emails << member.email
       end
       Membership.all.each do |membership|
-        CoopMailer.deliver_newsletter(membership, newsletter) unless emails.include? membership.email
+        CoopMailer.deliver_newsletter(membership, self) unless emails.include? membership.email
       end
     when :members
       Member.all.each do |member|
-        CoopMailer.deliver_newsletter(member, newsletter)
+        CoopMailer.deliver_newsletter(member, self)
       end
     when :memberships
       Membership.all.each do |membership|
-        CoopMailer.deliver_newsletter(membership, newsletter)
+        CoopMailer.deliver_newsletter(membership, self)
       end
     end
   end
