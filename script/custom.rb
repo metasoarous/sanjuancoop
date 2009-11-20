@@ -36,12 +36,11 @@ module ScriptMethods
     end
   end
   
-  def membership_import
-    puts "Poopies!"
+  def destructive_membership_import
     Membership.all.each {|m| m.destroy}
     add_memberships_from_tsv "current co-op emails 11_09.txt"
     add_memberships_from_tsv "new co-op emails 7_09.txt"
-    puts Membership.all.size
+    puts "There are now #{Membership.all.size} members in the coop"
   end
 end
 
