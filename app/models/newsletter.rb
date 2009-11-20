@@ -20,6 +20,10 @@ class Newsletter < ActiveRecord::Base
       Membership.all.each do |membership|
         CoopMailer.deliver_newsletter(membership, self)
       end
+    when Array
+      group.each do |member|
+        CoopMailer.deliver_newsletter(member,self)
+      end
     end
   end
 end
