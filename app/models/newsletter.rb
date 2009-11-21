@@ -22,7 +22,7 @@ class Newsletter < ActiveRecord::Base
       end
     when Array
       group.each do |member|
-        CoopMailer.deliver_newsletter(member,self)
+        CoopMailer.deliver_newsletter(member,self) if !member.email.nil? and !member.email.empty?
       end
     end
   end
