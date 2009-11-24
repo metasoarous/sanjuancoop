@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091106082457) do
+ActiveRecord::Schema.define(:version => 20091121023454) do
 
   create_table "barter_board_categories", :force => true do |t|
     t.string   "name"
@@ -171,6 +171,8 @@ ActiveRecord::Schema.define(:version => 20091106082457) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "mail"
+    t.text     "delivered"
+    t.string   "next_delivery"
   end
 
   create_table "product_request_statuses", :force => true do |t|
