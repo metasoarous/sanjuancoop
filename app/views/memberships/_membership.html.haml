@@ -1,17 +1,8 @@
-- content_tag_for :div, membership do
-  %ul
-    %li
-      %strong First name:
-      =h membership.first_name
-    %li
-      %strong Last name:
-      =h membership.last_name
-    %li
-      %strong Email:
-      =h membership.email
-    %li
-      %strong Accepts newsletters:
-      =h membership.accepts_newsletters
-    = link_to 'Show', membership
-    = link_to 'Edit', edit_membership_path(membership)
-    = link_to 'Destroy', membership, :confirm => 'Are you sure?', :method => :delete
+- content_tag_for :tr, membership do
+	%td=h membership.first_name
+	%td=h membership.last_name
+	%td=h membership.email
+	%td=h membership.accepts_newsletters
+	%td= link_to 'Show', membership
+	%td= link_to 'Edit', edit_membership_path(membership)
+	%td= link_to 'Destroy', membership, :confirm => 'Are you sure?', :method => :delete

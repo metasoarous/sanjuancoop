@@ -1,8 +1,18 @@
 %h2 Listing memberships
 - if !@memberships.empty?
-  .memberships
-    = render :partial => "membership", :collection => @memberships
-  = will_paginate(@memberships)
+	%table.memberships
+		%tr
+			%td
+				%strong First name:
+			%td
+				%strong Last name:
+			%td
+				%strong Email:
+			%td
+				%strong Accepts newsletters:
+		= render :partial => "membership", :collection => @memberships
+
+	= will_paginate(@memberships)
 - else
-  %p There are no memberships to show yet.
+	%p There are no memberships to show yet.
 = link_to 'New membership', new_membership_path
