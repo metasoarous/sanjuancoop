@@ -11,7 +11,7 @@ class Newsletter < ActiveRecord::Base
       group = Member.all
       emails = group.map {|m| m.email}
       Membership.all.each do |membership|
-        group << membership unless emails.include? membership.email
+        group << membership unless membership.email.nil? or emails.include? membership.email
         emails << membership.email
       end
     when :members
