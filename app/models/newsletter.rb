@@ -9,9 +9,9 @@ class Newsletter < ActiveRecord::Base
       puts "See me?"
     when :all
       group = Member.all
-      emails = group.map {|m| m.email}
+      emails = group.map {|m| m.email.downcase}
       Membership.all.each do |membership|
-        group << membership unless emails.include? membership.email
+        group << membership unless emails.include? membership.email.downcase
         emails << membership.email
       end
     when :members
