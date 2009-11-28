@@ -2,7 +2,7 @@ class MembershipsController < ApplicationController
 
   before_filter :find_membership
 
-  MEMBERSHIPS_PER_PAGE = 20
+  MEMBERSHIPS_PER_PAGE = 30
 
   def create
     @membership = Membership.new(params[:membership])
@@ -33,7 +33,8 @@ class MembershipsController < ApplicationController
   end
 
   def index
-    @memberships = Membership.paginate(:page => params[:page], :per_page => MEMBERSHIPS_PER_PAGE, :order => "last_name")
+    order = params[:order] || "last_name"
+    @memberships = Membership.paginate(:page => params[:page], :per_page => MEMBERSHIPS_PER_PAGE, :order => order)
     respond_to do |format|
       format.html
       format.xml  { render :xml => @memberships }

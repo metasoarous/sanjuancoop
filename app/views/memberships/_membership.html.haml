@@ -1,8 +1,7 @@
 - content_tag_for :tr, membership do
-	%td=h membership.first_name
-	%td=h membership.last_name
+	%td= link_to membership.first_name, membership
+	%td= link_to membership.last_name, membership
 	%td=h membership.email
 	%td=h membership.accepts_newsletters
-	%td= link_to 'Show', membership
 	%td= link_to 'Edit', edit_membership_path(membership)
 	%td= link_to 'Destroy', membership, :confirm => 'Are you sure?', :method => :delete

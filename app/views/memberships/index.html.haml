@@ -3,13 +3,13 @@
 	%table.memberships
 		%tr
 			%td
-				%strong First name:
+				%strong= link_to "First Name", memberships_url + "?order=first_name"
 			%td
-				%strong Last name:
+				%strong= link_to "Last Name", memberships_url + "?order=last_name"
 			%td
-				%strong Email:
+				%strong= link_to "Email", memberships_url + "?order=email"
 			%td
-				%strong Accepts newsletters:
+				%strong= link_to "Newsletters?", memberships_url + "?order=accepts_newsletters"
 		= render :partial => "membership", :collection => @memberships
 
 	= will_paginate(@memberships)
