@@ -41,6 +41,10 @@ module ApplicationHelper
     RedCloth.new(text).to_html
   end
   
+  def detilize_text(text)
+    text.gsub(/^h\d. /, "")
+  end
+  
   # Helper method for creating a whole set of tabs
   def create_tabs(active, *tabs)
     string = "<ul id='tabs'> \n"

@@ -1,0 +1,11 @@
+
+Dear <%= @member.first_name%>,
+
+The forum discussion <%= @post.forum_topic.subject%> which you are currently subscribed to has been posted to by <%= @post.member.name%>. To see this post, please visit <%= forum_topic_url(@post.forum_topic, :host => WEBSITEURL)%>.
+
+To change your coop forum notification settings, please login and visit your settings page.
+
+
+Sincerely,
+Reginald
+Your Friendly Coop Website Robot

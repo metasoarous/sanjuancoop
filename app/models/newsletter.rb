@@ -6,7 +6,6 @@ class Newsletter < ActiveRecord::Base
     self.delivered = [] if delivered.nil?
     case group
     when Array
-      puts "See me?"
     when :all
       group = Member.all
       emails = group.map {|m| m.email}
@@ -18,6 +17,8 @@ class Newsletter < ActiveRecord::Base
       group = Member.all
     when :memberships
       group = Membership.all
+    else
+      # Should throw or raise here!
     end
     
     group.each do |memb|
