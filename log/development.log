@@ -1,0 +1,416 @@
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM `members` LIMIT 1[0m
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mNewsletter Load (0.5ms)[0m   [0;1mSELECT * FROM `newsletters` ORDER BY newsletters.id DESC LIMIT 1[0m
+  [4;35;1mNewsletter Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `newsletters`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Update (18.1ms)[0m   [0mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;36;1mSQL (17.0ms)[0m   [0;1mCOMMIT[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 4 Dec 2009 14:05:14 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Another test - multipart
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b19879ae58c2_931a59390132
+
+
+--mimepart_4b19879ae58c2_931a59390132
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+I switched over the newsletter to multipart. Is this getting through any =
+better for you?
+
+Chris
+
+--mimepart_4b19879ae58c2_931a59390132
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>I switched over the newsletter to multipart. Is this getting through a=
+ny better for you?</p>
+<p>Chris</p>
+
+--mimepart_4b19879ae58c2_931a59390132--
+  [4;35;1mSQL (0.5ms)[0m   [0mBEGIN[0m
+  [4;36;1mNewsletter Update (42.3ms)[0m   [0;1mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;35;1mSQL (20.4ms)[0m   [0mCOMMIT[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 4 Dec 2009 14:39:24 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Another test - multipart
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b198f9cd9d13_931a5939036c
+
+
+--mimepart_4b198f9cd9d13_931a5939036c
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+I switched over the newsletter to multipart. Is this getting through any =
+better for you?
+
+Chris
+
+--mimepart_4b198f9cd9d13_931a5939036c
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>I switched over the newsletter to multipart. Is this getting through a=
+ny better for you?</p>
+<p>Chris</p>
+
+--mimepart_4b198f9cd9d13_931a5939036c--
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Update (53.1ms)[0m   [0mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mNewsletter Update (0.3ms)[0m   [0;1mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Update (0.4ms)[0m   [0mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCOMMIT[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 4 Dec 2009 15:12:24 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Another test - multipart
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b19975886c1a_931a593906b
+
+
+--mimepart_4b19975886c1a_931a593906b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+I switched over the newsletter to multipart. Is this getting through any =
+better for you?
+
+Chris
+
+--mimepart_4b19975886c1a_931a593906b
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>I switched over the newsletter to multipart. Is this getting through a=
+ny better for you?</p>
+<p>Chris</p>
+
+--mimepart_4b19975886c1a_931a593906b--
+  [4;35;1mSQL (0.8ms)[0m   [0mBEGIN[0m
+  [4;36;1mNewsletter Update (1.8ms)[0m   [0;1mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mNewsletter Update (0.5ms)[0m   [0mUPDATE `newsletters` SET `delivered` = '--- \n- tim@sendgrid.com\n- mark@mmadsen.org\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n- metasoarous@gmail.com\n' WHERE `id` = 20[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mForumPost Load (155.7ms)[0m   [0mSELECT * FROM `forum_posts` ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mForumPost Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `forum_posts`[0m
+  [4;35;1mSQL (136.2ms)[0m   [0mSELECT count(*) AS count_all FROM `members` [0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM `members` [0m
+  [4;35;1mMember Load (2.2ms)[0m   [0mSELECT * FROM `members` WHERE (`members`.`first_name` = 'Chris') LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mmembers_product_requests Columns (110.6ms)[0m   [0mSHOW FIELDS FROM `members_product_requests`[0m
+  [4;36;1mProductRequest Load (149.7ms)[0m   [0;1mSELECT * FROM `product_requests` INNER JOIN `members_product_requests` ON `product_requests`.id = `members_product_requests`.product_request_id WHERE (`members_product_requests`.member_id = 14 ) [0m
+  [4;35;1mMember Destroy (39.3ms)[0m   [0mDELETE FROM `members` WHERE `id` = 14[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM `members` ORDER BY members.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` INNER JOIN `members_product_requests` ON `product_requests`.id = `members_product_requests`.product_request_id WHERE (`members_product_requests`.member_id = 17 ) [0m
+  [4;36;1mMember Destroy (0.2ms)[0m   [0;1mDELETE FROM `members` WHERE `id` = 17[0m
+  [4;35;1mSQL (68.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'metasoarous' AND `members`.id <> 13) LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'this@that.com' AND `members`.id <> 13) LIMIT 1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `email` = 'this@that.com', `updated_at` = '2009-12-04 23:28:00' WHERE `id` = 13[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCOMMIT[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM `members` ORDER BY members.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-12-04 15:34:14) [POST]
+  Parameters: {"authenticity_token"=>"fQRxrispUKxogW1pqYPyQOUorH5/Y0yVBrH6VqZfS50=", "member"=>{"login"=>"mellifluidic", "first_name"=>"Chris", "last_name"=>"Small", "email"=>"metasoarous@gmail.com", "phone_number"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up", "controller"=>"members", "action"=>"create"}
+  [4;36;1mMember Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'mellifluidic') LIMIT 1[0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (0.5ms)[0m   [0;1mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`, `phone_number`, `accepts_newsletters`) VALUES('mellifluidic', 'metasoarous@gmail.com', '89706b37dc3c6e81152f40da849d94cadf6ea77c', '7e2d7aa8e478325912c795535e865776dbbc403e', '2009-12-04 23:34:14', '2009-12-04 23:34:14', NULL, NULL, '229ec433f6fc30e5e6267e60a8ac4f2694126e2f', NULL, 'pending', NULL, NULL, 'Chris', 'Small', '', NULL)[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 4 Dec 2009 15:34:14 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b199c7639e7a_93691485c44188
+
+
+--mimepart_4b199c7639e7a_93691485c44188
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Your account has been created. Below are your user name and password.
+
+	Username: mellifluidic
+	Password: mapsalot
+
+Please store these for safekeeping in case you forget them.
+
+To activate your account please visit this url:
+
+  http://0.0.0.0:3000/activate/229ec433f6fc30e5e6267e60a8ac4f2694126e2f
+
+Sincerely,
+Reginald
+Coop Website Robot
+
+--mimepart_4b199c7639e7a_93691485c44188
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Your account has been created. Below are your user name and password.<=
+/p>
+<p>
+  Username:
+  mellifluidic
+  <br />
+  Password:
+  mapsalot
+</p>
+<p>Please store these for safekeeping in case you forget them.</p>
+<p>
+  To activate your account please visit this url:
+  <a>http://0.0.0.0:3000/activate/229ec433f6fc30e5e6267e60a8ac4f2694126e2=
+f</a>
+</p>
+<p>
+  Sincerely,
+  <br />
+  Reginald
+  <br />
+  Coop Website Robot
+</p>
+
+--mimepart_4b199c7639e7a_93691485c44188--
+  [4;35;1mForumCategory Load (0.4ms)[0m   [0mSELECT * FROM `forum_categories` [0m
+  [4;36;1mForumCategory Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `forum_categories`[0m
+  [4;35;1mForumCategorySubscription Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `forum_category_subscriptions`[0m
+  [4;36;1mForumCategorySubscription Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 19) [0m
+  [4;35;1mForumCategorySubscription Create (0.3ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(19, 1, 'weekly', NULL, '2009-12-04 23:34:15', '2009-12-04 23:34:15')[0m
+  [4;36;1mForumCategorySubscription Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 19) [0m
+  [4;35;1mForumCategorySubscription Create (0.3ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(19, 2, 'weekly', NULL, '2009-12-04 23:34:15', '2009-12-04 23:34:15')[0m
+  [4;36;1mForumCategorySubscription Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 19) [0m
+  [4;35;1mForumCategorySubscription Create (0.2ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(19, 3, 'weekly', NULL, '2009-12-04 23:34:15', '2009-12-04 23:34:15')[0m
+  [4;36;1mForumCategorySubscription Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 19) [0m
+  [4;35;1mForumCategorySubscription Create (0.2ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(19, 5, 'weekly', NULL, '2009-12-04 23:34:15', '2009-12-04 23:34:15')[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'mellifluidic' AND `members`.id <> 19) LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com' AND `members`.id <> 19) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 989ms (DB: 13) | 302 Found [http://0.0.0.0/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-12-04 15:34:15) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 64ms (View: 61, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM `members` ORDER BY members.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mProductRequest Load (0.4ms)[0m   [0;1mSELECT * FROM `product_requests` INNER JOIN `members_product_requests` ON `product_requests`.id = `members_product_requests`.product_request_id WHERE (`members_product_requests`.member_id = 19 ) [0m
+  [4;35;1mMember Destroy (0.2ms)[0m   [0mDELETE FROM `members` WHERE `id` = 19[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#create (for 127.0.0.1 at 2009-12-04 15:35:47) [POST]
+  Parameters: {"authenticity_token"=>"fQRxrispUKxogW1pqYPyQOUorH5/Y0yVBrH6VqZfS50=", "member"=>{"login"=>"mellifluidic", "first_name"=>"Chris", "last_name"=>"Small", "email"=>"metasoarous@gmail.com", "phone_number"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up", "controller"=>"members", "action"=>"create"}
+  [4;36;1mMember Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `members`[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'mellifluidic') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Create (0.4ms)[0m   [0;1mINSERT INTO `members` (`login`, `email`, `crypted_password`, `salt`, `created_at`, `updated_at`, `remember_token`, `remember_token_expires_at`, `activation_code`, `activated_at`, `state`, `deleted_at`, `admin`, `first_name`, `last_name`, `phone_number`, `accepts_newsletters`) VALUES('mellifluidic', 'metasoarous@gmail.com', '73e32669d040ab1e306f31510a22b701574ea839', '5cea44b8c2e459fa465a0743ba96af40f17e795a', '2009-12-04 23:35:47', '2009-12-04 23:35:47', NULL, NULL, 'cc9371872886ba9dfdd843dce5d45211acfbb462', NULL, 'pending', NULL, NULL, 'Chris', 'Small', '', NULL)[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 4 Dec 2009 15:35:47 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b199cd33de0b_936c1485c441f0
+
+
+--mimepart_4b199cd33de0b_936c1485c441f0
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Your account has been created. Below are your user name and password.
+
+	Username: mellifluidic
+	Password: mapsalot
+
+Please store these for safekeeping in case you forget them.
+
+To activate your account please visit this url:
+
+  http://0.0.0.0:3000/activate/cc9371872886ba9dfdd843dce5d45211acfbb462
+
+Sincerely,
+Reginald
+Coop Website Robot
+
+--mimepart_4b199cd33de0b_936c1485c441f0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Your account has been created. Below are your user name and password.<=
+/p>
+<p>
+  Username:
+  mellifluidic
+  <br />
+  Password:
+  mapsalot
+</p>
+<p>Please store these for safekeeping in case you forget them.</p>
+<p>
+  To activate your account please visit this url:
+  <a href=3D'http://0.0.0.0:3000/activate/cc9371872886ba9dfdd843dce5d4521=
+1acfbb462'>http://0.0.0.0:3000/activate/cc9371872886ba9dfdd843dce5d45211a=
+cfbb462</a>
+</p>
+<p>
+  Sincerely,
+  <br />
+  Reginald
+  <br />
+  Coop Website Robot
+</p>
+
+--mimepart_4b199cd33de0b_936c1485c441f0--
+  [4;35;1mForumCategory Load (0.8ms)[0m   [0mSELECT * FROM `forum_categories` [0m
+  [4;36;1mForumCategory Columns (7.5ms)[0m   [0;1mSHOW FIELDS FROM `forum_categories`[0m
+  [4;35;1mForumCategorySubscription Columns (5.3ms)[0m   [0mSHOW FIELDS FROM `forum_category_subscriptions`[0m
+  [4;36;1mForumCategorySubscription Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 20) [0m
+  [4;35;1mForumCategorySubscription Create (0.6ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(20, 1, 'weekly', NULL, '2009-12-04 23:35:48', '2009-12-04 23:35:48')[0m
+  [4;36;1mForumCategorySubscription Load (0.3ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 20) [0m
+  [4;35;1mForumCategorySubscription Create (0.2ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(20, 2, 'weekly', NULL, '2009-12-04 23:35:48', '2009-12-04 23:35:48')[0m
+  [4;36;1mForumCategorySubscription Load (0.2ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 20) [0m
+  [4;35;1mForumCategorySubscription Create (0.2ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(20, 3, 'weekly', NULL, '2009-12-04 23:35:48', '2009-12-04 23:35:48')[0m
+  [4;36;1mForumCategorySubscription Load (0.4ms)[0m   [0;1mSELECT * FROM `forum_category_subscriptions` WHERE (`forum_category_subscriptions`.`member_id` = 20) [0m
+  [4;35;1mForumCategorySubscription Create (0.2ms)[0m   [0mINSERT INTO `forum_category_subscriptions` (`member_id`, `forum_category_id`, `frequency`, `active`, `created_at`, `updated_at`) VALUES(20, 5, 'weekly', NULL, '2009-12-04 23:35:48', '2009-12-04 23:35:48')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'mellifluidic' AND `members`.id <> 20) LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com' AND `members`.id <> 20) LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 881ms (DB: 22) | 302 Found [http://0.0.0.0/members]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-12-04 15:35:48) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 37ms (View: 34, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MembersController#activate (for 127.0.0.1 at 2009-12-04 15:36:11) [GET]
+  Parameters: {"controller"=>"members", "action"=>"activate", "activation_code"=>"cc9371872886ba9dfdd843dce5d45211acfbb462"}
+  [4;35;1mMember Columns (2.4ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`activation_code` = 'cc9371872886ba9dfdd843dce5d45211acfbb462') LIMIT 1[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMember Update (0.5ms)[0m   [0;1mUPDATE `members` SET `activated_at` = '2009-12-04 23:36:11', `activation_code` = NULL, `state` = 'active', `updated_at` = '2009-12-04 23:36:11' WHERE `id` = 20[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/login
+Completed in 455ms (DB: 4) | 302 Found [http://0.0.0.0/activate/cc9371872886ba9dfdd843dce5d45211acfbb462]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-12-04 15:36:11) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"new"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://0.0.0.0/login]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-12-04 15:36:24) [POST]
+  Parameters: {"authenticity_token"=>"fQRxrispUKxogW1pqYPyQOUorH5/Y0yVBrH6VqZfS50=", "login"=>"mellifluidic", "password"=>"[FILTERED]", "remember_me"=>"1", "commit"=>"Log in", "controller"=>"sessions", "action"=>"create"}
+  [4;36;1mMember Load (14.9ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`login` = 'mellifluidic') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mMember Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Update (0.7ms)[0m   [0mUPDATE `members` SET `remember_token_expires_at` = '2009-12-18 23:36:24', `remember_token` = '85213a8a250ecb5d1471a738ae8575023e2f03f9', `updated_at` = '2009-12-04 23:36:24' WHERE `id` = 20[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed in 42ms (DB: 22) | 302 Found [http://0.0.0.0/session]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-12-04 15:36:24) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT * FROM `members` WHERE (`members`.`id` = 20) LIMIT 1[0m
+Completed in 16ms (View: 10, DB: 4) | 200 OK [http://0.0.0.0/]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2009-12-04 15:36:31) [GET]
+  Parameters: {"controller"=>"sessions", "action"=>"destroy"}
+Redirected to http://0.0.0.0:3000/
+Completed in 3ms (DB: 1) | 302 Found [http://0.0.0.0/logout]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2009-12-04 15:36:31) [GET]
+  Parameters: {"controller"=>"welcome", "action"=>"index"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM `members` ORDER BY members.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProductRequest Load (0.3ms)[0m   [0mSELECT * FROM `product_requests` INNER JOIN `members_product_requests` ON `product_requests`.id = `members_product_requests`.product_request_id WHERE (`members_product_requests`.member_id = 20 ) [0m
+  [4;36;1mMember Destroy (0.3ms)[0m   [0;1mDELETE FROM `members` WHERE `id` = 20[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT `members`.id FROM `members` WHERE (`members`.`login` = BINARY 'metasoarous' AND `members`.id <> 13) LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com' AND `members`.id <> 13) LIMIT 1[0m
+  [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `email` = 'metasoarous@gmail.com', `updated_at` = '2009-12-04 23:41:41' WHERE `id` = 13[0m
+  [4;36;1mSQL (18.4ms)[0m   [0;1mCOMMIT[0m
