@@ -3,7 +3,7 @@ class ForumPostsController < ApplicationController
   # GET /forum_posts.xml
   
   before_filter :logged_in_authorize, :only => [:new, :create]
-  admin_authorize :admin_authorize, :only => [:destroy, :update, :edit]
+  before_filter :admin_authorize, :only => [:destroy, :update, :edit]
   
   def index
     @forum_posts = ForumPost.all
