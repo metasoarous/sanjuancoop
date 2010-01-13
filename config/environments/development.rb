@@ -18,3 +18,7 @@ config.action_mailer.raise_delivery_errors = true
 
 #Set the website adress for the dev environment
 WEBSITEURL = "0.0.0.0:3000"
+
+config.gem "factory_girl"
+config.gem "rspec", :lib => "spec"
+config.gem "rspec-rails", :lib => false

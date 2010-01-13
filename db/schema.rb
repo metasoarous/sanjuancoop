@@ -58,10 +58,10 @@ ActiveRecord::Schema.define(:version => 20091121023454) do
 
   create_table "distributors", :force => true do |t|
     t.string   "name"
-    t.string   "address"
-    t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "address"
+    t.string   "website"
   end
 
   create_table "event_categories", :force => true do |t|

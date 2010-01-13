@@ -15,6 +15,33 @@ class ApplicationController < ActionController::Base
   
   protected
   
+  # gives access only to admins
+  def admin_authorize
+    unless admin?
+      unauthorized_access
+    end
+  end
+  
+  # gives access only to site users who are logged in
+  def logged_in_authorize
+    unless logged_in?
+      unauthorized_access
+    end
+  end
+  
+  # gives access only to the a specific member or admin -
+  # helpfull for making sure that users can get at their own data
+  def owner_authorize(member_id)
+    unless logged_in? and (current_member.id == member_id or admin?)
+      unauthorized_access
+    end
+  end
+  
+  def unauthorized_access
+    flash[:notice] = "Unautorized access"
+    redirect_to "/"
+  end
+  
   def determined_by_response
     if request.xhr?
       return false

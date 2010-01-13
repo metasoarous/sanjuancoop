@@ -3,4 +3,8 @@ class Membership < ActiveRecord::Base
           :message => "That email already exists in the system.",
           :allow_nil => true,
           :allow_blank => true)
+          
+  def name
+    first_name + last_name
+  end
 end

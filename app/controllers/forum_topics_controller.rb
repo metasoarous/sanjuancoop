@@ -1,6 +1,9 @@
 class ForumTopicsController < ApplicationController
   # GET /forum_topics
   # GET /forum_topics.xml
+  
+  before_filter :admin_authorize, :except => [:show, :index]
+  
   def index
     @forum_topics = ForumTopic.all
 

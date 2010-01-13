@@ -3,8 +3,13 @@ class MembersController < ApplicationController
   # include AuthenticatedSystem
   
   # Protect these actions behind an admin login
-  # before_filter :admin_required, :only => [:suspend, :unsuspend, :destroy, :purge]
+  # before_filter :admin_required, :only => [:index, :suspend, :unsuspend, :destroy, :purge]
   before_filter :find_member, :only => [:suspend, :unsuspend, :destroy, :purge]
+  before_filter :admin_authorize, :only => [:index, :destroy, :suspend, :unsuspend, :purge]
+  before_filter :only => [:show, :update] do |controller|
+    controller.owner_authorize(params[:id]) or controller.admin_authorize
+  end
+  
   
   def index
     @members = Member.all

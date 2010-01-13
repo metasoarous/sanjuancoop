@@ -31,6 +31,9 @@ config.action_mailer.delivery_method = :test
 WEBSITEURL = "0.0.0.0:3000"
 
 # Set up testing framework stuff
-config.gem "factory_girl"
 config.gem "webrat"
 config.gem "cucumber"
+config.gem "email_spec"
+config.gem "factory_girl"
+config.gem "rspec", :lib => "spec"
+config.gem "rspec-rails", :lib => false

@@ -1,6 +1,8 @@
 class ForumTopicSubscriptionsController < ApplicationController
 
   before_filter :find_forum_topic_subscription
+  
+  before_filter :admin_authorize, :only => :index
 
   FORUM_TOPIC_SUBSCRIPTIONS_PER_PAGE = 20
 

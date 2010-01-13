@@ -1,6 +1,10 @@
 class VolunteerOfferingsController < ApplicationController
   # GET /volunteer_offerings
   # GET /volunteer_offerings.xml
+  
+  before_filter :admin_authorize, :only => [:index]
+  
+  
   def index
     @volunteer_offerings = VolunteerOffering.all
 

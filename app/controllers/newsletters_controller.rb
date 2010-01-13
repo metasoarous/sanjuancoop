@@ -1,6 +1,9 @@
 class NewslettersController < ApplicationController
   # GET /newsletters
   # GET /newsletters.xml
+  
+  before_filter :admin_authorize, :except => [:index, :show]
+  
   def index
     @newsletters = Newsletter.all.sort {|letter1, letter2| letter2.created_at <=> letter1.created_at}
     @page_results = @newsletters.paginate(:page => params[:page], :per_page => 4)

@@ -1,6 +1,9 @@
 class ContentItemsController < ApplicationController
   # GET /content_items
   # GET /content_items.xml
+  before_filter :logged_in_authorize, :only => :index
+  before_filter :admin_authorize, :except => [:index, :show]
+  
   def index
     @content_items = ContentItem.all
 

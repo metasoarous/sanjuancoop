@@ -1,7 +1,7 @@
 <h2>Frequently Asked Questions</h2>
 
 <% @faqs.each do |faq| %>
-  	<h4><%=h faq.question %></h4>
+  <h4><%=h faq.question %></h4>
 	<p><%=h faq.answer %></p>
 	<% if admin? %>
 		<p>

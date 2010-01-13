@@ -22,7 +22,7 @@ class Newsletter < ActiveRecord::Base
     end
     
     group.each do |memb|
-      if memb.accepts_newsletters and !memb.email.nil? and !memb.email.empty?
+      if memb.accepts_newsletters? and !memb.email.nil? and !memb.email.empty?
         next_delivery = memb.email
         self.save
         CoopMailer.deliver_newsletter(memb, self)

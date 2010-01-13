@@ -1,6 +1,7 @@
 class MembershipsController < ApplicationController
 
   before_filter :find_membership
+  before_filter :admin_authorize
 
   MEMBERSHIPS_PER_PAGE = 30
 

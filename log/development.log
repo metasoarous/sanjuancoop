@@ -414,3 +414,1292 @@ Completed in 7ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
   [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT `members`.id FROM `members` WHERE (`members`.`email` = BINARY 'metasoarous@gmail.com' AND `members`.id <> 13) LIMIT 1[0m
   [4;35;1mMember Update (0.3ms)[0m   [0mUPDATE `members` SET `email` = 'metasoarous@gmail.com', `updated_at` = '2009-12-04 23:41:41' WHERE `id` = 13[0m
   [4;36;1mSQL (18.4ms)[0m   [0;1mCOMMIT[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (42.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (13.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mMember Load (176.2ms)[0m   [0;1mSELECT * FROM `members` [0m
+  [4;35;1mMember Columns (7.3ms)[0m   [0mSHOW FIELDS FROM `members`[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM `members` [0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (32.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mNewsletter Columns (81.7ms)[0m   [0;1mSHOW FIELDS FROM `newsletters`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mNewsletter Create (0.6ms)[0m   [0;1mINSERT INTO `newsletters` (`subject`, `body`, `created_at`, `updated_at`, `mail`, `delivered`, `next_delivery`) VALUES('TEST a newsletter test', 'This is a test newsletter - it is a very awesome newsletter. Much shorter than most newsletters, but hopefully will be somwhat representative of what a newsletter might be like. At least well enough for the purposes of testing out what is the matter with this confounded houjamajogger. And of course, by houjamajogger, I mean spam filter thing that thwarts our attempts at trying to send email out. Damn majogger. That\'s short hand, btw. Oh Kay - I think that is good for now. Till later. Just remember that IIIIII AM THE WHITE PAJAMAD GOHST!!!!!', '2009-12-21 05:00:59', '2009-12-21 05:00:59', NULL, NULL, NULL)[0m
+  [4;35;1mSQL (22.7ms)[0m   [0mCOMMIT[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+/!\ FAILSAFE /!\  Mon Jan 11 15:47:01 -0800 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:61:in `mysql_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:9
+/!\ FAILSAFE /!\  Mon Jan 11 15:47:05 -0800 2010
+  Status: 500 Internal Server Error
+  no such file to load -- mysql
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:156:in `require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:7:in `require_library_or_gem'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/kernel/requires.rb:5:in `require_library_or_gem'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/mysql_adapter.rb:61:in `mysql_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `send'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/monitor.rb:242:in `synchronize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:9
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateMembers (20090911223904)
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "name" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime, "activation_code" varchar(40), "activated_at" datetime, "state" varchar(255) DEFAULT 'passive', "deleted_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE UNIQUE INDEX "index_members_on_login" ON "members" ("login")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090911223904')[0m
+Migrating to CreateNewsletters (20090918055256)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "newsletters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090918055256')[0m
+Migrating to CreateForumCategories (20090918060211)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "forum_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090918060211')[0m
+Migrating to CreateForumTopics (20090918061402)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "forum_topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "forum_category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090918061402')[0m
+Migrating to CreateForumPosts (20090918062036)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TABLE "forum_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "forum_topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090918062036')[0m
+Migrating to CreateProductRequests (20090920073513)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "ordered" boolean, "failed" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090920073513')[0m
+Migrating to CreateComments (20090920074103)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commentable_type" varchar(255), "commentable_id" integer, "body" text, "member_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090920074103')[0m
+Migrating to CreateMemberProductRequestJoins (20090920075208)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "member_product_request_joins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "product_request_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090920075208')[0m
+Migrating to AddFieldsToProductRequests (20090925034937)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "product_requests" ADD "in_stock" boolean[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "product_requests" ADD "product_number" varchar(255)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "product_requests" ADD "distributor_id" integer[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925034937')[0m
+Migrating to CreateDistributors (20090925042045)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "distributors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "adress" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (8.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925042045')[0m
+Migrating to CreateWholesaleOrders (20090925043950)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "wholesale_orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "product_name" varchar(255), "product_number" varchar(255), "distributor_id" integer, "quantity" varchar(255), "ordered" boolean, "arrived" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925043950')[0m
+Migrating to CreateVolunteerTasks (20090925054854)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "volunteer_tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925054854')[0m
+Migrating to CreateEvents (20090925055056)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "details" text, "date" date, "time" time, "event_category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925055056')[0m
+Migrating to CreateEventCategories (20090925055144)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "event_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090925055144')[0m
+Migrating to FixMembersProductRequestsJoin (20090925063932)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "member_product_request_joins"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "members_product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "member_id" integer, "product_request_id" integer, "ordered" boolean, "failed" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090925063932')[0m
+Migrating to AddAdminToMembers (20090928061447)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "members" ADD "admin" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090928061447')[0m
+Migrating to AddFirstAndLastNameToMembers (20090928063825)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "members" ADD "first_name" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "members" ADD "last_name" varchar(255)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCREATE TEMPORARY TABLE "altered_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "name" varchar(100) DEFAULT '', "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime, "activation_code" varchar(40), "activated_at" datetime, "state" varchar(255) DEFAULT 'passive', "deleted_at" datetime, "admin" boolean, "first_name" varchar(255), "last_name" varchar(255)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("members")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_members_on_login')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE UNIQUE INDEX "temp_index_altered_members_on_login" ON "altered_members" ("login")[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mDROP TABLE "members"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime, "activation_code" varchar(40), "activated_at" datetime, "state" varchar(255) DEFAULT 'passive', "deleted_at" datetime, "admin" boolean, "first_name" varchar(255), "last_name" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("altered_members")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_members_on_login')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE UNIQUE INDEX "index_members_on_login" ON "members" ("login")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mDROP TABLE "altered_members"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090928063825')[0m
+Migrating to AddMemberIdToForumPosts (20090928073017)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "forum_posts" ADD "member_id" integer[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090928073017')[0m
+Migrating to AddMailToNewsletters (20090928210229)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "newsletters" ADD "mail" boolean[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090928210229')[0m
+Migrating to CreateProductRequestStatuses (20091002070639)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "product_request_statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091002070639')[0m
+Migrating to AddStatusToProductRequests (20091002070753)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "product_requests" ADD "product_request_status_id" integer[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TEMPORARY TABLE "altered_product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "ordered" boolean, "failed" boolean, "created_at" datetime, "updated_at" datetime, "in_stock" boolean, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_requests")[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mDROP TABLE "product_requests"[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "failed" boolean, "created_at" datetime, "updated_at" datetime, "in_stock" boolean, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_product_requests")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mDROP TABLE "altered_product_requests"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "failed" boolean, "created_at" datetime, "updated_at" datetime, "in_stock" boolean, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_requests")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "product_requests"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime, "in_stock" boolean, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_product_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_product_requests"[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE TEMPORARY TABLE "altered_product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime, "in_stock" boolean, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_requests")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mDROP TABLE "product_requests"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_product_requests")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mDROP TABLE "altered_product_requests"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091002070753')[0m
+Migrating to AddAddressToAndRemoveAdressFromDistributors (20091002224458)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "distributors" ADD "address" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "distributors" ADD "website" varchar(255)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_distributors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "adress" varchar(255), "created_at" datetime, "updated_at" datetime, "address" varchar(255), "website" varchar(255)) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("distributors")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mDROP TABLE "distributors"[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "distributors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "address" varchar(255), "website" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_distributors")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mDROP TABLE "altered_distributors"[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091002224458')[0m
+Migrating to AddMemberIdToWholesaleOrders (20091004073251)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "wholesale_orders" ADD "member_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004073251')[0m
+Migrating to CreateBarterBoardCategories (20091004080129)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "barter_board_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004080129')[0m
+Migrating to CreateBarterBoardEntries (20091004080541)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "barter_board_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "wanted_category_id" integer, "offered_category_id" integer, "wanted" varchar(255), "offered" varchar(255), "details" text, "contact_info" varchar(255), "member_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091004080541')[0m
+Migrating to CreateFaqs (20091009091247)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "faqs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091009091247')[0m
+Migrating to CreateBoardMembers (20091009214804)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "board_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "description" text, "image_url" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091009214804')[0m
+Migrating to CreateVolunteerOfferings (20091012053928)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "volunteer_offerings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "volunteer_task_id" integer, "alt_contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091012053928')[0m
+Migrating to CreateContentItems (20091024200131)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "content_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091024200131')[0m
+Migrating to AddOrderToVolunteerTasks (20091031052731)
+  [4;35;1mSQL (0.6ms)[0m   [0mALTER TABLE "volunteer_tasks" ADD "order" integer[0m
+  [4;36;1mVolunteerTask Load (0.1ms)[0m   [0;1mSELECT * FROM "volunteer_tasks" [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091031052731')[0m
+Migrating to CreateMemberships (20091103103323)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "memberships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "accepts_newsletters" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091103103323')[0m
+Migrating to CreateForumTopicSubscriptions (20091103104838)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "forum_topic_subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "forum_topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091103104838')[0m
+Migrating to CreateForumCategorySubscriptions (20091103104932)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "forum_category_subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "forum_category_id" integer, "frequency" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091103104932')[0m
+Migrating to DropWholesaleOrders (20091106082037)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mDROP TABLE "wholesale_orders"[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091106082037')[0m
+Migrating to AddPhoneNumberAndAcceptsNewslettersToMembers (20091106082457)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "members" ADD "phone_number" varchar(255)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "members" ADD "accepts_newsletters" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091106082457')[0m
+Migrating to AddFieldsToNewsletters (20091121023454)
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "newsletters" ADD "delivered" text[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mALTER TABLE "newsletters" ADD "next_delivery" varchar(255)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091121023454')[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("barter_board_categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("barter_board_entries")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("board_members")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("comments")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("content_items")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("distributors")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("event_categories")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("events")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("faqs")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("forum_categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("forum_category_subscriptions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("forum_posts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("forum_topic_subscriptions")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("forum_topics")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("members")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_info('index_members_on_login')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("members_product_requests")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("memberships")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("newsletters")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_request_statuses")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("product_requests")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("volunteer_offerings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("volunteer_tasks")[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("barter_board_categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("barter_board_entries")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("board_members")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("comments")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("content_items")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("distributors")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("event_categories")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("events")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("faqs")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("forum_categories")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("forum_category_subscriptions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("forum_posts")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("forum_topic_subscriptions")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("forum_topics")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("members")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_info('index_members_on_login')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("members_product_requests")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("memberships")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("newsletters")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("product_request_statuses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("product_requests")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("volunteer_offerings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("volunteer_tasks")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE "barter_board_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE "barter_board_entries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "wanted_category_id" integer, "offered_category_id" integer, "wanted" varchar(255), "offered" varchar(255), "details" text, "contact_info" varchar(255), "member_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE TABLE "board_members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "description" text, "image_url" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.8ms)[0m   [0mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commentable_type" varchar(255), "commentable_id" integer, "body" text, "member_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "content_items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tag" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mCREATE TABLE "distributors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "address" varchar(255), "website" varchar(255)) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.6ms)[0m   [0mCREATE TABLE "event_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "details" text, "date" date, "time" time, "event_category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE TABLE "faqs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question" varchar(255), "answer" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mCREATE TABLE "forum_categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mCREATE TABLE "forum_category_subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "forum_category_id" integer, "frequency" varchar(255), "active" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mCREATE TABLE "forum_posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "forum_topic_id" integer, "created_at" datetime, "updated_at" datetime, "member_id" integer) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.5ms)[0m   [0mCREATE TABLE "forum_topic_subscriptions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "forum_topic_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.6ms)[0m   [0mCREATE TABLE "forum_topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "forum_category_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCREATE TABLE "members" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login" varchar(40), "email" varchar(100), "crypted_password" varchar(40), "salt" varchar(40), "created_at" datetime, "updated_at" datetime, "remember_token" varchar(40), "remember_token_expires_at" datetime, "activation_code" varchar(40), "activated_at" datetime, "state" varchar(255) DEFAULT 'passive', "deleted_at" datetime, "admin" boolean, "first_name" varchar(255), "last_name" varchar(255), "phone_number" varchar(255), "accepts_newsletters" boolean) [0m
+  [4;36;1mSQL (3.3ms)[0m   [0;1mCREATE UNIQUE INDEX "index_members_on_login" ON "members" ("login")[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "members_product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "member_id" integer, "product_request_id" integer, "ordered" boolean, "failed" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mCREATE TABLE "memberships" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "email" varchar(255), "accepts_newsletters" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mCREATE TABLE "newsletters" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime, "mail" boolean, "delivered" text, "next_delivery" varchar(255)) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.5ms)[0m   [0;1mCREATE TABLE "product_request_statuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mCREATE TABLE "product_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar(255), "created_at" datetime, "updated_at" datetime, "product_number" varchar(255), "distributor_id" integer, "product_request_status_id" integer) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.5ms)[0m   [0;1mCREATE TABLE "volunteer_offerings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "member_id" integer, "volunteer_task_id" integer, "alt_contact" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mCREATE TABLE "volunteer_tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "created_at" datetime, "updated_at" datetime, "order" integer) [0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091121023454')[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090911223904')[0m
+  [4;36;1mSQL (3.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090918055256')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090918060211')[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090918061402')[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090918062036')[0m
+  [4;36;1mSQL (3.1ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090920073513')[0m
+  [4;35;1mSQL (3.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090920074103')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090920075208')[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090925034937')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090925042045')[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090925043950')[0m
+  [4;36;1mSQL (3.4ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090925054854')[0m
+  [4;35;1mSQL (3.3ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090925055056')[0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090925055144')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090925063932')[0m
+  [4;36;1mSQL (4.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090928061447')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090928063825')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090928073017')[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090928210229')[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091002070639')[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091002070753')[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091002224458')[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091004073251')[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091004080129')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091004080541')[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091009091247')[0m
+  [4;35;1mSQL (3.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091009214804')[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091012053928')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091024200131')[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091031052731')[0m
+  [4;35;1mSQL (3.2ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091103103323')[0m
+  [4;36;1mSQL (3.2ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091103104838')[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091103104932')[0m
+  [4;36;1mSQL (2.9ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20091106082037')[0m
+  [4;35;1mSQL (2.9ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20091106082457')[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-12 14:32:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 119ms (View: 116, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-01-12 14:32:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (0.8ms)[0m   [0;1mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+Completed in 17ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-12 14:33:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/welcome]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-12 14:33:04) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/login]
+
+
+Processing MembersController#new (for 127.0.0.1 at 2010-01-12 14:33:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"members"}
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (40.5ms)
+Completed in 66ms (View: 59, DB: 0) | 200 OK [http://0.0.0.0/signup]
+
+
+Processing MembersController#create (for 127.0.0.1 at 2010-01-12 14:33:52) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"XFVnD7vX6qx3wZz5WlpK/PWlNjWfwSUQsQzYBLH5Sic=", "member"=>{"password_confirmation"=>"[FILTERED]", "phone_number"=>"317-4181", "last_name"=>"Small", "password"=>"[FILTERED]", "login"=>"me", "email"=>"metasoarous@gmail.com", "first_name"=>"Christopher"}, "controller"=>"members"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'me') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'metasoarous@gmail.com') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'me') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'metasoarous@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (7.4ms)
+Completed in 28ms (View: 12, DB: 1) | 200 OK [http://0.0.0.0/members]
+
+
+Processing MembersController#create (for 127.0.0.1 at 2010-01-12 14:34:09) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"XFVnD7vX6qx3wZz5WlpK/PWlNjWfwSUQsQzYBLH5Sic=", "member"=>{"password_confirmation"=>"[FILTERED]", "phone_number"=>"317-4181", "last_name"=>"Small", "password"=>"[FILTERED]", "login"=>"chris", "email"=>"metasoarous@gmail.com", "first_name"=>"Christopher"}, "controller"=>"members"}
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'chris') LIMIT 1[0m
+  [4;36;1mMember Load (0.1ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'metasoarous@gmail.com') LIMIT 1[0m
+  [4;35;1mMember Create (0.5ms)[0m   [0mINSERT INTO "members" ("salt", "created_at", "activated_at", "crypted_password", "remember_token_expires_at", "updated_at", "deleted_at", "activation_code", "admin", "phone_number", "remember_token", "last_name", "accepts_newsletters", "login", "email", "state", "first_name") VALUES('7a46f733846bf0a7d3eeaa1a79220cc86635fff5', '2010-01-12 22:34:09', NULL, 'bfa57163381012260f9a1bc3241013d83e75bbd5', NULL, '2010-01-12 22:34:09', NULL, '61f93d1c06e2c36579412b43e1db15c81c7eca6c', NULL, '317-4181', NULL, 'Small', NULL, 'chris', 'metasoarous@gmail.com', 'pending', 'Christopher')[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Tue, 12 Jan 2010 14:34:09 -0800
+From: SJIF-COOP
+To: metasoarous@gmail.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4cf8e235c_14468171cd1c16b
+
+
+--mimepart_4b4cf8e235c_14468171cd1c16b
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Your account has been created. Below are your user name and password.
+
+	Username: chris
+	Password: mapsalot
+
+Please store these for safekeeping in case you forget them.
+
+To activate your account please visit this url:
+
+  http://0.0.0.0:3000/activate/61f93d1c06e2c36579412b43e1db15c81c7eca6c
+
+Sincerely,
+Reginald
+Coop Website Robot
+
+--mimepart_4b4cf8e235c_14468171cd1c16b
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Your account has been created. Below are your user name and password.<=
+/p>
+<p>
+  Username:
+  chris
+  <br />
+  Password:
+  mapsalot
+</p>
+<p>Please store these for safekeeping in case you forget them.</p>
+<p>
+  To activate your account please visit this url:
+  <a href=3D'http://0.0.0.0:3000/activate/61f93d1c06e2c36579412b43e1db15c=
+81c7eca6c'>http://0.0.0.0:3000/activate/61f93d1c06e2c36579412b43e1db15c81=
+c7eca6c</a>
+</p>
+<p>
+  Sincerely,
+  <br />
+  Reginald
+  <br />
+  Coop Website Robot
+</p>
+
+--mimepart_4b4cf8e235c_14468171cd1c16b--
+  [4;36;1mForumCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'chris' AND "members".id <> 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.1ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'metasoarous@gmail.com' AND "members".id <> 1) LIMIT 1[0m
+Redirected to http://0.0.0.0:3010/
+Completed in 1022ms (DB: 2) | 302 Found [http://0.0.0.0/members]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-12 14:34:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 76ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing MembersController#activate (for 127.0.0.1 at 2010-01-12 15:07:03) [GET]
+  Parameters: {"activation_code"=>"61f93d1c06e2c36579412b43e1db15c81c7eca6c", "action"=>"activate", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."activation_code" = '61f93d1c06e2c36579412b43e1db15c81c7eca6c') LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-12 23:07:03', "activated_at" = '2010-01-12 23:07:03', "activation_code" = NULL, "state" = 'active' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3010/login
+Completed in 195ms (DB: 1) | 302 Found [http://0.0.0.0/activate/61f93d1c06e2c36579412b43e1db15c81c7eca6c]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-12 15:07:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-12 15:07:11) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"XFVnD7vX6qx3wZz5WlpK/PWlNjWfwSUQsQzYBLH5Sic=", "controller"=>"sessions", "login"=>"chris", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (1.2ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'chris') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-12 23:07:11', "remember_token" = 'e3177dd584944773d52992aca24bce8b9b2c4ccb', "remember_token_expires_at" = '2010-01-26 23:07:11' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3010/
+Completed in 17ms (DB: 2) | 302 Found [http://0.0.0.0/session]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-12 15:07:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mMember Load (1.2ms)[0m   [0;1mSELECT * FROM "members" LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'chris' AND "members".id <> 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.1ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'metasoarous@gmail.com' AND "members".id <> 1) LIMIT 1[0m
+  [4;35;1mMember Update (0.4ms)[0m   [0mUPDATE "members" SET "updated_at" = '2010-01-12 23:08:43', "admin" = 't' WHERE "id" = 1[0m
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-01-12 15:09:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (0.8ms)[0m   [0;1mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+
+
+Processing NewslettersController#new (for 127.0.0.1 at 2010-01-12 15:09:29) [GET]
+  Parameters: {"action"=>"new", "controller"=>"newsletters"}
+Rendering template within layouts/application
+Rendering newsletters/new
+Rendered partials/_textile_form (3.8ms)
+Rendered newsletters/_newsletter_form (23.5ms)
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 97ms (View: 90, DB: 0) | 200 OK [http://0.0.0.0/newsletters/new]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-12 15:09:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://0.0.0.0/welcome]
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-01-12 15:09:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memberships"}
+  [4;36;1mMembership Load (0.9ms)[0m   [0;1mSELECT * FROM "memberships" ORDER BY last_name LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering memberships/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 36ms (View: 28, DB: 1) | 200 OK [http://0.0.0.0/memberships]
+
+
+Processing MembershipsController#new (for 127.0.0.1 at 2010-01-12 15:09:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"memberships"}
+Rendering template within layouts/application
+Rendering memberships/new
+Rendered memberships/_form (64.1ms)
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 161ms (View: 153, DB: 1) | 200 OK [http://0.0.0.0/memberships/new]
+
+
+Processing MembershipsController#create (for 127.0.0.1 at 2010-01-12 15:09:49) [POST]
+  Parameters: {"commit"=>"Submit", "membership"=>{"last_name"=>"small", "accepts_newsletters"=>"1", "email"=>"mellifluidicpulse@gmail.com", "first_name"=>"chris"}, "action"=>"create", "authenticity_token"=>"XFVnD7vX6qx3wZz5WlpK/PWlNjWfwSUQsQzYBLH5Sic=", "controller"=>"memberships"}
+  [4;35;1mMembership Load (0.2ms)[0m   [0mSELECT "memberships".id FROM "memberships" WHERE ("memberships"."email" = 'mellifluidicpulse@gmail.com') LIMIT 1[0m
+  [4;36;1mMembership Create (0.3ms)[0m   [0;1mINSERT INTO "memberships" ("created_at", "updated_at", "last_name", "accepts_newsletters", "first_name", "email") VALUES('2010-01-12 23:09:49', '2010-01-12 23:09:49', 'small', 't', 'chris', 'mellifluidicpulse@gmail.com')[0m
+Redirected to http://0.0.0.0:3010/memberships/1
+Completed in 15ms (DB: 0) | 302 Found [http://0.0.0.0/memberships]
+
+
+Processing MembershipsController#show (for 127.0.0.1 at 2010-01-12 15:09:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memberships"}
+  [4;35;1mMembership Load (0.3ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering memberships/show
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 28ms (View: 19, DB: 1) | 200 OK [http://0.0.0.0/memberships/1]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-01-12 15:09:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;35;1mNewsletter Load (0.7ms)[0m   [0mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 14ms (View: 9, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+
+
+Processing NewslettersController#new (for 127.0.0.1 at 2010-01-12 15:09:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"newsletters"}
+Rendering template within layouts/application
+Rendering newsletters/new
+Rendered partials/_textile_form (0.8ms)
+Rendered newsletters/_newsletter_form (2.5ms)
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://0.0.0.0/newsletters/new]
+
+
+Processing NewslettersController#create (for 127.0.0.1 at 2010-01-12 15:10:05) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"XFVnD7vX6qx3wZz5WlpK/PWlNjWfwSUQsQzYBLH5Sic=", "newsletter"=>{"body"=>"hey this is a test", "mail"=>"1", "subject"=>"Weekly Newsletter!"}, "controller"=>"newsletters"}
+  [4;36;1mNewsletter Create (0.4ms)[0m   [0;1mINSERT INTO "newsletters" ("created_at", "body", "updated_at", "delivered", "next_delivery", "subject", "mail") VALUES('2010-01-12 23:10:05', 'hey this is a test', '2010-01-12 23:10:05', NULL, NULL, 'Weekly Newsletter!', 't')[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" [0m
+  [4;36;1mMembership Load (0.3ms)[0m   [0;1mSELECT * FROM "memberships" [0m
+  [4;35;1mNewsletter Update (0.1ms)[0m   [0mUPDATE "newsletters" SET "mail" = 't', "updated_at" = '2010-01-12 23:10:05', "created_at" = '2010-01-12 23:10:05', "delivered" = '--- []
+
+', "subject" = 'Weekly Newsletter!', "body" = 'hey this is a test' WHERE "id" = 1[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Tue, 12 Jan 2010 15:10:05 -0800
+From: SJIF-COOP
+To: mellifluidicpulse@gmail.com
+Subject: Weekly Newsletter!
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4d014d42ef4_14468166cc8c424
+
+
+--mimepart_4b4d014d42ef4_14468166cc8c424
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+hey this is a test
+
+--mimepart_4b4d014d42ef4_14468166cc8c424
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>hey this is a test</p>
+
+--mimepart_4b4d014d42ef4_14468166cc8c424--
+  [4;36;1mNewsletter Update (0.2ms)[0m   [0;1mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;35;1mNewsletter Update (0.1ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3010/newsletters
+Completed in 2560ms (DB: 1) | 302 Found [http://0.0.0.0/newsletters]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-01-12 15:10:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (1.0ms)[0m   [0;1mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 88ms (View: 13, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+  [4;36;1mNewsletter Load (0.5ms)[0m   [0;1mSELECT * FROM "newsletters" LIMIT 1[0m
+  [4;35;1mMember Load (0.8ms)[0m   [0mSELECT * FROM "members" [0m
+  [4;36;1mMembership Load (0.4ms)[0m   [0;1mSELECT * FROM "memberships" [0m
+  [4;35;1mNewsletter Update (0.6ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Tue, 12 Jan 2010 15:14:20 -0800
+From: SJIF-COOP
+To: mellifluidicpulse@gmail.com
+Subject: Weekly Newsletter!
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4d024cacb49_146c800e11b01ce
+
+
+--mimepart_4b4d024cacb49_146c800e11b01ce
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+hey this is a test
+
+--mimepart_4b4d024cacb49_146c800e11b01ce
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>hey this is a test</p>
+
+--mimepart_4b4d024cacb49_146c800e11b01ce--
+  [4;36;1mNewsletter Update (0.5ms)[0m   [0;1mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;35;1mNewsletter Update (0.4ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;36;1mNewsletter Update (0.4ms)[0m   [0;1mUPDATE "newsletters" SET "updated_at" = '2010-01-12 23:21:16', "delivered" = '--- []
+
+' WHERE "id" = 1[0m
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM "members" [0m
+  [4;36;1mMembership Load (0.3ms)[0m   [0;1mSELECT * FROM "memberships" [0m
+  [4;35;1mNewsletter Update (160.4ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- []
+
+' WHERE "id" = 1[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Tue, 12 Jan 2010 15:21:21 -0800
+From: SJIF-COOP
+To: mellifluidicpulse@gmail.com
+Subject: Weekly Newsletter!
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4d03f123c26_146c800e11b04cc
+
+
+--mimepart_4b4d03f123c26_146c800e11b04cc
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+hey this is a test
+
+--mimepart_4b4d03f123c26_146c800e11b04cc
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>hey this is a test</p>
+
+--mimepart_4b4d03f123c26_146c800e11b04cc--
+  [4;36;1mNewsletter Update (0.4ms)[0m   [0;1mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;35;1mNewsletter Update (0.4ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;36;1mMember Load (0.8ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mMembership Load (0.4ms)[0m   [0mSELECT * FROM "memberships" [0m
+  [4;36;1mNewsletter Update (0.5ms)[0m   [0;1mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Tue, 12 Jan 2010 15:26:51 -0800
+From: SJIF-COOP
+To: mellifluidicpulse@gmail.com
+Subject: Weekly Newsletter!
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b4d053bb0de1_146c800e11b07ca
+
+
+--mimepart_4b4d053bb0de1_146c800e11b07ca
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+hey this is a test
+
+--mimepart_4b4d053bb0de1_146c800e11b07ca
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>hey this is a test</p>
+
+--mimepart_4b4d053bb0de1_146c800e11b07ca--
+  [4;35;1mNewsletter Update (0.5ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+  [4;36;1mNewsletter Update (0.3ms)[0m   [0;1mUPDATE "newsletters" SET "delivered" = '--- 
+- mellifluidicpulse@gmail.com
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 1[0m
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-13 14:21:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 167ms (View: 164, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-01-13 14:21:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"members"}
+
+NameError (undefined local variable or method `home_path' for #<MembersController:0x102e183d8>):
+  app/controllers/application_controller.rb:21:in `admin_authorize'
+  haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.7ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-01-13 14:25:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"members"}
+Redirected to http://0.0.0.0:3010/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://0.0.0.0/members]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-13 14:25:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-01-13 14:25:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memberships"}
+Redirected to http://0.0.0.0:3010/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://0.0.0.0/memberships]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-13 14:25:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://0.0.0.0/]
+
+
+Processing VolunteerTasksController#index (for 127.0.0.1 at 2010-01-13 14:26:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"volunteer_tasks"}
+  [4;36;1mVolunteerTask Load (11.5ms)[0m   [0;1mSELECT * FROM "volunteer_tasks" [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/index
+Completed in 308ms (View: 64, DB: 12) | 200 OK [http://0.0.0.0/volunteer_tasks]
+
+
+Processing BarterBoardEntriesController#index (for 127.0.0.1 at 2010-01-13 14:26:06) [GET]
+  Parameters: {"action"=>"index", "sort_by"=>"offered", "controller"=>"barter_board_entries"}
+  [4;35;1mBarterBoardEntry Load (1.8ms)[0m   [0mSELECT * FROM "barter_board_entries" [0m
+  [4;36;1mBarterBoardCategory Load (0.2ms)[0m   [0;1mSELECT * FROM "barter_board_categories" [0m
+Rendering template within layouts/application
+Rendering barter_board_entries/index
+Completed in 186ms (View: 111, DB: 2) | 200 OK [http://0.0.0.0/barter_board_entries?sort_by=offered]
+
+
+Processing WholesaleOrdersController#index (for 127.0.0.1 at 2010-01-13 14:26:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"wholesale_orders"}
+  [4;35;1mContentItem Load (0.6ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_preamble') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_preamble') LIMIT 1[0m
+  [4;35;1mContentItem Create (46.8ms)[0m   [0mINSERT INTO "content_items" ("created_at", "updated_at", "tag", "content") VALUES('2010-01-13 22:26:08', '2010-01-13 22:26:08', 'wholesale_ordering_preamble', 'This content has yet to be created.')[0m
+  [4;36;1mContentItem Load (0.2ms)[0m   [0;1mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering wholesale_orders/index
+Completed in 84ms (View: 13, DB: 48) | 200 OK [http://0.0.0.0/wholesale_orders]
+
+
+Processing ProductRequestsController#index (for 127.0.0.1 at 2010-01-13 14:26:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"product_requests"}
+  [4;36;1mProductRequest Load (1.1ms)[0m   [0;1mSELECT * FROM "product_requests" [0m
+  [4;35;1mProductRequestStatus Load (0.2ms)[0m   [0mSELECT * FROM "product_request_statuses" [0m
+Rendering template within layouts/application
+Rendering product_requests/index
+Completed in 56ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/product_requests]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-01-13 14:26:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (10.8ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+Completed in 33ms (View: 13, DB: 11) | 200 OK [http://0.0.0.0/forum_categories]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-01-13 14:26:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;35;1mNewsletter Load (1.0ms)[0m   [0mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+Completed in 210ms (View: 205, DB: 1) | 200 OK [http://0.0.0.0/newsletters]
+
+
+Processing WholesaleOrdersController#index (for 127.0.0.1 at 2010-01-13 14:26:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"wholesale_orders"}
+  [4;36;1mContentItem Load (0.2ms)[0m   [0;1mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_preamble') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering wholesale_orders/index
+Completed in 17ms (View: 3, DB: 1) | 200 OK [http://0.0.0.0/wholesale_orders]
+
+
+Processing MembersController#new (for 127.0.0.1 at 2010-01-13 14:26:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"members"}
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (8.3ms)
+Completed in 31ms (View: 25, DB: 0) | 200 OK [http://0.0.0.0/signup]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-13 14:26:25) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 88ms (View: 85, DB: 0) | 200 OK [http://0.0.0.0/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-13 14:26:38) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"bPqourThbXfnQDVFSDuJDuHUw58GiYTHW7LvYpmdN9E=", "controller"=>"sessions", "login"=>"chris", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (32.7ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'chris') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-13 22:26:38', "remember_token" = '4fd835d73a5186f7d5a85ac4ee1a0a8c147fedce', "remember_token_expires_at" = '2010-01-27 22:26:38' WHERE "id" = 1[0m
+Redirected to http://0.0.0.0:3010/
+Completed in 54ms (DB: 33) | 302 Found [http://0.0.0.0/session]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-13 14:26:38) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://0.0.0.0/]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-01-13 14:26:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (0.8ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 89ms (View: 10, DB: 1) | 200 OK [http://0.0.0.0/forum_categories]
+
+
+Processing ForumCategoriesController#new (for 127.0.0.1 at 2010-01-13 14:26:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_categories"}
+Rendering template within layouts/application
+Rendering forum_categories/new
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 26ms (View: 17, DB: 0) | 200 OK [http://0.0.0.0/forum_categories/new]
+
+
+Processing ForumCategoriesController#create (for 127.0.0.1 at 2010-01-13 14:26:58) [POST]
+  Parameters: {"action"=>"create", "authenticity_token"=>"bPqourThbXfnQDVFSDuJDuHUw58GiYTHW7LvYpmdN9E=", "controller"=>"forum_categories", "forum_category"=>{"name"=>"Stuff"}}
+  [4;35;1mForumCategory Create (0.4ms)[0m   [0mINSERT INTO "forum_categories" ("name", "created_at", "updated_at") VALUES('Stuff', '2010-01-13 22:26:58', '2010-01-13 22:26:58')[0m
+Redirected to http://0.0.0.0:3010/forum_categories
+Completed in 15ms (DB: 0) | 302 Found [http://0.0.0.0/forum_categories]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-01-13 14:26:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (1.1ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mForumTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "forum_topics" WHERE ("forum_topics".forum_category_id = 1) [0m
+Rendered forum_categories/_category (7.8ms)
+Completed in 108ms (View: 98, DB: 2) | 200 OK [http://0.0.0.0/forum_categories]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-13 14:27:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/new
+  [4;36;1mForumCategory Load (0.4ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendered forum_topics/_topic_form (13.8ms)
+Completed in 125ms (View: 33, DB: 1) | 200 OK [http://0.0.0.0/forum_topics/new]
+
+
+Processing ForumTopicsController#create (for 127.0.0.1 at 2010-01-13 14:27:12) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"bPqourThbXfnQDVFSDuJDuHUw58GiYTHW7LvYpmdN9E=", "controller"=>"forum_topics", "forum_topic"=>{"forum_posts_attributes"=>{"0"=>{"body"=>"Ah yeah"}}, "subject"=>"Some crap", "forum_category_id"=>"1"}}
+  [4;35;1mMember Load (0.7ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" WHERE ("forum_categories"."id" = 1) [0m
+  [4;35;1mForumTopic Create (0.4ms)[0m   [0mINSERT INTO "forum_topics" ("created_at", "updated_at", "subject", "forum_category_id") VALUES('2010-01-13 22:27:12', '2010-01-13 22:27:12', 'Some crap', 1)[0m
+  [4;36;1mForumPost Create (0.1ms)[0m   [0;1mINSERT INTO "forum_posts" ("forum_topic_id", "created_at", "body", "member_id", "updated_at") VALUES(1, '2010-01-13 22:27:12', 'Ah yeah', NULL, '2010-01-13 22:27:12')[0m
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 1) [0m
+  [4;36;1mMember Load (0.8ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "forum_topic_subscriptions" ON "members".id = "forum_topic_subscriptions".member_id WHERE (("forum_topic_subscriptions".forum_topic_id = 1)) [0m
+Redirected to http://0.0.0.0:3010/forum_topics/1
+Completed in 118ms (DB: 3) | 302 Found [http://0.0.0.0/forum_topics]
+
+
+Processing ForumTopicsController#show (for 127.0.0.1 at 2010-01-13 14:27:12) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 1) [0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) LIMIT 20 OFFSET 0[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/show
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" WHERE ("forum_categories"."id" = 1) [0m
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT "forum_topics".id FROM "forum_topics" INNER JOIN "forum_topic_subscriptions" ON "forum_topics".id = "forum_topic_subscriptions".forum_topic_id WHERE ("forum_topics"."id" = 1) AND (("forum_topic_subscriptions".member_id = 1)) LIMIT 1[0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) [0m
+Completed in 135ms (View: 114, DB: 2) | 200 OK [http://0.0.0.0/forum_topics/1]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-13 14:27:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 87ms (View: 84, DB: 0) | 200 OK [http://0.0.0.0/welcome]
+
+
+Processing WholesaleOrdersController#index (for 127.0.0.1 at 2010-01-13 14:27:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"wholesale_orders"}
+  [4;36;1mContentItem Load (0.3ms)[0m   [0;1mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_preamble') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_unfi') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_azures') LIMIT 1[0m
+  [4;35;1mContentItem Load (0.1ms)[0m   [0mSELECT * FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+  [4;36;1mContentItem Load (0.1ms)[0m   [0;1mSELECT "content_items".id FROM "content_items" WHERE ("content_items"."tag" = 'wholesale_ordering_rest') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering wholesale_orders/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+
+ActionView::TemplateError (can't convert nil into String) on line #10 of app/views/wholesale_orders/index.html.haml:
+7: 		#specific_instr
+8: 			#unfi_instr
+9: 				%h3 UNFI
+10: 				= display_content(@content[:wholesale_ordering_unfi])
+11: 			#azures_instr
+12: 				%h3 Azure Standard
+13: 				= display_content(@content[:wholesale_ordering_azures])
+
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib/redcloth/textile_doc.rb:69:in `initialize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib/redcloth/textile_doc.rb:69:in `initialize'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib/RedCloth.rb:28:in `new'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/gems/1.8/gems/RedCloth-4.2.2/lib/RedCloth.rb:28:in `new'
+    app/helpers/application_helper.rb:41:in `display_textile'
+    app/helpers/application_helper.rb:32:in `display_content'
+    app/views/wholesale_orders/index.html.haml:10:in `_run_haml_app47views47wholesale_orders47index46html46haml'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (2.2.16) lib/sass/plugin/rails.rb:19:in `process'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /Users/cts/.multiruby/install/1.8.7-p248/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (141.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)

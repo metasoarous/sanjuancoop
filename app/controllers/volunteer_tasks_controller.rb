@@ -1,6 +1,9 @@
 class VolunteerTasksController < ApplicationController
   # GET /volunteer_tasks
   # GET /volunteer_tasks.xml
+  
+  before_filter :admin_authorize, :except => [:index, :show]
+  
   def index
     @volunteer_tasks = VolunteerTask.all.sort {|a,b| a.order <=> b.order}
     
