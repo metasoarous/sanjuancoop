@@ -1703,3 +1703,22 @@ ActionView::TemplateError (can't convert nil into String) on line #10 of app/vie
 Rendered rescues/_trace (141.3ms)
 Rendered rescues/_request_and_response (0.3ms)
 Rendering rescues/layout (internal_server_error)
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-22 17:01:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 150ms (View: 147, DB: 0) | 200 OK [http://localhost/]
