@@ -7,7 +7,7 @@ class MembersController < ApplicationController
   before_filter :find_member, :only => [:suspend, :unsuspend, :destroy, :purge]
   before_filter :admin_authorize, :only => [:index, :destroy, :suspend, :unsuspend, :purge]
   before_filter :only => [:show, :update] do |controller|
-    controller.owner_authorize(params[:id]) or controller.admin_authorize
+    controller.owner_authorize(controller.params[:id]) or controller.admin_authorize
   end
   
   

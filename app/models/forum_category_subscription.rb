@@ -10,6 +10,8 @@ class ForumCategorySubscription < ActiveRecord::Base
   validates_numericality_of :forum_category_id, :message => "Subscription is failing to associate itself with a forum_category"
   validates_presence_of :frequency, :message => "Must have a subscription frequency selected"
   
+  protected 
+  
   def must_be_unique_join
     member_subs = self.class.all(:conditions => {:member_id => member_id})
     pass = true
