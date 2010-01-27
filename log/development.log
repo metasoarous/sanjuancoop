@@ -1722,3 +1722,82 @@ Processing WelcomeController#index (for 127.0.0.1 at 2010-01-22 17:01:39) [GET]
 Rendering template within layouts/application
 Rendering welcome/index
 Completed in 150ms (View: 147, DB: 0) | 200 OK [http://localhost/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-27 10:54:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 149ms (View: 145, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-27 10:55:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 58ms (View: 54, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-27 10:55:09) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"2SULvY1bJcHE/GM7rLRPzB+PsNY5boDEypW6aqql7wU=", "controller"=>"sessions", "login"=>"metasoarous", "password"=>"[FILTERED]"}
+  [4;36;1mMember Load (14.8ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."login" = 'metasoarous') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'metasoarous' from 127.0.0.1 at Wed Jan 27 18:55:09 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 24ms (View: 4, DB: 15) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-27 10:55:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 74ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing MembersController#new (for 127.0.0.1 at 2010-01-27 10:55:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"members"}
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (78.6ms)
+Completed in 102ms (View: 96, DB: 0) | 200 OK [http://localhost/signup]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mMember Load (1.1ms)[0m   [0;1mSELECT * FROM "members" [0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-27 10:55:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 8ms (View: 5, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-27 10:56:07) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"2SULvY1bJcHE/GM7rLRPzB+PsNY5boDEypW6aqql7wU=", "controller"=>"sessions", "login"=>"chris", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (1.2ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'chris') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-27 18:56:08', "remember_token" = '7223aab8b969f20e733d3401a75b9d431b6380cd', "remember_token_expires_at" = '2010-02-10 18:56:08' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 239ms (DB: 2) | 302 Found [http://localhost/session]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-27 10:56:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MembersController#show (for 127.0.0.1 at 2010-01-27 10:56:10) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"members"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) [0m
+  [4;36;1mForumTopicSubscription Load (13.3ms)[0m   [0;1mSELECT * FROM "forum_topic_subscriptions" WHERE ("forum_topic_subscriptions".member_id = 1) LIMIT 20 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering members/show
+  [4;35;1mForumCategorySubscription Load (0.2ms)[0m   [0mSELECT * FROM "forum_category_subscriptions" WHERE ("forum_category_subscriptions".member_id = 1) [0m
+Completed in 100ms (View: 20, DB: 14) | 200 OK [http://localhost/members/1]
