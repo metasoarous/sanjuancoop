@@ -2,36 +2,31 @@ class Newsletter < ActiveRecord::Base
   has_many :comments, :as => :commentable
   serialize :delivered, Array
   
-  def deliver(group = :all)
+  def deliver(deliver_to = :memberships)
     self.delivered = [] if delivered.nil?
-    case group
+    case deliver_to
     when Array
-    when :all
-      group = Member.all
-      emails = group.map {|m| m.email}
-      Membership.all.each do |membership|
-        group << membership unless membership.email.nil? or emails.include? membership.email
-        emails << membership.email
-      end
+      # carry on
+    when String, Member, Membership
+      deliver_to = [deliver_to]
     when :members
-      group = Member.all
+      deliver_to = Member.all
     when :memberships
-      group = Membership.all
+      deliver_to = Membership.all
     else
-      # Should throw or raise here!
+      # Should throw or raise here?
     end
     
-    group.each do |memb|
-      if memb.accepts_newsletters? and !memb.email.nil? and !memb.email.empty?
-        next_delivery = memb.email
-        self.save
-        CoopMailer.deliver_newsletter(memb, self)
-        self.delivered = delivered << memb.email
+    deliver_to.each do |contact|
+      case contact
+      when String
+        self.delivered << contact
+      when Membership, Member
+        next unless (contact.accepts_newsletters? and !contact.email.nil? and !contact.email.empty?)
+        self.delivered << contact.email
         self.save
       end
+      CoopMailer.deliver_newsletter(contact, self)
     end
-    
-    next_delivery = nil
-    self.save
   end
 end

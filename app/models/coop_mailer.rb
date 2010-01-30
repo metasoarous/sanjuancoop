@@ -17,8 +17,9 @@ class CoopMailer < ActionMailer::Base
   end
   
   # delivers newsletters
-  def newsletter(member, newsletter)
-    setup_multipart_email(member.email)
+  def newsletter(deliver_to, newsletter)
+    addy = (deliver_to.class == Membership or deliver_to.class == Member) ? deliver_to.email : deliver_to
+    setup_multipart_email(addy)
     @subject = newsletter.subject
     @body[:body] = newsletter.body
   end
@@ -44,7 +45,7 @@ class CoopMailer < ActionMailer::Base
     def setup_multipart_email(address)
       headers       {}
       recipients    address
-      from          "SJIF-COOP"
+      from          "SJI-Coop<no-reply@sanjuancoop.org>"
       sent_on       Time.now
       content_type  "multipart/alternative"
     end
