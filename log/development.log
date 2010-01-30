@@ -1801,3 +1801,341 @@ Rendering template within layouts/application
 Rendering members/show
   [4;35;1mForumCategorySubscription Load (0.2ms)[0m   [0mSELECT * FROM "forum_category_subscriptions" WHERE ("forum_category_subscriptions".member_id = 1) [0m
 Completed in 100ms (View: 20, DB: 14) | 200 OK [http://localhost/members/1]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:03:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 192ms (View: 187, DB: 0) | 200 OK [http://localhost/]
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.0.2 ready to catch errors
+  [4;36;1mMember Load (111.7ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM "members" [0m
+
+
+Processing MembersController#new (for 127.0.0.1 at 2010-01-29 21:05:38) [GET]
+  Parameters: {"action"=>"new", "controller"=>"members"}
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (160.9ms)
+Completed in 202ms (View: 196, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing MembersController#create (for 127.0.0.1 at 2010-01-29 21:06:08) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "member"=>{"password_confirmation"=>"[FILTERED]", "phone_number"=>"360-317-4181", "last_name"=>"small", "password"=>"[FILTERED]", "login"=>"normal_user", "email"=>"mellifluidicpulse@gmail.com", "first_name"=>"chris"}, "controller"=>"members"}
+  [4;36;1mMember Load (8.6ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user') LIMIT 1[0m
+  [4;35;1mMember Load (0.3ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering members/new
+Rendered members/_member_form (9.6ms)
+Completed in 46ms (View: 19, DB: 9) | 200 OK [http://localhost/members]
+
+
+Processing MembersController#create (for 127.0.0.1 at 2010-01-29 21:06:16) [POST]
+  Parameters: {"commit"=>"Sign Up", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "member"=>{"password_confirmation"=>"[FILTERED]", "phone_number"=>"360-317-4181", "last_name"=>"small", "password"=>"[FILTERED]", "login"=>"normal_user", "email"=>"mellifluidicpulse@gmail.com", "first_name"=>"chris"}, "controller"=>"members"}
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com') LIMIT 1[0m
+  [4;36;1mMember Create (0.5ms)[0m   [0;1mINSERT INTO "members" ("salt", "created_at", "activated_at", "crypted_password", "remember_token_expires_at", "updated_at", "deleted_at", "activation_code", "admin", "phone_number", "remember_token", "last_name", "accepts_newsletters", "login", "email", "state", "first_name") VALUES('4475797d9090c1749d3b64155f7f74d01119a5b4', '2010-01-30 05:06:16', NULL, '5b59fd89b9b8950e530a706d75aa1cf6b5f55e3b', NULL, '2010-01-30 05:06:16', NULL, 'a036481650e6bd46d2b873fef95a5c2b8380cc97', NULL, '360-317-4181', NULL, 'small', NULL, 'normal_user', 'mellifluidicpulse@gmail.com', 'pending', 'chris')[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Fri, 29 Jan 2010 21:06:16 -0800
+From: SJIF-COOP
+To: mellifluidicpulse@gmail.com
+Subject: Website Registration: Please activate your new account
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b63be482f51c_de7819476f0153
+
+
+--mimepart_4b63be482f51c_de7819476f0153
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Your account has been created. Below are your user name and password.
+
+	Username: normal_user
+	Password: mapsalot
+
+Please store these for safekeeping in case you forget them.
+
+To activate your account please visit this url:
+
+  http://0.0.0.0:3000/activate/a036481650e6bd46d2b873fef95a5c2b8380cc97
+
+Sincerely,
+Reginald
+Coop Website Robot
+
+--mimepart_4b63be482f51c_de7819476f0153
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Your account has been created. Below are your user name and password.<=
+/p>
+<p>
+  Username:
+  normal_user
+  <br />
+  Password:
+  mapsalot
+</p>
+<p>Please store these for safekeeping in case you forget them.</p>
+<p>
+  To activate your account please visit this url:
+  <a href=3D'http://0.0.0.0:3000/activate/a036481650e6bd46d2b873fef95a5c2=
+b8380cc97'>http://0.0.0.0:3000/activate/a036481650e6bd46d2b873fef95a5c2b8=
+380cc97</a>
+</p>
+<p>
+  Sincerely,
+  <br />
+  Reginald
+  <br />
+  Coop Website Robot
+</p>
+
+--mimepart_4b63be482f51c_de7819476f0153--
+  [4;35;1mForumCategory Load (26.9ms)[0m   [0mSELECT * FROM "forum_categories" [0m
+  [4;36;1mForumCategorySubscription Load (0.2ms)[0m   [0;1mSELECT * FROM "forum_category_subscriptions" WHERE ("forum_category_subscriptions"."member_id" = 2) [0m
+  [4;35;1mForumCategorySubscription Create (0.3ms)[0m   [0mINSERT INTO "forum_category_subscriptions" ("created_at", "member_id", "updated_at", "frequency", "forum_category_id", "active") VALUES('2010-01-30 05:06:17', 2, '2010-01-30 05:06:17', 'weekly', 1, NULL)[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user' AND "members".id <> 2) LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com' AND "members".id <> 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 1067ms (DB: 29) | 302 Found [http://localhost/members]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:06:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM "members" ORDER BY members.id DESC LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user' AND "members".id <> 2) LIMIT 1[0m
+  [4;36;1mMember Load (0.1ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com' AND "members".id <> 2) LIMIT 1[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" ORDER BY members.id DESC LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-29 21:07:10) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-29 21:07:26) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"sessions", "login"=>"normal_user", "password"=>"[FILTERED]"}
+  [4;36;1mMember Load (0.9ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."login" = 'normal_user') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'normal_user' from 127.0.0.1 at Sat Jan 30 05:07:26 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-29 21:07:43) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"sessions", "login"=>"normal_user", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (0.9ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'normal_user') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'normal_user' from 127.0.0.1 at Sat Jan 30 05:07:43 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 9ms (View: 3, DB: 1) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-29 21:07:59) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"sessions", "login"=>"normal_user", "password"=>"[FILTERED]"}
+  [4;36;1mMember Load (0.8ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."login" = 'normal_user') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'normal_user' from 127.0.0.1 at Sat Jan 30 05:07:59 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/session]
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user' AND "members".id <> 2) LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com' AND "members".id <> 2) LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-30 05:08:04', "state" = 'active' WHERE "id" = 2[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-29 21:08:09) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"sessions", "login"=>"normal_user", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (1.2ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'normal_user') AND (members.state = 'active') LIMIT 1[0m
+  [4;36;1mMember Update (0.4ms)[0m   [0;1mUPDATE "members" SET "updated_at" = '2010-01-30 05:08:09', "remember_token" = '32ffe8cf72a3e2c2b4dfa35b135c3421b3535bae', "remember_token_expires_at" = '2010-02-13 05:08:09' WHERE "id" = 2[0m
+Redirected to http://localhost:3000/
+Completed in 254ms (DB: 2) | 302 Found [http://localhost/session]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:08:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-01-29 21:08:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;36;1mForumCategory Load (0.9ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+  [4;36;1mForumTopic Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_topics" WHERE ("forum_topics".forum_category_id = 1) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) [0m
+Rendered forum_categories/_category (13.5ms)
+Completed in 52ms (View: 42, DB: 2) | 200 OK [http://localhost/forum_categories]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:08:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 8ms (DB: 1) | 302 Found [http://localhost/forum_topics/new]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:08:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:09:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/forum_topics/new]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:09:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/forum_topics/new]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:09:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:09:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/forum_topics/new]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:09:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:10:28) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/new
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendered forum_topics/_topic_form (78.1ms)
+Completed in 115ms (View: 98, DB: 1) | 200 OK [http://localhost/forum_topics/new]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:10:35) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:admin_authorize] rendered_or_redirected.
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/forum_topics/new]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-01-29 21:10:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-01-29 21:11:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;35;1mForumCategory Load (0.9ms)[0m   [0mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics".forum_category_id = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) [0m
+Rendered forum_categories/_category (7.9ms)
+Completed in 31ms (View: 21, DB: 2) | 200 OK [http://localhost/forum_categories]
+
+
+Processing ForumTopicsController#new (for 127.0.0.1 at 2010-01-29 21:11:22) [GET]
+  Parameters: {"action"=>"new", "controller"=>"forum_topics"}
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/new
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" [0m
+Rendered forum_topics/_topic_form (13.8ms)
+Completed in 39ms (View: 23, DB: 1) | 200 OK [http://localhost/forum_topics/new]
+
+
+Processing ForumTopicsController#create (for 127.0.0.1 at 2010-01-29 21:11:33) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"forum_topics", "forum_topic"=>{"forum_posts_attributes"=>{"0"=>{"body"=>"Adsfkjahsdf alsdkfj lakdsfj kas dlf"}}, "subject"=>"some crap", "forum_category_id"=>"1"}}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" WHERE ("forum_categories"."id" = 1) [0m
+  [4;35;1mForumTopic Create (0.6ms)[0m   [0mINSERT INTO "forum_topics" ("created_at", "updated_at", "subject", "forum_category_id") VALUES('2010-01-30 05:11:33', '2010-01-30 05:11:33', 'some crap', 1)[0m
+  [4;36;1mForumPost Create (0.1ms)[0m   [0;1mINSERT INTO "forum_posts" ("forum_topic_id", "created_at", "body", "member_id", "updated_at") VALUES(2, '2010-01-30 05:11:33', 'Adsfkjahsdf alsdkfj lakdsfj kas dlf', NULL, '2010-01-30 05:11:33')[0m
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 2) [0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "forum_topic_subscriptions" ON "members".id = "forum_topic_subscriptions".member_id WHERE (("forum_topic_subscriptions".forum_topic_id = 2)) [0m
+Redirected to http://localhost:3000/forum_topics/2
+Completed in 51ms (DB: 2) | 302 Found [http://localhost/forum_topics]
+
+
+Processing ForumTopicsController#show (for 127.0.0.1 at 2010-01-29 21:11:34) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.4ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 2) [0m
+  [4;36;1mForumPost Load (0.4ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) LIMIT 20 OFFSET 0[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/show
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" WHERE ("forum_categories"."id" = 1) [0m
+  [4;35;1mForumTopic Load (0.3ms)[0m   [0mSELECT "forum_topics".id FROM "forum_topics" INNER JOIN "forum_topic_subscriptions" ON "forum_topics".id = "forum_topic_subscriptions".forum_topic_id WHERE ("forum_topics"."id" = 2) AND (("forum_topic_subscriptions".member_id = 2)) LIMIT 1[0m
+  [4;36;1mForumPost Load (0.4ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) [0m
+Completed in 54ms (View: 31, DB: 2) | 200 OK [http://localhost/forum_topics/2]
+
+
+Processing ForumPostsController#create (for 127.0.0.1 at 2010-01-29 21:11:47) [POST]
+  Parameters: {"forum_post"=>{"forum_topic_id"=>"2", "body"=>"Some more stuff?"}, "commit"=>"Post", "action"=>"create", "authenticity_token"=>"BRvh7921/tzOHNVeH+PmKJGo041xXhsaZ4LunQsfS9M=", "controller"=>"forum_posts"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+  [4;36;1mForumPost Create (0.5ms)[0m   [0;1mINSERT INTO "forum_posts" ("forum_topic_id", "created_at", "body", "member_id", "updated_at") VALUES(2, '2010-01-30 05:11:47', 'Some more stuff?', 2, '2010-01-30 05:11:47')[0m
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 2) [0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "forum_topic_subscriptions" ON "members".id = "forum_topic_subscriptions".member_id WHERE (("forum_topic_subscriptions".forum_topic_id = 2)) [0m
+Redirected to http://localhost:3000/forum_topics/2
+Completed in 30ms (DB: 1) | 302 Found [http://localhost/forum_posts]
+
+
+Processing ForumTopicsController#show (for 127.0.0.1 at 2010-01-29 21:11:47) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"forum_topics"}
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics"."id" = 2) [0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) LIMIT 20 OFFSET 0[0m
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering forum_topics/show
+  [4;36;1mForumCategory Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_categories" WHERE ("forum_categories"."id" = 1) [0m
+  [4;35;1mForumTopic Load (0.2ms)[0m   [0mSELECT "forum_topics".id FROM "forum_topics" INNER JOIN "forum_topic_subscriptions" ON "forum_topics".id = "forum_topic_subscriptions".forum_topic_id WHERE ("forum_topics"."id" = 2) AND (("forum_topic_subscriptions".member_id = 2)) LIMIT 1[0m
+  [4;36;1mForumPost Load (0.4ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) [0m
+  [4;35;1mMember Load (0.6ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 2) [0m
+Completed in 50ms (View: 26, DB: 3) | 200 OK [http://localhost/forum_topics/2]
