@@ -3,3 +3,4 @@ haml
 RedCloth
 will_paginate
 mocha
+hoptoad_notifier
