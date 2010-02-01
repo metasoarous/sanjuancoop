@@ -12,4 +12,9 @@ module VolunteerTasksHelper
     offerings = VolunteerOffering.find(:all, :conditions => conditions)
     return offerings.first
   end
+  
+  def task_order_number
+    orders = VolunteerTask.all.map {|t| t.order}
+    return orders.max ? orders.max + 1 : 1
+  end
 end
