@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
   
   # handles any unauthorized access
   def unauthorized_access
-    flash[:notice] = "Unautorized access"
+    flash[:notice] = "Unauthorized access"
     redirect_to "/"
     return false
   end

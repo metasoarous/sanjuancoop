@@ -2,7 +2,7 @@ class Newsletter < ActiveRecord::Base
   has_many :comments, :as => :commentable
   serialize :delivered, Array
   
-  def deliver(deliver_to = :memberships)
+  def deliver(deliver_to = :all)
     self.delivered = [] if delivered.nil?
     case deliver_to
     when Array
@@ -13,6 +13,8 @@ class Newsletter < ActiveRecord::Base
       deliver_to = Member.all
     when :memberships
       deliver_to = Membership.all
+    when :all
+      deliver_to = Membership.all + Member.all
     else
       # Should throw or raise here?
     end
@@ -20,9 +22,13 @@ class Newsletter < ActiveRecord::Base
     deliver_to.each do |contact|
       case contact
       when String
-        self.delivered << contact
+        unless self.delivered.include? contact
+          self.delivered << contact
+        else
+          next
+        end
       when Membership, Member
-        next unless (contact.accepts_newsletters? and !contact.email.nil? and !contact.email.empty?)
+        next unless (contact.accepts_newsletters? and !contact.email.nil? and !contact.email.empty? and !self.delivered.include?(contact.email))
         self.delivered << contact.email
         self.save
       end

@@ -3548,3 +3548,296 @@ Rendered volunteer_tasks/_task (5.3ms)
   [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "volunteer_offerings" ON "members".id = "volunteer_offerings".member_id WHERE (("volunteer_offerings".volunteer_task_id = 7)) [0m
 Rendered volunteer_tasks/_task (5.4ms)
 Completed in 50ms (View: 38, DB: 3) | 200 OK [http://localhost/volunteer_tasks]
+
+
+Processing VolunteerTasksController#index (for 127.0.0.1 at 2010-02-01 14:59:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"volunteer_tasks"}
+  [4;35;1mVolunteerTask Load (1.1ms)[0m   [0mSELECT * FROM "volunteer_tasks" [0m
+Rendering template within layouts/application
+Rendering volunteer_tasks/index
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;35;1mVolunteerTask Load (0.2ms)[0m   [0mSELECT "volunteer_tasks".id FROM "volunteer_tasks" INNER JOIN "volunteer_offerings" ON "volunteer_tasks".id = "volunteer_offerings".volunteer_task_id WHERE ("volunteer_tasks"."id" = 3) AND (("volunteer_offerings".member_id = 1)) LIMIT 1[0m
+  [4;36;1mMember Load (0.3ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "volunteer_offerings" ON "members".id = "volunteer_offerings".member_id WHERE (("volunteer_offerings".volunteer_task_id = 3)) [0m
+Rendered volunteer_tasks/_task (12.9ms)
+  [4;35;1mVolunteerTask Load (0.2ms)[0m   [0mSELECT "volunteer_tasks".id FROM "volunteer_tasks" INNER JOIN "volunteer_offerings" ON "volunteer_tasks".id = "volunteer_offerings".volunteer_task_id WHERE ("volunteer_tasks"."id" = 4) AND (("volunteer_offerings".member_id = 1)) LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "volunteer_offerings" ON "members".id = "volunteer_offerings".member_id WHERE (("volunteer_offerings".volunteer_task_id = 4)) [0m
+Rendered volunteer_tasks/_task (5.6ms)
+  [4;35;1mVolunteerTask Load (0.2ms)[0m   [0mSELECT "volunteer_tasks".id FROM "volunteer_tasks" INNER JOIN "volunteer_offerings" ON "volunteer_tasks".id = "volunteer_offerings".volunteer_task_id WHERE ("volunteer_tasks"."id" = 6) AND (("volunteer_offerings".member_id = 1)) LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "volunteer_offerings" ON "members".id = "volunteer_offerings".member_id WHERE (("volunteer_offerings".volunteer_task_id = 6)) [0m
+Rendered volunteer_tasks/_task (5.3ms)
+  [4;35;1mVolunteerTask Load (0.2ms)[0m   [0mSELECT "volunteer_tasks".id FROM "volunteer_tasks" INNER JOIN "volunteer_offerings" ON "volunteer_tasks".id = "volunteer_offerings".volunteer_task_id WHERE ("volunteer_tasks"."id" = 7) AND (("volunteer_offerings".member_id = 1)) LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".* FROM "members" INNER JOIN "volunteer_offerings" ON "members".id = "volunteer_offerings".member_id WHERE (("volunteer_offerings".volunteer_task_id = 7)) [0m
+Rendered volunteer_tasks/_task (5.4ms)
+Completed in 50ms (View: 38, DB: 3) | 200 OK [http://localhost/volunteer_tasks]
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-02-12 18:06:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+Completed in 123ms (View: 118, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-02-12 18:07:00) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-12 18:07:09) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "controller"=>"sessions", "login"=>"metasoarous", "password"=>"[FILTERED]"}
+  [4;36;1mMember Load (22.9ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."login" = 'metasoarous') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'metasoarous' from 127.0.0.1 at Sat Feb 13 02:07:09 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 32ms (View: 4, DB: 23) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-12 18:07:17) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "controller"=>"sessions", "login"=>"metasoarous", "password"=>"[FILTERED]"}
+  [4;35;1mMember Load (0.9ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."login" = 'metasoarous') AND (members.state = 'active') LIMIT 1[0m
+Failed login for 'metasoarous' from 127.0.0.1 at Sat Feb 13 02:07:17 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 9ms (View: 4, DB: 1) | 200 OK [http://localhost/session]
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-12 18:07:42) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "controller"=>"sessions", "login"=>"chris", "password"=>"[FILTERED]"}
+Failed login for 'chris' from 127.0.0.1 at Sat Feb 13 02:07:42 UTC 2010
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 7ms (View: 4, DB: 0) | 200 OK [http://localhost/session]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-02-12 18:07:45) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "action"=>"create", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "controller"=>"sessions", "login"=>"chris", "password"=>"[FILTERED]"}
+  [4;36;1mMember Load (1.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."login" = 'chris') AND (members.state = 'active') LIMIT 1[0m
+  [4;35;1mMember Update (0.6ms)[0m   [0mUPDATE "members" SET "updated_at" = '2010-02-13 02:07:46', "remember_token" = '4ebaf4a3e0e7568977d5049f8ee3e3207b29803a', "remember_token_expires_at" = '2010-02-27 02:07:46' WHERE "id" = 1[0m
+Redirected to http://localhost:3003/
+Completed in 160ms (DB: 2) | 302 Found [http://localhost/session]
+
+
+Processing WelcomeController#index (for 127.0.0.1 at 2010-02-12 18:07:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"welcome"}
+Rendering template within layouts/application
+Rendering welcome/index
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-02-12 18:08:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"members"}
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM "members" [0m
+Rendering template within layouts/application
+Rendering members/index
+Completed in 26ms (View: 13, DB: 1) | 200 OK [http://localhost/members]
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-12 18:08:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memberships"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMembership Load (1.2ms)[0m   [0;1mSELECT * FROM "memberships" ORDER BY last_name LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering memberships/index
+Rendered memberships/_membership (7.0ms)
+Completed in 114ms (View: 24, DB: 2) | 200 OK [http://localhost/memberships]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-02-12 18:08:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM "members" [0m
+Rendering template within layouts/application
+Rendering members/index
+Completed in 15ms (View: 4, DB: 1) | 200 OK [http://localhost/members]
+
+
+Processing MembershipsController#index (for 127.0.0.1 at 2010-02-12 18:08:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"memberships"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMembership Load (0.4ms)[0m   [0;1mSELECT * FROM "memberships" ORDER BY last_name LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering memberships/index
+Rendered memberships/_membership (3.9ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/memberships]
+
+
+Processing MembershipsController#edit (for 127.0.0.1 at 2010-02-12 18:08:30) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"memberships"}
+  [4;35;1mMembership Load (0.2ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering memberships/edit
+Rendered memberships/_form (8.9ms)
+Completed in 105ms (View: 91, DB: 1) | 200 OK [http://localhost/memberships/1/edit]
+
+
+Processing MembershipsController#update (for 127.0.0.1 at 2010-02-12 18:08:41) [PUT]
+  Parameters: {"commit"=>"Submit", "membership"=>{"last_name"=>"small", "accepts_newsletters"=>"1", "email"=>"metasoarous@gmail.com", "first_name"=>"chris"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "id"=>"1", "controller"=>"memberships"}
+  [4;35;1mMembership Load (0.3ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;35;1mMembership Load (0.2ms)[0m   [0mSELECT "memberships".id FROM "memberships" WHERE ("memberships"."email" = 'metasoarous@gmail.com' AND "memberships".id <> 1) LIMIT 1[0m
+  [4;36;1mMembership Update (0.3ms)[0m   [0;1mUPDATE "memberships" SET "updated_at" = '2010-02-13 02:08:41', "email" = 'metasoarous@gmail.com' WHERE "id" = 1[0m
+Redirected to http://localhost:3003/memberships/1
+Completed in 22ms (DB: 1) | 302 Found [http://localhost/memberships/1]
+
+
+Processing MembershipsController#show (for 127.0.0.1 at 2010-02-12 18:08:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"memberships"}
+  [4;35;1mMembership Load (0.2ms)[0m   [0mSELECT * FROM "memberships" WHERE ("memberships"."id" = 1) [0m
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering memberships/show
+Completed in 27ms (View: 12, DB: 1) | 200 OK [http://localhost/memberships/1]
+
+
+Processing MembersController#index (for 127.0.0.1 at 2010-02-12 18:08:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.6ms)[0m   [0;1mSELECT * FROM "members" [0m
+Rendering template within layouts/application
+Rendering members/index
+Completed in 96ms (View: 84, DB: 1) | 200 OK [http://localhost/members]
+
+
+Processing MembersController#show (for 127.0.0.1 at 2010-02-12 18:08:46) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"members"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) [0m
+  [4;35;1mForumTopicSubscription Load (0.2ms)[0m   [0mSELECT * FROM "forum_topic_subscriptions" WHERE ("forum_topic_subscriptions".member_id = 1) LIMIT 20 OFFSET 0[0m
+Rendering template within layouts/application
+Rendering members/show
+  [4;36;1mForumCategorySubscription Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_category_subscriptions" WHERE ("forum_category_subscriptions".member_id = 1) [0m
+Completed in 64ms (View: 47, DB: 1) | 200 OK [http://localhost/members/1]
+
+
+Processing ForumCategoriesController#index (for 127.0.0.1 at 2010-02-12 18:09:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"forum_categories"}
+  [4;35;1mForumCategory Load (0.9ms)[0m   [0mSELECT * FROM "forum_categories" [0m
+Rendering template within layouts/application
+Rendering forum_categories/index
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;35;1mForumTopic Load (11.0ms)[0m   [0mSELECT * FROM "forum_topics" WHERE ("forum_topics".forum_category_id = 1) [0m
+  [4;36;1mForumPost Load (0.3ms)[0m   [0;1mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;35;1mForumPost Load (0.3ms)[0m   [0mSELECT * FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) ORDER BY forum_posts.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT count(*) AS count_all FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 2) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "forum_posts" WHERE ("forum_posts".forum_topic_id = 1) [0m
+Rendered forum_categories/_category (16.1ms)
+Completed in 79ms (View: 57, DB: 14) | 200 OK [http://localhost/forum_categories]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-02-12 18:09:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (2.1ms)[0m   [0;1mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;35;1mMember Load (0.5ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 46ms (View: 37, DB: 3) | 200 OK [http://localhost/newsletters]
+
+
+Processing NewslettersController#new (for 127.0.0.1 at 2010-02-12 18:09:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"newsletters"}
+  [4;36;1mMember Load (0.4ms)[0m   [0;1mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering newsletters/new
+Rendered partials/_textile_form (3.5ms)
+Rendered newsletters/_newsletter_form (14.2ms)
+Completed in 114ms (View: 101, DB: 0) | 200 OK [http://localhost/newsletters/new]
+
+
+Processing NewslettersController#create (for 127.0.0.1 at 2010-02-12 18:11:40) [POST]
+  Parameters: {"commit"=>"Create", "action"=>"create", "authenticity_token"=>"0oNjxR/Jf0KfR81ciG+Hdz1WeC038lPA1/GRfhAxsqM=", "newsletter"=>{"body"=>"Can you hear me knocking?", "mail"=>"1", "subject"=>"Test Newsletter"}, "controller"=>"newsletters"}
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+  [4;36;1mNewsletter Create (0.4ms)[0m   [0;1mINSERT INTO "newsletters" ("created_at", "body", "updated_at", "delivered", "next_delivery", "subject", "mail") VALUES('2010-02-13 02:11:40', 'Can you hear me knocking?', '2010-02-13 02:11:40', NULL, NULL, 'Test Newsletter', 't')[0m
+  [4;35;1mMembership Load (0.3ms)[0m   [0mSELECT * FROM "memberships" [0m
+  [4;36;1mMember Load (0.5ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mNewsletter Update (0.1ms)[0m   [0mUPDATE "newsletters" SET "mail" = 't', "updated_at" = '2010-02-13 02:11:40', "created_at" = '2010-02-13 02:11:40', "delivered" = '--- 
+- metasoarous@gmail.com
+', "subject" = 'Test Newsletter', "body" = 'Can you hear me knocking?' WHERE "id" = 7[0m
+Sent mail to metasoarous@gmail.com
+
+Date: Fri, 12 Feb 2010 18:11:40 -0800
+From: SJI-Coop <no-reply@sanjuancoop.org>
+To: metasoarous@gmail.com
+Subject: Test Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b760a5cf1765_100cd817596cc1fb
+
+
+--mimepart_4b760a5cf1765_100cd817596cc1fb
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Can you hear me knocking?
+
+--mimepart_4b760a5cf1765_100cd817596cc1fb
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Can you hear me knocking?</p>
+
+--mimepart_4b760a5cf1765_100cd817596cc1fb--
+Redirected to http://localhost:3003/newsletters
+Completed in 932ms (DB: 2) | 302 Found [http://localhost/newsletters]
+
+
+Processing NewslettersController#index (for 127.0.0.1 at 2010-02-12 18:11:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"newsletters"}
+  [4;36;1mNewsletter Load (1.6ms)[0m   [0;1mSELECT * FROM "newsletters" [0m
+Rendering template within layouts/application
+Rendering newsletters/index
+  [4;35;1mMember Load (0.4ms)[0m   [0mSELECT * FROM "members" WHERE ("members"."id" = 1) LIMIT 1[0m
+Completed in 26ms (View: 16, DB: 2) | 200 OK [http://localhost/newsletters]
+  [4;36;1mNewsletter Load (1.0ms)[0m   [0;1mSELECT * FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [4;35;1mMembership Load (0.4ms)[0m   [0mSELECT * FROM "memberships" [0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mMember Load (0.9ms)[0m   [0mSELECT * FROM "members" [0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM "members" ORDER BY members.id DESC LIMIT 1[0m
+  [4;35;1mMember Load (65.8ms)[0m   [0mSELECT * FROM "members" ORDER BY members.id DESC LIMIT 1[0m
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+  [4;36;1mMember Load (1.2ms)[0m   [0;1mSELECT * FROM "members" ORDER BY members.id DESC LIMIT 1[0m
+  [4;35;1mMember Load (0.2ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."login" = 'normal_user' AND "members".id <> 2) LIMIT 1[0m
+  [4;36;1mMember Load (0.1ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."email" = 'mellifluidicpulse@gmail.com' AND "members".id <> 2) LIMIT 1[0m
+  [4;35;1mMember Update (1.1ms)[0m   [0mUPDATE "members" SET "updated_at" = '2010-02-13 03:02:49', "accepts_newsletters" = 't' WHERE "id" = 2[0m
+  [4;36;1mNewsletter Load (0.7ms)[0m   [0;1mSELECT * FROM "newsletters" ORDER BY newsletters.id DESC LIMIT 1[0m
+  [4;35;1mMembership Load (0.5ms)[0m   [0mSELECT * FROM "memberships" [0m
+  [4;36;1mMember Load (0.7ms)[0m   [0;1mSELECT * FROM "members" [0m
+  [4;35;1mNewsletter Update (0.4ms)[0m   [0mUPDATE "newsletters" SET "delivered" = '--- 
+- metasoarous@gmail.com
+- mellifluidicpulse@gmail.com
+' WHERE "id" = 7[0m
+Sent mail to mellifluidicpulse@gmail.com
+
+Date: Fri, 12 Feb 2010 19:03:00 -0800
+From: SJI-Coop <no-reply@sanjuancoop.org>
+To: mellifluidicpulse@gmail.com
+Subject: Test Newsletter
+Mime-Version: 1.0
+Content-Type: multipart/alternative; boundary=mimepart_4b7616647d3c0_1252b800e11b014c
+
+
+--mimepart_4b7616647d3c0_1252b800e11b014c
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+Can you hear me knocking?
+
+--mimepart_4b7616647d3c0_1252b800e11b014c
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: Quoted-printable
+Content-Disposition: inline
+
+<p>Can you hear me knocking?</p>
+
+--mimepart_4b7616647d3c0_1252b800e11b014c--

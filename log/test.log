@@ -51498,3 +51498,33 @@ Completed in 17ms (View: 7, DB: 1) | 200 OK [http://test.host/wholesale_orders]
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+  [4;36;1mMember Load (11.0ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member#<factory::proxy::create:0x1022a76') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x1022a7670>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member#<factory::proxy::create:0x1020991') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x1020991f8>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member#<factory::proxy::create:0x101ecd0') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x101ecd0e0>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member#<factory::proxy::create:0x101e3bd') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x101e3bdc0>@example.com') LIMIT 1[0m
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member1') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x1022a57f8>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member1') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x1020df3b0>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member1') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x101f64aa8>@example.com') LIMIT 1[0m
+  [4;36;1mMember Load (0.2ms)[0m   [0;1mSELECT "members".id FROM "members" WHERE ("members"."login" = 'member1') LIMIT 1[0m
+  [4;35;1mMember Load (0.1ms)[0m   [0mSELECT "members".id FROM "members" WHERE ("members"."email" = 'member#<factory::proxy::create:0x101eb90b8>@example.com') LIMIT 1[0m
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
