@@ -38,3 +38,17 @@ Factory.define :newsletter do |nl|
   #delivered
   #next_delivery
 end
+
+Factory.define :forum_category do |c|
+end
+
+Factory.define :forum_topic do |t|
+  t.subject "Something to do with Aliens"
+  t.forum_category_id 1
+end
+
+Factory.define :forum_post do |p|
+  p.body "Some text"
+  p.forum_topic_id 1
+  p.member_id 1
+end

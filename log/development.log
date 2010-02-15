@@ -3841,3 +3841,15 @@ Content-Disposition: inline
 <p>Can you hear me knocking?</p>
 
 --mimepart_4b7616647d3c0_1252b800e11b014c--
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+  [4;36;1mMember Load (1.1ms)[0m   [0;1mSELECT * FROM "members" LIMIT 1[0m
+  [4;35;1mMember Load (0.7ms)[0m   [0mSELECT * FROM "members" LIMIT 1[0m
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
+** TabsOnRails: initialized properly
+** [Hoptoad] Notifier 2.1.3 ready to catch errors
