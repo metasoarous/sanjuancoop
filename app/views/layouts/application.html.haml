@@ -24,6 +24,7 @@
 				#content_container
 					%p(style="color: green")= flash[:notice]
 					%p(style="color: red")= flash[:error]
+					%p(style="color: red")= flash[:alert]
 					- if active_tab(request.path_parameters[:controller]) == :home or true
 						#content
 							#sidebar
