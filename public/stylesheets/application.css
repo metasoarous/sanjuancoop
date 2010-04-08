@@ -1,8 +1,8 @@
 body {
   background-color: #1f0f10;
   color: #333;
-  padding-right: 6em;
-  padding-left: 6em;
+  padding-right: 1em;
+  padding-left: 1em;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
@@ -60,12 +60,28 @@ h4 {
     font-size: 12px;
     list-style: square; }
 
+#sidebar {
+  float: left;
+  width: 110px;
+  margin: 60px 0 0 0;
+  padding: 8px 13px 8px 8px;
+  position: relative;
+  left: -10px; }
+  #sidebar a {
+    color: #cccc99; }
+  #sidebar h3 {
+    color: #efefd1; }
+  #sidebar p {
+    padding: 0;
+    margin: 3px 0 9px 3px;
+    line-height: 14px; }
+
 #wrapper {
+  float: left;
   width: 800px;
-  margin: 0px auto; }
+  margin: 0px; }
   #wrapper #user_panel {
     text-align: right;
-    left: 600px;
     color: white; }
     #wrapper #user_panel p {
       margin: 1px 0 5px 0;
@@ -114,21 +130,9 @@ h4 {
       margin-top: 3px;
       padding: 3.5em 4em 3.5em 1em;
       background-color: #efefd1; }
-      #wrapper #wrapper2 #content_container #sidebar {
-        float: left;
-        width: 110px;
-        margin: 26px 0 auto 8px;
-        padding: 8px 13px 8px 8px;
-        position: relative;
-        left: -10px;
-        background-color: #cccc99; }
-        #wrapper #wrapper2 #content_container #sidebar p {
-          padding: 0;
-          margin: 3px 0 9px 3px;
-          line-height: 14px; }
       #wrapper #wrapper2 #content_container #inner_content {
         float: left;
-        width: 540px;
+        width: 700px;
         margin-left: 30px; }
         #wrapper #wrapper2 #content_container #inner_content div {
           padding-bottom: 1.3em; }
@@ -159,6 +163,16 @@ h4 {
   #footer #text p {
     text-align: center;
     margin: 10px 230px 0 0; }
+
+.right_div {
+  float: right;
+  width: 350px; }
+
+.clear_div {
+  clear: both;
+  padding: 60px; }
+  .clear_div h5 {
+    padding: 40px; }
 
 #newsletters div.newsletter .news_subject_container h3 {
   display: inline; }

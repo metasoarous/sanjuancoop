@@ -10,6 +10,19 @@
 		= yield(:head)
 		
 	%body
+		#sidebar
+			%h3 Navigation
+			%p= link_to("Home", "/")
+			%p= link_to("FAQs", faqs_path)
+			%p= link_to("Coop Board", board_members_path)
+			%p= link_to("Links and Resources", "/content/links")
+			%p= link_to("Becoming a Member", "/content/becoming_a_member")
+			%p= link_to("Your Settings", member_path(current_member)) if logged_in?
+			- if admin?
+				%h3 Admin
+				%p= link_to("Content Items", content_items_path)
+				%p= link_to("Member Index", members_path)
+				%p= link_to("Membership Index", memberships_path)
 		#wrapper
 			#user_panel
 				- if logged_in?
@@ -27,19 +40,6 @@
 					%p(style="color: red")= flash[:alert]
 					- if active_tab(request.path_parameters[:controller]) == :home or true
 						#content
-							#sidebar
-								%h3 Within
-								%p= link_to("Home", "/")
-								%p= link_to("FAQs", faqs_path)
-								%p= link_to("Coop Board", board_members_path)
-								%p= link_to("Links and Resources", "/content/links")
-								%p= link_to("Becoming a Member", "/content/becoming_a_member")
-								%p= link_to("Your Settings", member_path(current_member)) if logged_in?
-								- if admin?
-									%h3 Admin
-									%p= link_to("Content Items", content_items_path)
-									%p= link_to("Member Index", members_path)
-									%p= link_to("Membership Index", memberships_path)
 							#inner_content
 								= yield
 							#placeholder
