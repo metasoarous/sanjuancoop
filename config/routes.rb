@@ -5,13 +5,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :memberships
 
-  map.resources :memberships
-
-  map.resources :memberships
-
   map.resources :distributors
-
-  map.resources :content_items
 
   map.resources :content_items
 
@@ -20,10 +14,6 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :board_members
 
   map.resources :faqs
-
-  map.resources :barter_board_entries
-
-  map.resources :barter_board_categories
 
   map.resources :distributors
 
