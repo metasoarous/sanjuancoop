@@ -1,4 +1,9 @@
-h1. TODO
+h1. San Juan Island Coop Website
+
+This is the web front for the San Juan Island Food Coop, a groovy little group of people who love good food and live on San Juan Island. The website has all sorts of interesting functionality, like a little forum and newsletters. There are also admin tools for looking at membership data and such. The plan is to expand these to include the inclusion of all membership database data and integrate that with volunteer coordinator tools which make the process of coordinating the membership in running their coop a bit easier.
+
+
+h2. TODO
 
 * Product Requests deletable
 * Get Anna to update requests
