@@ -1,6 +1,6 @@
 body {
   background-color: #1f0f10;
-  color: #333;
+  color: #333333;
   padding-right: 1em;
   padding-left: 1em;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -13,7 +13,7 @@ p, ol, ul, td {
   line-height: 18px; }
 
 pre {
-  background-color: #eee;
+  background-color: #eeeeee;
   padding: 10px;
   font-size: 11px; }
 
@@ -22,11 +22,11 @@ textarea {
   height: 250px; }
 
 a {
-  color: #2F0F0F; }
+  color: #2f0f0f; }
   a:visited {
-    color: #4F2222; }
+    color: #4f2222; }
   a:hover {
-    color: #7E7F37; }
+    color: #7e7f37; }
 
 h4 {
   font-size: 12px; }
@@ -50,10 +50,10 @@ h4 {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
-    background-color: #c00;
-    color: #fff; }
+    background-color: #cc0000;
+    color: white; }
   #errorExplanation p {
-    color: #333;
+    color: #333333;
     margin-bottom: 0;
     padding: 5px; }
   #errorExplanation ul li {
@@ -70,7 +70,7 @@ h4 {
   #sidebar a {
     color: #cccc99; }
   #sidebar h3 {
-    color: #efefd1; }
+    color: #efe8d2; }
   #sidebar p {
     padding: 0;
     margin: 3px 0 9px 3px;
@@ -87,7 +87,7 @@ h4 {
       margin: 1px 0 5px 0;
       font-size: 14px; }
     #wrapper #user_panel a {
-      color: #61DFD1; }
+      color: #61dfd1; }
   #wrapper #wrapper2 {
     background-color: #3f1b1d;
     margin: 0;
@@ -111,7 +111,7 @@ h4 {
       #wrapper #wrapper2 #tabs_container #tabs li {
         display: inline; }
         #wrapper #wrapper2 #tabs_container #tabs li .active {
-          background-color: #efefd1;
+          background-color: #efe8d2;
           padding-bottom: 6px; }
         #wrapper #wrapper2 #tabs_container #tabs li a {
           margin: 0;
@@ -125,11 +125,11 @@ h4 {
           #wrapper #wrapper2 #tabs_container #tabs li a .active:hover {
             background-color: white; }
       #wrapper #wrapper2 #tabs_container #tabs .spacer {
-        background-color: #9F9AA4; }
+        background-color: #9f9aa4; }
     #wrapper #wrapper2 #content_container {
       margin-top: 3px;
       padding: 3.5em 4em 3.5em 1em;
-      background-color: #efefd1; }
+      background-color: #efe8d2; }
       #wrapper #wrapper2 #content_container #inner_content {
         float: left;
         width: 700px;
@@ -157,9 +157,9 @@ h4 {
       top: -18px;
       left: 23px; }
     #footer #image a {
-      color: #4F4F4F; }
+      color: #4f4f4f; }
       #footer #image a:hover {
-        color: #5F5F5F; }
+        color: #5f5f5f; }
   #footer #text p {
     text-align: center;
     margin: 10px 230px 0 0; }
@@ -180,13 +180,13 @@ h4 {
   padding: 12px;
   padding-bottom: 18px;
   margin-bottom: 2em;
-  background-color: #dbdfc4; }
+  background-color: #e7dcbc; }
 
 .apple {
   float: left;
   padding: 0 12px 10px 0;
   margin: 0 12px 10px 0;
-  background-color: #efefd1; }
+  background-color: #efe8d2; }
 
 .warning p {
   color: red; }
@@ -204,15 +204,15 @@ p#tab_info {
 
 #textile_form {
   margin: 1px;
-  background-color: #FOFOEE; }
+  background-color: #f0f0ee; }
 
 .groovy_table {
   margin-top: 5px;
   border: 1px;
-  border-color: #959D9F;
+  border-color: #959d9f;
   border-collapse: collapse; }
   .groovy_table tr.category_row {
-    background-color: #8E868F; }
+    background-color: #8e868f; }
     .groovy_table tr.category_row td {
       padding: 8px 0 5px 0; }
   .groovy_table tr h3, .groovy_table tr h4 {
@@ -232,11 +232,11 @@ p#tab_info {
     left: 130px;
     color: black; }
     .groovy_table a.category_link:hover {
-      color: #7E7F37; }
+      color: #7e7f37; }
 
 div.content {
-  background-color: #dbdfc4;
-  padding: 1px 9px 7px 9px;
+  background-color: #e7dcbc;
+  padding: 10px 20px;
   margin-top: 9px; }
 
 div.board_member {
@@ -245,9 +245,9 @@ div.board_member {
     float: left;
     margin-right: 10px; }
 div.post {
-  background-color: #dbdfc4;
+  background-color: #e7dcbc;
   margin: 0 2em 0.8em 0;
-  padding: 0.3em 1em 0 0.5em; }
+  padding: 20px 20px; }
 div#ordering_instructions div#specific_instr div#unfi_instr {
   float: left;
   width: 43%; }
