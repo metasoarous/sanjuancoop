@@ -18,7 +18,7 @@
 		
 
 #posts
-	- @forum_topic.forum_posts.each do |post|
+	- @forum_posts.each do |post|
 		.post
 			%b Posted by -
 			= post.member.name if post.member
@@ -27,6 +27,8 @@
 			= display_post(post)
 			- if admin?
 				= link_to("Edit", edit_forum_post_path(post))
+				
+	= will_paginate @forum_posts
 					
 - if logged_in?
 	#new_post
