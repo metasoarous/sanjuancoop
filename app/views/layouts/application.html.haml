@@ -16,6 +16,7 @@
 			%p= link_to("FAQs", faqs_path)
 			%p= link_to("Coop Board", board_members_path)
 			%p= link_to("Links and Resources", "/content/links")
+			%p= link_to("By-Laws (pdf)", "http://metasoarous.s3.amazonaws.com/coop by-laws (5-09).pdf")
 			%p= link_to("Becoming a Member", "/content/becoming_a_member")
 			%p= link_to("Your Settings", member_path(current_member)) if logged_in?
 			- if admin?
