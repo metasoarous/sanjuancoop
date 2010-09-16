@@ -18,7 +18,7 @@ class ForumTopicsController < ApplicationController
   # GET /forum_topics/1.xml
   def show
     @forum_topic = ForumTopic.find(params[:id])
-    @forum_posts = @forum_topic.forum_posts.paginate(:page => params[:page], :per_page => 20)
+    @forum_posts = @forum_topic.posts_by_date.paginate(:page => params[:page], :per_page => 20)
     @forum_topic_subscription = ForumTopicSubscription.new
     if current_member
       @forum_topic_subscription.member_id = current_member.id

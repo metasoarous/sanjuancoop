@@ -14,4 +14,8 @@ class ForumTopic < ActiveRecord::Base
   def last_post_date
     return self.forum_posts.map {|p| p.created_at }.max
   end
+  
+  def posts_by_date
+    return self.forum_posts.sort {|a,b| a.created_at <=> b.created_at}
+  end
 end
