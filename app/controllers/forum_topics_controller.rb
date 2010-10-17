@@ -51,6 +51,8 @@ class ForumTopicsController < ApplicationController
   # POST /forum_topics
   # POST /forum_topics.xml
   def create
+		# debugger
+		params[:forum_topic][:forum_posts_attributes]["0"][:member_id] = current_member.id
     @forum_topic = ForumTopic.new(params[:forum_topic])
 
     respond_to do |format|
