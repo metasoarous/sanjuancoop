@@ -1,12 +1,12 @@
 = form_for(forum_topic_subscription) do |f|
-  = f.error_messages
-  %p
-    = f.label :member_id
-    %br
-    = f.text_field :member_id
-  %p
-    = f.label :forum_topic_id
-    %br
-    = f.text_field :forum_topic_id
-  %p
-    = f.submit "Submit"
+	= f.error_messages
+	%p
+		= f.label :member_id
+		%br
+		= f.text_field :member_id
+	%p
+		= f.label :forum_topic_id
+		%br
+		= f.text_field :forum_topic_id
+	%p
+		= f.submit "Submit"

@@ -3,7 +3,7 @@ require 'test/unit'
 
 # FIXME: tests raises an error with Rails 2.3.2,
 # althought this library is 100% compatible with Rails 2.3.x
-gem     'rails', '2.2.2'
+gem		 'rails', '2.2.2'
 
 require 'active_support'
 require 'active_support/test_case'
@@ -15,13 +15,13 @@ require 'mocha'
 
 $:.unshift File.dirname(__FILE__) + '/../lib'
 
-Rails.root = '.'    unless defined? Rails.root
-Rails.env  = 'test' unless defined? Rails.env
+Rails.root = '.'		unless defined? Rails.root
+Rails.env	= 'test' unless defined? Rails.env
 Rails.logger = Logger.new(STDOUT) unless defined? Rails.logger
 
 # simulate the inclusion as Rails does loading the init.rb file.
-require    'tabs_on_rails'
-require    File.dirname(__FILE__) + '/../init.rb'
+require		'tabs_on_rails'
+require		File.dirname(__FILE__) + '/../init.rb'
 
 ActionController::Base.logger = nil
 ActionController::Routing::Routes.reload rescue nil
@@ -31,22 +31,22 @@ ActionController::Routing::Routes.reload rescue nil
 
 
 module ControllerTestHelpers
-  private
+	private
 
-    def controller
-      @controller_proxy
-    end
+		def controller
+			@controller_proxy
+		end
 
-  class ControllerProxy
-    def initialize(controller)
-      @controller = controller
-    end
-    def method_missing(method, *args)
-      @controller.instance_eval do
-        m = method(method)
-        m.call(*args)
-      end
-    end
-  end
-  
+	class ControllerProxy
+		def initialize(controller)
+			@controller = controller
+		end
+		def method_missing(method, *args)
+			@controller.instance_eval do
+				m = method(method)
+				m.call(*args)
+			end
+		end
+	end
+	
 end

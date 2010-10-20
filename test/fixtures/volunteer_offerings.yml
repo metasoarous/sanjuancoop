@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  member_id: 1
-  volunteer_task_id: 1
-  alt_contact: MyString
+	member_id: 1
+	volunteer_task_id: 1
+	alt_contact: MyString
 
 two:
-  member_id: 1
-  volunteer_task_id: 1
-  alt_contact: MyString
+	member_id: 1
+	volunteer_task_id: 1
+	alt_contact: MyString

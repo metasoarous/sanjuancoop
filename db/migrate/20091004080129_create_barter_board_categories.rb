@@ -1,14 +1,14 @@
 class CreateBarterBoardCategories < ActiveRecord::Migration
-  def self.up
-    create_table :barter_board_categories do |t|
-      t.string :name
-      t.text :description
+	def self.up
+		create_table :barter_board_categories do |t|
+			t.string :name
+			t.text :description
 
-      t.timestamps
-    end
-  end
+			t.timestamps
+		end
+	end
 
-  def self.down
-    drop_table :barter_board_categories
-  end
+	def self.down
+		drop_table :barter_board_categories
+	end
 end

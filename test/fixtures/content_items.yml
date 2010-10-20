@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  tag: wholesale_ordering_preamble
-  content: "Blah, Blah, Blah"
+	tag: wholesale_ordering_preamble
+	content: "Blah, Blah, Blah"
 
 two:
-  tag: wholesale_ordering_unfi
-  content: "UNFI, 1nce a week, blah blah"
-  
+	tag: wholesale_ordering_unfi
+	content: "UNFI, 1nce a week, blah blah"
+	
 three:
-  tag: wholesale_ordering_azures
-  content: "azures, 1nce a month, blah blah"
+	tag: wholesale_ordering_azures
+	content: "azures, 1nce a month, blah blah"
 
 four:
-  tag: wholesale_ordering_rest
-  content: "don't mess up the order!"
+	tag: wholesale_ordering_rest
+	content: "don't mess up the order!"

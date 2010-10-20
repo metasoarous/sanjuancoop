@@ -1,27 +1,27 @@
 <h1>Editing comment</h1>
 
 <%= form_for(@comment) do |f| %>
-  <%= f.error_messages %>
+	<%= f.error_messages %>
 
-  <p>
-    <%= f.label :commentable_type %><br />
-    <%= f.text_field :commentable_type %>
-  </p>
-  <p>
-    <%= f.label :commentable_id %><br />
-    <%= f.text_field :commentable_id %>
-  </p>
-  <p>
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.label :member_id %><br />
-    <%= f.text_field :member_id %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+	<p>
+		<%= f.label :commentable_type %><br />
+		<%= f.text_field :commentable_type %>
+	</p>
+	<p>
+		<%= f.label :commentable_id %><br />
+		<%= f.text_field :commentable_id %>
+	</p>
+	<p>
+		<%= f.label :body %><br />
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.label :member_id %><br />
+		<%= f.text_field :member_id %>
+	</p>
+	<p>
+		<%= f.submit 'Update' %>
+	</p>
 <% end %>
 
 <%= link_to 'Show', @comment %> |

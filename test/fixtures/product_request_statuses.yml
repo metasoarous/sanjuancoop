@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: Ordered
-  description: 
+	name: Ordered
+	description: 
 
 two:
-  name: Unordered
-  description: 
+	name: Unordered
+	description: 

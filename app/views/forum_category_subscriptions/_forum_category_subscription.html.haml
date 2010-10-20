@@ -1,14 +1,14 @@
 - content_tag_for :div, forum_category_subscription do
-  %ul
-    %li
-      %strong Member:
-      =h forum_category_subscription.member_id
-    %li
-      %strong Forum category:
-      =h forum_category_subscription.forum_category_id
-    %li
-      %strong Frequency:
-      =h forum_category_subscription.frequency
-    = link_to 'Show', forum_category_subscription
-    = link_to 'Edit', edit_forum_category_subscription_path(forum_category_subscription)
-    = link_to 'Destroy', forum_category_subscription, :confirm => 'Are you sure?', :method => :delete
+	%ul
+		%li
+			%strong Member:
+			=h forum_category_subscription.member_id
+		%li
+			%strong Forum category:
+			=h forum_category_subscription.forum_category_id
+		%li
+			%strong Frequency:
+			=h forum_category_subscription.frequency
+		= link_to 'Show', forum_category_subscription
+		= link_to 'Edit', edit_forum_category_subscription_path(forum_category_subscription)
+		= link_to 'Destroy', forum_category_subscription, :confirm => 'Are you sure?', :method => :delete

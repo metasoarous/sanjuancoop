@@ -1,11 +1,11 @@
 - content_tag_for :div, forum_topic_subscription do
-  %ul
-    %li
-      %strong Member:
-      =h forum_topic_subscription.member_id
-    %li
-      %strong Forum topic:
-      =h forum_topic_subscription.forum_topic_id
-    = link_to 'Show', forum_topic_subscription
-    = link_to 'Edit', edit_forum_topic_subscription_path(forum_topic_subscription)
-    = link_to 'Destroy', forum_topic_subscription, :confirm => 'Are you sure?', :method => :delete
+	%ul
+		%li
+			%strong Member:
+			=h forum_topic_subscription.member_id
+		%li
+			%strong Forum topic:
+			=h forum_topic_subscription.forum_topic_id
+		= link_to 'Show', forum_topic_subscription
+		= link_to 'Edit', edit_forum_topic_subscription_path(forum_topic_subscription)
+		= link_to 'Destroy', forum_topic_subscription, :confirm => 'Are you sure?', :method => :delete

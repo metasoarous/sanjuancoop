@@ -1,19 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  wanted_category_id: 1
-  wanted: "trash"
-  offered_category_id: 2
-  offered: "not trash"
-  details: Much experience - very nice and well groomed
-  contact_info: 317-4181
-  member_id: 1
+	wanted_category_id: 1
+	wanted: "trash"
+	offered_category_id: 2
+	offered: "not trash"
+	details: Much experience - very nice and well groomed
+	contact_info: 317-4181
+	member_id: 1
 
 two:
-  wanted_category_id: 2
-  wanted: "califronia riasins"
-  offered_category_id: 1
-  offered: "triptic polynomicals"
-  details: It's 3 miles long
-  contact_info: MyString
-  member_id: 2
+	wanted_category_id: 2
+	wanted: "califronia riasins"
+	offered_category_id: 1
+	offered: "triptic polynomicals"
+	details: It's 3 miles long
+	contact_info: MyString
+	member_id: 2

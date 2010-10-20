@@ -1,19 +1,19 @@
 <h1>Forum Posts</h1>
 
 <table>
-  <tr>
-    <th>Body</th>
-    <th>Forum topic</th>
-  </tr>
+	<tr>
+		<th>Body</th>
+		<th>Forum topic</th>
+	</tr>
 
 <% @forum_posts.each do |forum_post| %>
-  <tr>
-    <td><%=h forum_post.body %></td>
-    <td><%=h forum_post.forum_topic_id %></td>
-    <td><%= link_to 'Show', forum_post %></td>
-    <td><%= link_to 'Edit', edit_forum_post_path(forum_post) %></td>
-    <td><%= link_to 'Destroy', forum_post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+	<tr>
+		<td><%=h forum_post.body %></td>
+		<td><%=h forum_post.forum_topic_id %></td>
+		<td><%= link_to 'Show', forum_post %></td>
+		<td><%= link_to 'Edit', edit_forum_post_path(forum_post) %></td>
+		<td><%= link_to 'Destroy', forum_post, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
 <% end %>
 </table>
 

@@ -1,10 +1,10 @@
 %h2 New Discussion Category
 
 = form_for(@forum_category) do |f|
-  = f.error_messages 
-  %p
-    = f.label :name
-    %br/
-    = f.text_field :name
-  %p= f.label "Create"
+	= f.error_messages 
+	%p
+		= f.label :name
+		%br/
+		= f.text_field :name
+	%p= f.label "Create"
 

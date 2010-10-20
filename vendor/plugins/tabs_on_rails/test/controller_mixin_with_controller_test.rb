@@ -1,81 +1,81 @@
 require 'test_helper'
 
 class ControllerMixinWithControllerTest < ActiveSupport::TestCase
-  include ControllerTestHelpers
-  
-  class MixinController < ActionController::Base
-    def self.controller_name; "mixin"; end
-    def self.controller_path; "mixin"; end
+	include ControllerTestHelpers
+	
+	class MixinController < ActionController::Base
+		def self.controller_name; "mixin"; end
+		def self.controller_path; "mixin"; end
 
-    layout false
+		layout false
 
-    set_tab :dashboard
-    set_tab :welcome,   :only => %w(action_welcome)
-    set_tab :dashboard, :only => %w(action_namespace)
-    set_tab :homepage,  :namespace, :only => %w(action_namespace)
+		set_tab :dashboard
+		set_tab :welcome,	 :only => %w(action_welcome)
+		set_tab :dashboard, :only => %w(action_namespace)
+		set_tab :homepage,	:namespace, :only => %w(action_namespace)
 
-    def method_missing(method, *args)
-      if method =~ /^action_(.*)/
-        render :action => (params[:template] || 'standard')
-      end
-    end
+		def method_missing(method, *args)
+			if method =~ /^action_(.*)/
+				render :action => (params[:template] || 'standard')
+			end
+		end
 
-    def rescue_action(e) raise end
-  end
+		def rescue_action(e) raise end
+	end
 
-  MixinController.view_paths = [ File.dirname(__FILE__) + "/fixtures/" ]
+	MixinController.view_paths = [ File.dirname(__FILE__) + "/fixtures/" ]
 
-  def setup
-    @controller = MixinController.new
-    @controller_proxy = ControllerProxy.new(@controller)
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
-  end
+	def setup
+		@controller = MixinController.new
+		@controller_proxy = ControllerProxy.new(@controller)
+		@request		= ActionController::TestRequest.new
+		@response	 = ActionController::TestResponse.new
+	end
 
 
-  def test_set_tab
-    get :action_dashboard
-    assert_equal(:dashboard, controller.current_tab)
-    assert_equal(:dashboard, controller.current_tab(:default))
-    assert_equal(%Q{<ul>
-  <li><span>Dashboard</span></li>
-  <li><a href="/w">Welcome</a></li>
+	def test_set_tab
+		get :action_dashboard
+		assert_equal(:dashboard, controller.current_tab)
+		assert_equal(:dashboard, controller.current_tab(:default))
+		assert_equal(%Q{<ul>
+	<li><span>Dashboard</span></li>
+	<li><a href="/w">Welcome</a></li>
 </ul>}, @response.body)
-  end
+	end
 
-  def test_set_tab_with_only_option
-    get :action_welcome
-    assert_equal(:welcome, controller.current_tab)
-    assert_equal(:welcome, controller.current_tab(:default))
-    assert_equal(%Q{<ul>
-  <li><a href="/d">Dashboard</a></li>
-  <li><span>Welcome</span></li>
+	def test_set_tab_with_only_option
+		get :action_welcome
+		assert_equal(:welcome, controller.current_tab)
+		assert_equal(:welcome, controller.current_tab(:default))
+		assert_equal(%Q{<ul>
+	<li><a href="/d">Dashboard</a></li>
+	<li><span>Welcome</span></li>
 </ul>}, @response.body)
-  end
+	end
 
-  def test_set_tab_with_namespace
-    get :action_namespace
-    assert_equal(:dashboard, controller.current_tab)
-    assert_equal(:dashboard, controller.current_tab(:default))
-    assert_equal(:homepage, controller.current_tab(:namespace))
-    assert_equal(%Q{<ul>
-  <li><span>Dashboard</span></li>
-  <li><a href="/w">Welcome</a></li>
+	def test_set_tab_with_namespace
+		get :action_namespace
+		assert_equal(:dashboard, controller.current_tab)
+		assert_equal(:dashboard, controller.current_tab(:default))
+		assert_equal(:homepage, controller.current_tab(:namespace))
+		assert_equal(%Q{<ul>
+	<li><span>Dashboard</span></li>
+	<li><a href="/w">Welcome</a></li>
 </ul>}, @response.body)
-  end
+	end
 
-  def test_current_tab
-    get :action_dashboard
-    assert_equal :dashboard, controller.current_tab
-    assert_equal :dashboard, controller.current_tab(:default)
-  end
+	def test_current_tab
+		get :action_dashboard
+		assert_equal :dashboard, controller.current_tab
+		assert_equal :dashboard, controller.current_tab(:default)
+	end
 
-  def test_current_tab_question
-    get :action_dashboard
-    assert  controller.current_tab?(:dashboard)
-    assert  controller.current_tab?(:dashboard, :default)
-    assert !controller.current_tab?(:foobar)
-    assert !controller.current_tab?(:foobar, :default)
-  end
+	def test_current_tab_question
+		get :action_dashboard
+		assert	controller.current_tab?(:dashboard)
+		assert	controller.current_tab?(:dashboard, :default)
+		assert !controller.current_tab?(:foobar)
+		assert !controller.current_tab?(:foobar, :default)
+	end
 
 end

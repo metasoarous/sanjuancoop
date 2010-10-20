@@ -1,18 +1,18 @@
 %h2= "Membership \"#{@membership.to_param}\""
 - content_tag_for :div, @membership do
-  %ul
-    %li
-      %strong First name:
-      =h @membership.first_name
-    %li
-      %strong Last name:
-      =h @membership.last_name
-    %li
-      %strong Email:
-      =h @membership.email
-    %li
-      %strong Accepts newsletters:
-      =h @membership.accepts_newsletters
+	%ul
+		%li
+			%strong First name:
+			=h @membership.first_name
+		%li
+			%strong Last name:
+			=h @membership.last_name
+		%li
+			%strong Email:
+			=h @membership.email
+		%li
+			%strong Accepts newsletters:
+			=h @membership.accepts_newsletters
 %ul
-  %li= link_to 'Edit', edit_membership_path(@membership)
-  %li= link_to 'Back', memberships_path
+	%li= link_to 'Edit', edit_membership_path(@membership)
+	%li= link_to 'Back', memberships_path
