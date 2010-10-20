@@ -15,6 +15,8 @@ gem "will_paginate"
 gem "sass-on-heroku"
 gem "contentable"
 gem "formtastic"
+gem "hoptoad_notifier"
+
 
 # Forget what this is for - should look into later.
 gem "aasm"
@@ -35,5 +37,4 @@ end
 
 group :production do
 	gem "sass-on-heroku"
-	gem "hoptoad_notifier"
 end

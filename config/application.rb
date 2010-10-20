@@ -8,8 +8,21 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Sanjuancoop
 	class Application < Rails::Application
-	
-	
+		
+		config.time_zone = 'UTC'
+		
+		config.active_record.observers = :member_observer, :newsletter_observer, :forum_post_observer
+		
+		config.action_mailer.delivery_method = :smtp
+	  config.action_mailer.smtp_settings = {    
+	    :address              => 'smtp.sendgrid.net',    
+	    :port                 => 25,    
+	    :domain               => 'sanjuancoop.com',    
+	    :user_name            => 'sanjuancoop@gmail.com',    
+	    :password             => 'coopmail',
+	    :authentication       => :plain
+	  }
+		
 		# Settings in config/environments/* take precedence over those specified here.
 		# Application configuration should go into files in config/initializers
 		# -- all .rb files in that directory are automatically loaded.

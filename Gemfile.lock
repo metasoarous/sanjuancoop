@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     RedCloth (4.2.3)
+    aasm (2.1.3)
     abstract (1.0.0)
     actionmailer (3.0.0)
       actionpack (= 3.0.0)
@@ -80,6 +81,8 @@ GEM
       formtastic (>= 1.0.0)
       haml (>= 3.0.18)
       railties (>= 3.0.0)
+    hoptoad_notifier (2.1.3)
+      activesupport
     i18n (0.4.1)
     json (1.4.6)
     json_pure (1.4.6)
@@ -156,6 +159,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  aasm
   capybara
   contentable
   cucumber
@@ -166,6 +170,7 @@ DEPENDENCIES
   formtastic
   haml
   hamltastic
+  hoptoad_notifier
   launchy
   pickle (>= 0.4.0)
   rails (= 3.0.0)

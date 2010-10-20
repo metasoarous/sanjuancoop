@@ -1,4 +1,4 @@
-Sanjuancoop::Application.routes.draw do
+Sanjuancoop::Application.routes.draw do |map|
 	
 	resources :forum_category_subscriptions, :forum_topic_subscriptions, :memberships, :content_items, :volunteer_offerings, :board_members, :faqs, :volunteer_tasks, :wholesale_orders, :member_product_request_joins, :comments, :product_requests, :forum_posts, :forum_topics, :forum_categories, :newsletters
 
