@@ -15,9 +15,9 @@ require 'mocha'
 
 $:.unshift File.dirname(__FILE__) + '/../lib'
 
-RAILS_ROOT = '.'    unless defined? RAILS_ROOT
-RAILS_ENV  = 'test' unless defined? RAILS_ENV
-RAILS_DEFAULT_LOGGER = Logger.new(STDOUT) unless defined? RAILS_DEFAULT_LOGGER
+Rails.root = '.'    unless defined? Rails.root
+Rails.env  = 'test' unless defined? Rails.env
+Rails.logger = Logger.new(STDOUT) unless defined? Rails.logger
 
 # simulate the inclusion as Rails does loading the init.rb file.
 require    'tabs_on_rails'

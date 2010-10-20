@@ -1,5 +1,5 @@
 %h2 New Volunteer Task
-- form_for(@volunteer_task) do |f|
+= form_for(@volunteer_task) do |f|
 	= render :partial => "task_form", :locals => {:f => f}
 	%p= f.submit "Update"
 

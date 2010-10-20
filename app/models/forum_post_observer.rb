@@ -3,7 +3,7 @@ class ForumPostObserver < ActiveRecord::Observer
   # Sends the update to the member when new post is created if that post is in a topic that the user subscribes to.
   def after_create(fp)
     fp.forum_topic.subscribers.each do |member|
-      CoopMailer.deliver_forum_topic_update(member, fp)
+      CoopMailer.forum_topic_update(member, fp).deliver
     end
   end
   

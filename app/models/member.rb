@@ -75,7 +75,7 @@ class Member < ActiveRecord::Base
   def self.subscribe_all
     ForumCategory.all.each do |cat|
       self.all.each do |mem|
-        if ForumCategorySubscription.find(:all, :conditions => {:member_id => mem.id, :forum_category_id => cat.id}).empty?
+        if ForumCategorySubscription.where(:member_id => mem.id, :forum_category_id => cat.id).empty?
           sub = ForumCategorySubscription.new(:member_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
           sub.save
         end

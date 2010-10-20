@@ -2,4 +2,4 @@ require 'tabs_on_rails'
 
 ActionController::Base.send :include, TabsOnRails::ControllerMixin
 
-RAILS_DEFAULT_LOGGER.info("** TabsOnRails: initialized properly")
+Rails.logger.info("** TabsOnRails: initialized properly")

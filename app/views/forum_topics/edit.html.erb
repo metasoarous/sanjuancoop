@@ -1,6 +1,6 @@
 <h1>Editing Forum Topic</h1>
 
-<% form_for(@forum_topic) do |f| %>
+<%= form_for(@forum_topic) do |f| %>
 
   <%= render :partial => "topic_form", :locals => {:f => f} %>
   <p>

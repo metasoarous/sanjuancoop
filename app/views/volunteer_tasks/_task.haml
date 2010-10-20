@@ -15,7 +15,7 @@
 				= link_to "here", volunteer_offering(volunteer_task, current_member), :confirm => "Are you sure you want to remove yourself from the volunteer list?", :method => :delete
 				to modify this status.
 		- else
-			- volunteer_signup_form(volunteer_task) do |f|
+			= volunteer_signup_form(volunteer_task) do |f|
 				= f.hidden_field :member_id
 				= f.hidden_field :volunteer_task_id
 				= f.label :alt_contact, "Contact info (if different than on record): "

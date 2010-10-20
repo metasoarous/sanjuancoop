@@ -1,6 +1,6 @@
 %h2 Edit Newsletter
 
-- form_for @newsletter do |f|
+= form_for @newsletter do |f|
 	= render :partial => "newsletter_form", :locals => {:f => f}
 	%p= f.submit "Update"
 	

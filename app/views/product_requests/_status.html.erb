@@ -10,7 +10,7 @@
 		<td class="subject"><%=link_to request.description, product_request_path(request) %></td>
 		<% if admin? %>
 			<td>
-				<% form_for(request) do |request_form| %>
+				<%= form_for(request) do |request_form| %>
 					<%= request_form.collection_select :product_request_status_id, statuses, :id, :name, {:prompt => "Select a new status"}, {:class => "dynamic_control"} %>
 					<%= request_form.hidden_field :description %>
 				<% end %>

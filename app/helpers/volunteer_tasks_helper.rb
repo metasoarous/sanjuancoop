@@ -8,8 +8,7 @@ module VolunteerTasksHelper
   
   # Another one that would be good to factor into a gem - this one makes it easier to find the first join given any two objects that might participate in a many to many relationship (could factor out to have a :first or :all parameter)
   def volunteer_offering(task, member)
-    conditions = {:volunteer_task_id => task.id, :member_id => member.id}
-    offerings = VolunteerOffering.find(:all, :conditions => conditions)
+    offerings = VolunteerOffering.where(:volunteer_task_id => task.id, :member_id => member.id)
     return offerings.first
   end
   

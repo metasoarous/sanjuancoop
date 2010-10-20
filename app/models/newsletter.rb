@@ -32,7 +32,7 @@ class Newsletter < ActiveRecord::Base
         self.delivered << contact.email
         self.save
       end
-      CoopMailer.deliver_newsletter(contact, self)
+      CoopMailer.newsletter(contact, self).deliver
     end
   end
 end
