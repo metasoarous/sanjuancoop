@@ -44,8 +44,7 @@ class ForumPostsController < ApplicationController
 	# POST /forum_posts
 	# POST /forum_posts.xml
 	def create
-		debugger
-		@forum_post = ForumPost.new(params[:forum_post].merge(:member_id => current_member.id))
+		@forum_post = ForumPost.new(params[:forum_post].merge(:user_id => current_user.id))
 
 		respond_to do |format|
 			if @forum_post.save

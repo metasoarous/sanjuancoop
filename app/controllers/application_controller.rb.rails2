@@ -29,10 +29,10 @@ class ApplicationController < ActionController::Base
     end
   end
   
-  # gives access only to the a specific member or admin -
+  # gives access only to the a specific user or admin -
   # helpfull for making sure that users can get at their own data
-  def owner_authorize(member_id)
-    unless logged_in? and (current_member.id == member_id or admin?)
+  def owner_authorize(user_id)
+    unless logged_in? and (current_user.id == user_id or admin?)
       unauthorized_access
     end
   end
@@ -53,25 +53,25 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    if current_member
-      return current_member.admin? 
+    if current_user
+      return current_user.admin? 
     else
       return false
     end
   end
   
   def logged_in?
-    current_member
+    current_user
   end
   
-  # This sets up method which allows controllers to either assign a member_id param to 
-  # a specific member_id or to current_member.id if none is supplied
+  # This sets up method which allows controllers to either assign a user_id param to 
+  # a specific user_id or to current_user.id if none is supplied
   # using a merge method on the param hash. Returns the hash that gets fed
   # into the create method. Helps tests not fuck up...
-  def memberified_params(object)
+  def userified_params(object)
     entry_params = params[object.to_sym]
-    if current_member
-      entry_params = {:member_id => current_member.id}.merge(entry_params) 
+    if current_user
+      entry_params = {:user_id => current_user.id}.merge(entry_params) 
     end
   end
 end

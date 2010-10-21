@@ -25,7 +25,7 @@ class ForumTopicSubscriptionsController < ApplicationController
 		respond_to do |format|
 			if @forum_topic_subscription.destroy
 				flash[:notice] = 'You have been successfully unsubscribed.'
-				format.html { redirect_to redirect || current_member }
+				format.html { redirect_to redirect || current_user }
 				format.xml	{ head :ok }
 			else
 				flash[:error] = 'ForumTopicSubscription could not be destroyed.'

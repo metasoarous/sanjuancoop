@@ -20,8 +20,8 @@ class ForumTopicsController < ApplicationController
 		@forum_topic = ForumTopic.find(params[:id])
 		@forum_posts = @forum_topic.posts_by_date.paginate(:page => params[:page], :per_page => 15)
 		@forum_topic_subscription = ForumTopicSubscription.new
-		if current_member
-			@forum_topic_subscription.member_id = current_member.id
+		if current_user
+			@forum_topic_subscription.user_id = current_user.id
 			@forum_topic_subscription.forum_topic_id = @forum_topic.id
 		end
 
@@ -52,7 +52,7 @@ class ForumTopicsController < ApplicationController
 	# POST /forum_topics.xml
 	def create
 		# debugger
-		params[:forum_topic][:forum_posts_attributes]["0"][:member_id] = current_member.id
+		params[:forum_topic][:forum_posts_attributes]["0"][:user_id] = current_user.id
 		@forum_topic = ForumTopic.new(params[:forum_topic])
 
 		respond_to do |format|
