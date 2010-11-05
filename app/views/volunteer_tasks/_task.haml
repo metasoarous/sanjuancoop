@@ -8,15 +8,15 @@
 	
 	= display_textile volunteer_task.description
 
-	- if current_member
-		- if current_member.volunteer_tasks.include? volunteer_task
+	- if current_user
+		- if current_user.volunteer_tasks.include? volunteer_task
 			%h5 
 				You are currently listed as willing to volunteer for this task. Click
-				= link_to "here", volunteer_offering(volunteer_task, current_member), :confirm => "Are you sure you want to remove yourself from the volunteer list?", :method => :delete
+				= link_to "here", volunteer_offering(volunteer_task, current_user), :confirm => "Are you sure you want to remove yourself from the volunteer list?", :method => :delete
 				to modify this status.
 		- else
 			= volunteer_signup_form(volunteer_task) do |f|
-				= f.hidden_field :member_id
+				= f.hidden_field :user_id
 				= f.hidden_field :volunteer_task_id
 				= f.label :alt_contact, "Contact info (if different than on record): "
 				= f.text_field :alt_contact
@@ -25,8 +25,8 @@
 	- if admin?
 		%h4 Volunteer Offerings
 		%ul
-			- volunteer_task.members.each do |member|
+			- volunteer_task.users.each do |user|
 				%li
-					= "#{member.name} - #{member.email} "
-					= "- #{member.phone_number}" if member.phone_number
-					= ": #{volunteer_offering(volunteer_task, member).alt_contact}"
+					= "#{user.name} - #{user.email} "
+					= "- #{user.phone_number}" if user.phone_number
+					= ": #{volunteer_offering(volunteer_task, user).alt_contact}"

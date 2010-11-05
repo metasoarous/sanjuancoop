@@ -1,4 +1,4 @@
-- if current_member
+- if current_user
 	#ordering_instructions
 		%h2 Ordering Instructions
 		#preamble
@@ -16,7 +16,7 @@
 - else
 	%h2 Wholesale Ordering
 	%p 
-		The coop offers wholesale ordering to our members. To see the wholesale ordering instructions, please 
+		The coop offers wholesale ordering to our users. To see the wholesale ordering instructions, please 
 		= link_to "login", "/login"
 		or 
 		= link_to "signup.", "/signup"

@@ -15,20 +15,20 @@
 			%h3 Navigation
 			%p= link_to("Home", "/")
 			%p= link_to("FAQs", faqs_path)
-			%p= link_to("Coop Board", board_members_path)
+			%p= link_to("Coop Board", board_users_path)
 			%p= link_to("Links and Resources", "/content/links")
 			%p= link_to("By-Laws (pdf)", "http://metasoarous.s3.amazonaws.com/coop by-laws (5-09).pdf")
-			%p= link_to("Becoming a Member", "/content/becoming_a_member")
-			%p= link_to("Your Settings", member_path(current_member)) if logged_in?
+			%p= link_to("Becoming a User", "/content/becoming_a_user")
+			%p= link_to("Your Settings", user_path(current_user)) if logged_in?
 			- if admin?
 				%h3 Admin
 				%p= link_to("Content Items", content_items_path)
-				%p= link_to("Member Index", members_path)
+				%p= link_to("User Index", users_path)
 				%p= link_to("Membership Index", memberships_path)
 		#wrapper
 			#user_panel
 				- if logged_in?
-					%p= "Hi #{current_member.first_name}! - #{link_to "Settings", member_path(current_member)} | #{link_to("Logout", "/logout")}"
+					%p= "Hi #{current_user.first_name}! - #{link_to "Settings", user_path(current_user)} | #{link_to("Logout", "/logout")}"
 				- else
 					%p= "Login or Sign Up - #{link_to("Login", "/login")} | #{link_to("Sign Up", "/signup")}"
 			#wrapper2

@@ -3,12 +3,12 @@
 
 - unless logged_in?
 	%h5 
-		Thanks for visiting! If you are a coop member you are invited to
+		Thanks for visiting! If you are a coop user you are invited to
 		= link_to("sign up", "/signup")
 		or 
 		= link_to("login", "/login")
-		in order to get full access to all of this web site's features. If you are not yet a member, you can find out about becoming one
-		= link_to("here.", "/content/becoming_a_member")
+		in order to get full access to all of this web site's features. If you are not yet a user, you can find out about becoming one
+		= link_to("here.", "/content/becoming_a_user")
 
 
 
@@ -20,10 +20,10 @@
 		%h3 Hours of Operation
 		%table
 			%tr
-				%td <strong>Members: </strong>
+				%td <strong>Users: </strong>
 				%td 24/7
 			%tr
-				%td <strong>Non Members: </strong>
+				%td <strong>Non Users: </strong>
 				%td Every Day from 11 to 1 (often later on Wednesdays to accommodate the order arrival)
 
 

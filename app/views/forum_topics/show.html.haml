@@ -6,14 +6,14 @@
 		= "::"
 		= @forum_topic.subject
 	%span
-		- if current_member
-			- if current_member.subscribed_forum_topics.include? @forum_topic
+		- if current_user
+			- if current_user.subscribed_forum_topics.include? @forum_topic
 				You are currently subscribed to this topic - 
-				= link_to("unsubscribe", {:controller => :forum_topic_subscriptions, :id => subscription(current_member, @forum_topic).id, :action => :destroy, :redirect => forum_topic_path(@forum_topic)}, :confirm => "Unsubscribe?", :method => :delete)
+				= link_to("unsubscribe", {:controller => :forum_topic_subscriptions, :id => subscription(current_user, @forum_topic).id, :action => :destroy, :redirect => forum_topic_path(@forum_topic)}, :confirm => "Unsubscribe?", :method => :delete)
 			- else
 				- form_for(@forum_topic_subscription) do |f|
 					= f.hidden_field :forum_topic_id, :value => @forum_topic.id
-					= f.hidden_field :member_id, :value => current_member.id
+					= f.hidden_field :user_id, :value => current_user.id
 					= f.submit "Subscribe to this discussion"
 		
 
@@ -21,7 +21,7 @@
 	- @forum_posts.each do |post|
 		.post
 			%b Posted by -
-			= post.member.name if post.member
+			= post.user.name if post.user
 			= "::"
 			= post.created_at.strftime('%a, %b %d, %Y')
 			= display_post(post)

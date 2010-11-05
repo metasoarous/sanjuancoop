@@ -7,14 +7,14 @@ class Newsletter < ActiveRecord::Base
 		case deliver_to
 		when Array
 			# carry on
-		when String, Member, Membership
+		when String, User, Membership
 			deliver_to = [deliver_to]
-		when :members
-			deliver_to = Member.all
+		when :users
+			deliver_to = User.all
 		when :memberships
 			deliver_to = Membership.all
 		when :all
-			deliver_to = Membership.all + Member.all
+			deliver_to = Membership.all + User.all
 		else
 			# Should throw or raise here?
 		end
@@ -27,7 +27,7 @@ class Newsletter < ActiveRecord::Base
 				else
 					next
 				end
-			when Membership, Member
+			when Membership, User
 				next unless (contact.accepts_newsletters? and !contact.email.nil? and !contact.email.empty? and !self.delivered.include?(contact.email))
 				self.delivered << contact.email
 				self.save

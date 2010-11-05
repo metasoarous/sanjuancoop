@@ -2,14 +2,14 @@
 
 <table>
 	<tr>
-		<th>Member</th>
+		<th>User</th>
 		<th>Volunteer task</th>
 		<th>Alternative contact</th>
 	</tr>
 
 <% @volunteer_offerings.each do |volunteer_offering| %>
 	<tr>
-		<td><%=h volunteer_offering.member.name %></td>
+		<td><%=h volunteer_offering.user.name %></td>
 		<td><%=h volunteer_offering.volunteer_task.name %></td>
 		<td><%=h volunteer_offering.alt_contact %></td>
 		<td><%= link_to 'Show', volunteer_offering %></td>

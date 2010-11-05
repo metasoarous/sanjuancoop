@@ -1,7 +1,7 @@
 class VolunteerOffering < ActiveRecord::Base
 	require "validations"
 	
-	belongs_to :member
+	belongs_to :user
 	belongs_to :volunteer_task
 	
 	# Add validation that check to make sure that such a join doesn't already exist in the table.

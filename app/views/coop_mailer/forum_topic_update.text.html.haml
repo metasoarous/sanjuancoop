@@ -2,14 +2,14 @@
 
 %p 
 	Dear
-	= @member.first_name
+	= @user.first_name
 	,
 
 %p 
 	The forum discussion
 	= link_to(@post.forum_topic.subject + ".", forum_topic_url(@post.forum_topic, :host => WEBSITEURL))
 	which you are currently subscribed to has been posted to by
-	= @post.member.name + "."
+	= @post.user.name + "."
 	Below is the content of the post-
 	
 #post
@@ -21,7 +21,7 @@
 	To change your coop forum notification settings 
 	= link_to("log in", "http://#{WEBSITEURL}/login")
 	and then got to
-	= link_to("your settings page.", member_url(@member, :host => WEBSITEURL))
+	= link_to("your settings page.", user_url(@user, :host => WEBSITEURL))
 	
 %p 
 	Sincerely,
