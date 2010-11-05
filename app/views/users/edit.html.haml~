@@ -1,0 +1,5 @@
+%h2 Editing User Info
+
+= form_for(@member) do |f|
+	= render :partial => "member_form", :locals => {:f => f}
+	= f.submit "Update"

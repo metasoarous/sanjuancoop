@@ -1,0 +1,13 @@
+<p>
+	<b>User:</b>
+	<%=h @user_product_request_join.user_id %>
+</p>
+
+<p>
+	<b>Product request:</b>
+	<%=h @user_product_request_join.product_request_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_product_request_join_path(@user_product_request_join) %> |
+<%= link_to 'Back', user_product_request_joins_path %>

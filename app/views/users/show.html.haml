@@ -1,0 +1,51 @@
+%h2 User Info
+
+%p
+	%b Name:
+	= @user.name
+%p 
+	%b Email:
+	= @user.email
+%p
+	%b Phone:
+	= @user.phone_number
+	
+%p= link_to("Edit Information", edit_user_path(@user))
+	
+	
+#subscriptions
+	#categories
+		%h3 Forum Category Subscriptions
+		%p To get weekly or daily updates for specific forum categories, check the categories you are interested in and click "Update Subscriptions". (This feature has not been fully set up yet, but if you set your subscriptions now you will start receiving updates once this feature is in full gear).
+		= form_for @user do |user_form|
+			%table.groovy_table
+				%tr.category_row
+					%td/
+					%td 
+						%h4 Category
+					%td
+						%h4 Frequency
+				= user_form.fields_for :forum_category_subscriptions do |sub_form|
+					- category = sub_form.object.forum_category
+					%tr
+						%td= sub_form.check_box :active
+						%td= link_to category.name, forum_category_path(category)
+						%td= sub_form.select :frequency, ForumCategorySubscription::FREQUENCIES
+			= submit_tag "Update Subscriptions"
+	#topics
+		%h3 Forum Discussion Subscriptions
+		%p You can also get instant email notifications as people make additions to specific forum discussions. Sign up for these notifications on the pages discussion pages.
+		%table.groovy_table
+			%tr.category_row
+				%td 
+					%h4 Discussion Topic
+				%td 
+			- @topic_subscriptions.each do |topic_sub|
+				- topic = topic_sub.forum_topic
+				%tr 
+					%td= link_to(topic.subject, topic)
+					%td= link_to "Unsubscribe", topic_sub, :confirm => "Unsubscribe?", :method => :delete
+				
+		= will_paginate(@topic_subscriptions)
+- if admin?
+	= link_to "Back to Users Listing", users_path

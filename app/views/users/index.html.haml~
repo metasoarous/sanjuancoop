@@ -1,0 +1,11 @@
+%h2 User Index
+
+%table 
+	%tr
+		%td Name
+		%td Email
+		
+	- sort(@members, :last_name).each do |member|
+		%tr
+			%td= link_to member.name, member
+			%td= member.email

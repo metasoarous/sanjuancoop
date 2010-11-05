@@ -1,0 +1,30 @@
+= error_messages_for :member
+%p
+	= f.label :login
+	%br/
+	= f.text_field :login
+
+%p
+	= f.label :password
+	%br/
+	= f.password_field :password
+%p
+	= f.label :password_confirmation
+	%br/
+	= f.password_field :password_confirmation
+%p
+	= f.label :first_name
+	%br/
+	= f.text_field :first_name
+%p 
+	= f.label :last_name
+	%br/
+	= f.text_field :last_name
+%p 
+	= f.label :email
+	%br/
+	= f.text_field :email
+%p
+	= f.label :phone_number, "Phone (optional)"
+	%br/
+	= f.text_field :phone_number

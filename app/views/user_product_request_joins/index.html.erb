@@ -1,0 +1,22 @@
+<h1>Listing user_product_request_joins</h1>
+
+<table>
+	<tr>
+		<th>User</th>
+		<th>Product request</th>
+	</tr>
+
+<% @user_product_request_joins.each do |user_product_request_join| %>
+	<tr>
+		<td><%=h user_product_request_join.user_id %></td>
+		<td><%=h user_product_request_join.product_request_id %></td>
+		<td><%= link_to 'Show', user_product_request_join %></td>
+		<td><%= link_to 'Edit', edit_user_product_request_join_path(user_product_request_join) %></td>
+		<td><%= link_to 'Destroy', user_product_request_join, :confirm => 'Are you sure?', :method => :delete %></td>
+	</tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user_product_request_join', new_user_product_request_join_path %>
