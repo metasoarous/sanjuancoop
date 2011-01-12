@@ -14,13 +14,13 @@ class ActiveSupport::TestCase
 
 	# Add more helper methods to be used by all tests here...
 
-	current_member = Member.first
+	current_user = User.first
 
 	# Add more helper methods to be used by all tests here...
 	
 	protected
-		def create_member(options = {})
-			record = Member.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))
+		def create_user(options = {})
+			record = User.new({ :login => 'quire', :email => 'quire@example.com', :password => 'quire69', :password_confirmation => 'quire69' }.merge(options))
 			record.register! if record.valid?
 			record
 		end

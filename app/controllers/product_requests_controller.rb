@@ -6,7 +6,7 @@ class ProductRequestsController < ApplicationController
 		@product_request_statuses = ProductRequestStatus.all
 
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html # index.html.haml
 			format.xml	{ render :xml => @product_requests }
 		end
 	end
@@ -17,7 +17,7 @@ class ProductRequestsController < ApplicationController
 		@product_request = ProductRequest.find(params[:id])
 
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html # show.html.haml
 			format.xml	{ render :xml => @product_request }
 		end
 	end
@@ -30,7 +30,7 @@ class ProductRequestsController < ApplicationController
 		@product_request = ProductRequest.new(:product_request_status_id => status_id)
 
 		respond_to do |format|
-			format.html # new.html.erb
+			format.html # new.html.haml
 			format.xml	{ render :xml => @product_request }
 		end
 	end

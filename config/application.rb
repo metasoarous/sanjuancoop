@@ -11,7 +11,7 @@ module Sanjuancoop
 		
 		config.time_zone = 'UTC'
 		
-		config.active_record.observers = :member_observer, :newsletter_observer, :forum_post_observer
+		config.active_record.observers = :user_observer, :newsletter_observer, :forum_post_observer
 		
 		config.action_mailer.delivery_method = :smtp
 	  config.action_mailer.smtp_settings = {    

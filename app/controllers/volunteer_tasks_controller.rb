@@ -8,7 +8,7 @@ class VolunteerTasksController < ApplicationController
 		@volunteer_tasks = VolunteerTask.all.sort {|a,b| a.order <=> b.order}
 		
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html # index.html.haml
 			format.xml	{ render :xml => @volunteer_tasks }
 		end
 	end
@@ -19,7 +19,7 @@ class VolunteerTasksController < ApplicationController
 		@volunteer_task = VolunteerTask.find(params[:id])
 
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html # show.html.haml
 			format.xml	{ render :xml => @volunteer_task }
 		end
 	end
@@ -30,7 +30,7 @@ class VolunteerTasksController < ApplicationController
 		@volunteer_task = VolunteerTask.new
 
 		respond_to do |format|
-			format.html # new.html.erb
+			format.html # new.html.haml
 			format.xml	{ render :xml => @volunteer_task }
 		end
 	end

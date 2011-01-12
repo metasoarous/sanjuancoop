@@ -1,3 +1,21 @@
+GIT
+  remote: git://github.com/metasoarous/contentable.git
+  revision: 6996835add24a288c92b47fb4e9d81a2ceba0bb9
+  specs:
+    contentable (0.2.4)
+      RedCloth
+
+GIT
+  remote: git://github.com/metasoarous/hamltastic.git
+  revision: 57f0cd42e3c49539847e5c1f6cb9525dcf8f7700
+  specs:
+    hamltastic (0.3.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      formtastic (>= 1.0.0)
+      haml (>= 3.0.18)
+      railties (>= 3.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -44,9 +62,6 @@ GEM
       ffi (~> 0.6.3)
     columnize (0.3.1)
     configuration (1.1.0)
-    contentable (0.1.0)
-      RedCloth
-      rails (>= 3.0.0)
     cucumber (0.9.2)
       builder (~> 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -75,12 +90,6 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.21)
-    hamltastic (0.3.1)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      formtastic (>= 1.0.0)
-      haml (>= 3.0.18)
-      railties (>= 3.0.0)
     hoptoad_notifier (2.1.3)
       activesupport
     i18n (0.4.1)
@@ -161,7 +170,7 @@ DEPENDENCIES
   RedCloth
   aasm
   capybara
-  contentable
+  contentable!
   cucumber
   cucumber-rails
   database_cleaner
@@ -169,7 +178,7 @@ DEPENDENCIES
   factory_girl_rails (>= 1.0.0)
   formtastic
   haml
-  hamltastic
+  hamltastic!
   hoptoad_notifier
   launchy
   pickle (>= 0.4.0)

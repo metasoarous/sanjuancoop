@@ -9,7 +9,7 @@ class VolunteerOfferingsController < ApplicationController
 		@volunteer_offerings = VolunteerOffering.all
 
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html # index.html.haml
 			format.xml	{ render :xml => @volunteer_offerings }
 		end
 	end
@@ -20,7 +20,7 @@ class VolunteerOfferingsController < ApplicationController
 		@volunteer_offering = VolunteerOffering.find(params[:id])
 
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html # show.html.haml
 			format.xml	{ render :xml => @volunteer_offering }
 		end
 	end
@@ -31,7 +31,7 @@ class VolunteerOfferingsController < ApplicationController
 		@volunteer_offering = VolunteerOffering.new
 
 		respond_to do |format|
-			format.html # new.html.erb
+			format.html # new.html.haml
 			format.xml	{ render :xml => @volunteer_offering }
 		end
 	end

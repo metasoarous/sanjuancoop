@@ -6,14 +6,13 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.0'
 
 
-gem "hamltastic"
 gem "haml"
 gem "factory_girl_generator", ">= 0.0.1", :group => [:test, :development]
-gem "hamltastic"
+gem "hamltastic", :git => 'git://github.com/metasoarous/hamltastic.git'
 gem "RedCloth"
 gem "will_paginate"
 gem "sass-on-heroku"
-gem "contentable"
+gem "contentable", :git => 'git://github.com/metasoarous/contentable.git'
 gem "formtastic"
 gem "hoptoad_notifier"
 

@@ -5,7 +5,7 @@ class BoardMembersController < ApplicationController
 		@board_members = BoardMember.all
 
 		respond_to do |format|
-			format.html # index.html.erb
+			format.html # index.html.haml
 			format.xml	{ render :xml => @board_members }
 		end
 	end
@@ -16,7 +16,7 @@ class BoardMembersController < ApplicationController
 		@board_member = BoardMember.find(params[:id])
 
 		respond_to do |format|
-			format.html # show.html.erb
+			format.html # show.html.haml
 			format.xml	{ render :xml => @board_member }
 		end
 	end
@@ -27,7 +27,7 @@ class BoardMembersController < ApplicationController
 		@board_member = BoardMember.new
 
 		respond_to do |format|
-			format.html # new.html.erb
+			format.html # new.html.haml
 			format.xml	{ render :xml => @board_member }
 		end
 	end
