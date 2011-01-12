@@ -1,0 +1,12 @@
+%p
+  %b User:
+  = h @volunteer_offering.user_id
+%p
+  %b Volunteer task:
+  = h @volunteer_offering.volunteer_task_id
+%p
+  %b Alt contact:
+  = h @volunteer_offering.alt_contact
+= link_to 'Edit', edit_volunteer_offering_path(@volunteer_offering)
+|
+\#{link_to 'Back', volunteer_offerings_path}

@@ -1,0 +1,14 @@
+%h1 New user_product_request_join
+= form_for(@user_product_request_join) do |f|
+  = f.error_messages
+  %p
+    = f.label :user_id
+    %br/
+    = f.text_field :user_id
+  %p
+    = f.label :product_request_id
+    %br/
+    = f.text_field :product_request_id
+  %p
+    = f.submit 'Create'
+= link_to 'Back', user_product_request_joins_path

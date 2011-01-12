@@ -1,0 +1,12 @@
+%h2 Editing Product Request
+= form_for(@product_request) do |f|
+  = f.error_messages
+  %p
+    = f.label :description
+    %br/
+    = f.text_field :description
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @product_request
+|
+\#{link_to 'Back', product_requests_path}

@@ -1,0 +1,15 @@
+%p
+  %b Commentable type:
+  = h @comment.commentable_type
+%p
+  %b Commentable:
+  = h @comment.commentable_id
+%p
+  %b Body:
+  = h @comment.body
+%p
+  %b User:
+  = h @comment.user_id
+= link_to 'Edit', edit_comment_path(@comment)
+|
+\#{link_to 'Back', comments_path}

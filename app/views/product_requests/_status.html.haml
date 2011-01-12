@@ -1,0 +1,15 @@
+%tr.category_row
+  %td
+    %h3= status.name
+  - if admin?
+    %td
+- i= 0
+- status.product_requests.each do |request|
+  %tr.topic_row
+    %td.subject= link_to request.description, product_request_path(request)
+    - if admin?
+      %td
+        = form_for(request) do |request_form|
+          = request_form.collection_select :product_request_status_id, statuses, :id, :name, {:prompt => "Select a new status"}, {:class => "dynamic_control"}
+          = request_form.hidden_field :description
+  - i += 1

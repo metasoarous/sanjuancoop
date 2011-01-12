@@ -1,0 +1,9 @@
+%p
+  %b User:
+  = h @user_product_request_join.user_id
+%p
+  %b Product request:
+  = h @user_product_request_join.product_request_id
+= link_to 'Edit', edit_user_product_request_join_path(@user_product_request_join)
+|
+\#{link_to 'Back', user_product_request_joins_path}

@@ -1,0 +1,6 @@
+%h2 Product Requests
+%p#tab_info
+  Please look to see what has already been requested before creating a #{link_to "new request", new_product_request_path}.
+%table.groovy_table
+  - @product_request_statuses.each do |status|
+    = render :partial => "status", :locals => {:status => status, :statuses => @product_request_statuses}

@@ -1,0 +1,14 @@
+%h1 New Forum Ppost
+= form_for(@forum_post) do |f|
+  = f.error_messages
+  %p
+    = f.label :body
+    %br/
+    = f.text_area :body
+  %p
+    = f.label :forum_topic_id
+    %br/
+    = f.text_field :forum_topic_id
+  %p
+    = f.submit 'Create'
+= link_to 'Back', forum_posts_path

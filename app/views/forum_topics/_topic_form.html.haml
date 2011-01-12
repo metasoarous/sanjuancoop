@@ -1,0 +1,9 @@
+= f.error_messages
+%p
+  = f.label :forum_category_id
+  %br/
+  = f.collection_select :forum_category_id, ForumCategory.all, :id, :name, {:prompt => true}
+%p
+  = f.label :subject
+  %br/
+  = f.text_field :subject

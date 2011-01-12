@@ -1,0 +1,12 @@
+%h2 New Product Request
+= form_for(@product_request) do |f|
+  = f.error_messages
+  %p
+    = f.label :description
+    %br/
+    = f.text_field :description
+  %p
+    = f.hidden_field :product_request_status_id
+  %p
+    = f.submit 'Create'
+= link_to 'Back', product_requests_path

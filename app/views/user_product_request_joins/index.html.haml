@@ -1,0 +1,14 @@
+%h1 Listing user_product_request_joins
+%table
+  %tr
+    %th User
+    %th Product request
+  - @user_product_request_joins.each do |user_product_request_join|
+    %tr
+      %td= h user_product_request_join.user_id
+      %td= h user_product_request_join.product_request_id
+      %td= link_to 'Show', user_product_request_join
+      %td= link_to 'Edit', edit_user_product_request_join_path(user_product_request_join)
+      %td= link_to 'Destroy', user_product_request_join, :confirm => 'Are you sure?', :method => :delete
+%br/
+= link_to 'New user_product_request_join', new_user_product_request_join_path

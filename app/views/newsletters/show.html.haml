@@ -1,0 +1,9 @@
+%p
+  %b Subject:
+  = h @newsletter.subject
+%p
+  %b Body:
+  = h @newsletter.body
+= link_to 'Edit', edit_newsletter_path(@newsletter)
+|
+\#{link_to 'Back', newsletters_path}

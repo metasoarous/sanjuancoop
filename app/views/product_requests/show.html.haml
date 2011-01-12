@@ -1,0 +1,9 @@
+%p
+  %b Description:
+  = h @product_request.description
+%p
+  %b Status:
+  = h @product_request.product_request_status.name
+= link_to 'Edit', edit_product_request_path(@product_request)
+|
+\#{link_to 'Back', product_requests_path}

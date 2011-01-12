@@ -1,0 +1,28 @@
+%h1 Editing board_member
+= form_for(@board_member) do |f|
+  = f.error_messages
+  %p
+    = f.label :name
+    %br/
+    = f.text_field :name
+  %p
+    = f.label :role
+    %br/
+    = f.text_field :role
+  %p
+    = f.label :description
+    %br/
+    = f.text_area :description
+  %p
+    = f.label :image_url
+    %br/
+    = f.text_field :image_url
+  %p
+    = f.label :active
+    %br/
+    = f.check_box :active
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @board_member
+|
+\#{link_to 'Back', board_members_path}

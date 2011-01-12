@@ -1,0 +1,18 @@
+%h1 New volunteer_offering
+= form_for(@volunteer_offering) do |f|
+  = f.error_messages
+  %p
+    = f.label :user_id
+    %br/
+    = f.text_field :user_id
+  %p
+    = f.label :volunteer_task_id
+    %br/
+    = f.text_field :volunteer_task_id
+  %p
+    = f.label :alt_contact
+    %br/
+    = f.text_field :alt_contact
+  %p
+    = f.submit 'Create'
+= link_to 'Back', volunteer_offerings_path

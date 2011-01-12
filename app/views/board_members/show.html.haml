@@ -1,0 +1,19 @@
+%p
+  %b Name:
+  = h @board_member.name
+%p
+  %b Role:
+  = h @board_member.role
+%p
+  %b Description:
+  = h @board_member.description
+%p
+  %b Image url:
+  = h @board_member.image_url
+%p
+  %b Active:
+  = h @board_member.active
+- if admin?
+  = link_to 'Edit', edit_board_member_path(@board_member)
+  |
+= link_to 'Back', board_members_path

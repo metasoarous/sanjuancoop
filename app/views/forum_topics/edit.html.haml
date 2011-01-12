@@ -1,0 +1,8 @@
+%h1 Editing Forum Topic
+= form_for(@forum_topic) do |f|
+  = render :partial => "topic_form", :locals => {:f => f}
+  %p
+    = f.submit 'Update'
+= link_to 'Show', @forum_topic
+|
+\#{link_to 'Back to Forum Categories', forum_categories_path}
