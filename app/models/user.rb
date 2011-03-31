@@ -2,6 +2,11 @@ require 'digest/sha1'
 require "aasm"
 
 class User < ActiveRecord::Base
+
+	acts_as_authentic do |c| 
+		c.transition_from_restful_authentication = true
+		c.crypto_provider = Authlogic::CryptoProviders::Sha512
+	end
 	
 	has_many :user_product_requests
 	has_many :product_requests, :through => :user_product_requests
@@ -46,79 +51,80 @@ class User < ActiveRecord::Base
 	attr_writer :password_reset_code
 
 
-	# Authenticates a user by their login name and unencrypted password.	Returns the user or nil.
-	#
-	# uff.	this is really an authorization, not authentication routine.	
-	# We really need a Dispatch Chain here or something.
-	# This will also let us return a human error message.
-	#
-	def self.authenticate(login, password)
-		return nil if login.blank? || password.blank?
-		u = find_in_state :first, :active, :conditions => {:login => login.downcase} # need to get the salt
-		u && u.authenticated?(password) ? u : nil
-	end
+# Shouldn't need any of this but we'll see
+#	# Authenticates a user by their login name and unencrypted password.	Returns the user or nil.
+#	#
+#	# uff.	this is really an authorization, not authentication routine.	
+#	# We really need a Dispatch Chain here or something.
+#	# This will also let us return a human error message.
+#	#
+#	def self.authenticate(login, password)
+#		return nil if login.blank? || password.blank?
+#		u = find_in_state :first, :active, :conditions => {:login => login.downcase} # need to get the salt
+#		u && u.authenticated?(password) ? u : nil
+#	end
 
-	def login=(value)
-		write_attribute :login, (value ? value.downcase : nil)
-	end
+#	def login=(value)
+#		write_attribute :login, (value ? value.downcase : nil)
+#	end
 
-	def email=(value)
-		write_attribute :email, (value ? value.downcase : nil)
-	end
-	
-	def name
-		return first_name + " " + last_name
-	end
-	
-	def self.subscribe_all
-		ForumCategory.all.each do |cat|
-			self.all.each do |mem|
-				if ForumCategorySubscription.where(:user_id => mem.id, :forum_category_id => cat.id).empty?
-					sub = ForumCategorySubscription.new(:user_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
-					sub.save
-				end
-			end
-		end
-	end
-	
-	
-	# THE FOLLOWING METHODS WERE TAKEN FROM THE RAILSONEDGE.BLOGSPOT POST ON RESTFUL AUTH
-	# They are for the purpose of password reset (etc) - that is, all before the protected
-	def forgot_password
-		@forgotten_password = true
-		self.make_password_reset_code
-	end
+#	def email=(value)
+#		write_attribute :email, (value ? value.downcase : nil)
+#	end
+#	
+#	def name
+#		return first_name + " " + last_name
+#	end
+#	
+#	def self.subscribe_all
+#		ForumCategory.all.each do |cat|
+#			self.all.each do |mem|
+#				if ForumCategorySubscription.where(:user_id => mem.id, :forum_category_id => cat.id).empty?
+#					sub = ForumCategorySubscription.new(:user_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
+#					sub.save
+#				end
+#			end
+#		end
+#	end
+#	
+#	
+#	# THE FOLLOWING METHODS WERE TAKEN FROM THE RAILSONEDGE.BLOGSPOT POST ON RESTFUL AUTH
+#	# They are for the purpose of password reset (etc) - that is, all before the protected
+#	def forgot_password
+#		@forgotten_password = true
+#		self.make_password_reset_code
+#	end
 
-	def reset_password
-		# First update the password_reset_code before setting the 
-		# reset_password flag to avoid duplicate email notifications.
-		update_attributes(:password_reset_code => nil)
-		@reset_password = true
-	end	
+#	def reset_password
+#		# First update the password_reset_code before setting the 
+#		# reset_password flag to avoid duplicate email notifications.
+#		update_attributes(:password_reset_code => nil)
+#		@reset_password = true
+#	end	
 
-	#used in user_observer
-	def recently_forgot_password?
-		@forgotten_password
-	end
-	
-	def recently_reset_password?
-		@reset_password
-	end
-	
-	def recently_activated?
-		@recent_active
-	end
+#	#used in user_observer
+#	def recently_forgot_password?
+#		@forgotten_password
+#	end
+#	
+#	def recently_reset_password?
+#		@reset_password
+#	end
+#	
+#	def recently_activated?
+#		@recent_active
+#	end
 
-	protected
-		
-		def make_activation_code
-				self.deleted_at = nil
-				self.activation_code = self.class.make_token
-		end
-		
-		# From RAILSONEDGE.BLOGSPOT Post
-		def make_password_reset_code
-			self.password_reset_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
-		end
+#	protected
+#		
+#		def make_activation_code
+#				self.deleted_at = nil
+#				self.activation_code = self.class.make_token
+#		end
+#		
+#		# From RAILSONEDGE.BLOGSPOT Post
+#		def make_password_reset_code
+#			self.password_reset_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
+#		end
 
 end

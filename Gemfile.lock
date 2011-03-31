@@ -16,6 +16,13 @@ GIT
       haml (>= 3.0.18)
       railties (>= 3.0.0)
 
+GIT
+  remote: http://github.com/binarylogic/authlogic.git
+  revision: 66ed79515919fe13016911b10ebe734cf8718dc7
+  specs:
+    authlogic (2.1.6)
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -169,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   aasm
+  authlogic!
   capybara
   contentable!
   cucumber

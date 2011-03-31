@@ -15,6 +15,7 @@ gem "sass-on-heroku"
 gem "contentable", :git => 'git://github.com/metasoarous/contentable.git'
 gem "formtastic"
 gem "hoptoad_notifier"
+gem 'authlogic', :git => 'http://github.com/binarylogic/authlogic.git'
 
 
 # Forget what this is for - should look into later.
