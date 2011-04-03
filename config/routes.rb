@@ -1,9 +1,9 @@
 Sanjuancoop::Application.routes.draw do |map|
 	
-	resources :forum_category_subscriptions, :forum_topic_subscriptions, :memberships, :content_items, :volunteer_offerings, :board_members, :faqs, :volunteer_tasks, :wholesale_orders, :member_product_request_joins, :comments, :product_requests, :forum_posts, :forum_topics, :forum_categories, :newsletters
+	resources :forum_category_subscriptions, :forum_topic_subscriptions, :memberships, :content_items, :volunteer_offerings, :board_users, :faqs, :volunteer_tasks, :wholesale_orders, :member_product_request_joins, :comments, :product_requests, :forum_posts, :forum_topics, :forum_categories, :newsletters
 
-	map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-	map.login '/login', :controller => 'sessions', :action => 'new'
+	map.logout '/logout', :controller => 'user_sessions', :action => 'destroy'
+	map.login '/login', :controller => 'user_sessions', :action => 'new'
 	map.register '/register', :controller => 'users', :action => 'create'
 	map.signup '/signup', :controller => 'users', :action => 'new'
 	map.activate '/activate/:activation_code', :controller => "users", :action => "activate", :activation_code => nil
@@ -12,7 +12,7 @@ Sanjuancoop::Application.routes.draw do |map|
 	map.content "/content/:tag", :controller => "content_items", :action => "show"
 	
 	resources :users, :user => {:suspend => :put, :unsuspend => :put, :purge => :delete}
-	resource :session
+	resources :user_sessions
 	
 	map.root :controller => "welcome"
 	

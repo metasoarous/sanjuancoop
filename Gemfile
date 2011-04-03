@@ -3,7 +3,9 @@ source 'http://rubygems.org'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.5'
+
+gem "thin"
 
 
 gem "haml"
@@ -16,10 +18,6 @@ gem "contentable", :git => 'git://github.com/metasoarous/contentable.git'
 gem "formtastic"
 gem "hoptoad_notifier"
 gem 'authlogic', :git => 'http://github.com/binarylogic/authlogic.git'
-
-
-# Forget what this is for - should look into later.
-gem "aasm"
 
 
 group :test, :development do

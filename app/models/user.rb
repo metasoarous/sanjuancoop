@@ -1,9 +1,7 @@
-require 'digest/sha1'
-require "aasm"
 
 class User < ActiveRecord::Base
 
-	acts_as_authentic do |c| 
+	acts_as_authentic do |c|
 		c.transition_from_restful_authentication = true
 		c.crypto_provider = Authlogic::CryptoProviders::Sha512
 	end
