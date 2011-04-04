@@ -62,28 +62,28 @@ class User < ActiveRecord::Base
 #		u && u.authenticated?(password) ? u : nil
 #	end
 
-#	def login=(value)
-#		write_attribute :login, (value ? value.downcase : nil)
-#	end
+	def login=(value)
+		write_attribute :login, (value ? value.downcase : nil)
+	end
 
-#	def email=(value)
-#		write_attribute :email, (value ? value.downcase : nil)
-#	end
-#	
-#	def name
-#		return first_name + " " + last_name
-#	end
-#	
-#	def self.subscribe_all
-#		ForumCategory.all.each do |cat|
-#			self.all.each do |mem|
-#				if ForumCategorySubscription.where(:user_id => mem.id, :forum_category_id => cat.id).empty?
-#					sub = ForumCategorySubscription.new(:user_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
-#					sub.save
-#				end
-#			end
-#		end
-#	end
+	def email=(value)
+		write_attribute :email, (value ? value.downcase : nil)
+	end
+	
+	def name
+		return first_name + " " + last_name
+	end
+	
+	def self.subscribe_all
+		ForumCategory.all.each do |cat|
+			self.all.each do |mem|
+				if ForumCategorySubscription.where(:user_id => mem.id, :forum_category_id => cat.id).empty?
+					sub = ForumCategorySubscription.new(:user_id => mem.id, :forum_category_id => cat.id, :frequency => "weekly")
+					sub.save
+				end
+			end
+		end
+	end
 #	
 #	
 #	# THE FOLLOWING METHODS WERE TAKEN FROM THE RAILSONEDGE.BLOGSPOT POST ON RESTFUL AUTH
@@ -109,9 +109,9 @@ class User < ActiveRecord::Base
 #		@reset_password
 #	end
 #	
-#	def recently_activated?
-#		@recent_active
-#	end
+	def recently_activated?
+		@recent_active
+	end
 
 #	protected
 #		
