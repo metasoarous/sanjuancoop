@@ -11,7 +11,7 @@ Sanjuancoop::Application.routes.draw do |map|
 	
 	map.content "/content/:tag", :controller => "content_items", :action => "show"
 	
-	resources :users, :user => {:suspend => :put, :unsuspend => :put, :purge => :delete}
+	resources :users
 	resources :user_sessions
 	
 	map.root :controller => "welcome"

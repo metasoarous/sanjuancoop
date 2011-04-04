@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110404000603) do
+ActiveRecord::Schema.define(:version => 20101020152206) do
 
   create_table "board_members", :force => true do |t|
     t.string    "name"
@@ -142,27 +142,38 @@ ActiveRecord::Schema.define(:version => 20110404000603) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login",                     :limit => 40
-    t.string   "email",                     :limit => 100
-    t.string   "crypted_password",          :limit => 128
-    t.string   "salt",                      :limit => 128
+    t.string   "login",                         :limit => 40
+    t.string   "email",                         :limit => 100
+    t.string   "crypted_password",              :limit => 128, :default => "",        :null => false
+    t.string   "password_salt",                 :limit => 128, :default => "",        :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token",            :limit => 40
-    t.datetime "remember_token_expires_at"
-    t.string   "activation_code",           :limit => 40
+    t.string   "old_remember_token",            :limit => 40
+    t.datetime "old_remember_token_expires_at"
+    t.string   "old_activation_code",           :limit => 40
     t.datetime "activated_at"
-    t.string   "state",                                    :default => "passive"
+    t.string   "state",                                        :default => "passive"
     t.datetime "deleted_at"
     t.boolean  "admin"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone_number"
     t.boolean  "accepts_newsletters"
+    t.integer  "login_count",                                  :default => 0,         :null => false
+    t.integer  "failed_login_count",                           :default => 0,         :null => false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
     t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_token"
+    t.boolean  "active",                                       :default => false,     :null => false
   end
 
   add_index "users", ["login"], :name => "index_members_on_login", :unique => true
+  add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"
 
   create_table "users_product_requests", :force => true do |t|
     t.string   "description"

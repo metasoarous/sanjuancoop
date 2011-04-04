@@ -21,6 +21,7 @@ gem 'authlogic', :git => 'http://github.com/binarylogic/authlogic.git'
 
 
 group :test, :development do
+	gem "nifty-generators"
 	gem 'sqlite3-ruby', :require => 'sqlite3'
 	gem 'ruby-debug'
 	gem "factory_girl_rails", ">= 1.0.0"

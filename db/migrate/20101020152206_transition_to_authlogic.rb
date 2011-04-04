@@ -1,11 +1,57 @@
+# Fetched this from http://jrmehle.com/2009/09/02/switching-from-restful_authentication-to-authlogic/
 class TransitionToAuthlogic < ActiveRecord::Migration
-	def self.up
-		change_column :users, :crypted_password, :string, :limit => 128
-		change_column :users, :salt, :string, :limit => 128
-	end
-	
-	# Is this dangerous leaving this blank? Seems like it shouldn't be - If we leave 
-	# extra space in this column, we leave extra space.
-	def self.down
-	end
+ 
+  def self.up
+    change_column :users, :crypted_password, :string, :limit => 128, :null => false, :default => ""
+    change_column :users, :salt, :string, :limit => 128, :null => false, :default => ""
+ 
+    rename_column :users, :salt, :password_salt
+    rename_column :users, :activation_code, :old_activation_code
+    rename_column :users, :remember_token, :old_remember_token
+    rename_column :users, :remember_token_expires_at, :old_remember_token_expires_at
+ 
+    add_column :users, :login_count, :integer, :null => false, :default => 0
+    add_column :users, :failed_login_count, :integer, :null => false, :default => 0
+    add_column :users, :last_request_at, :datetime
+    add_column :users, :current_login_at, :datetime
+    add_column :users, :last_login_at, :datetime
+    add_column :users, :current_login_ip, :string
+    add_column :users, :last_login_ip, :string
+    
+    # These had :nul => false, but this led to migration errors with SQLite3 
+    #
+    # SQLite3::SQLException: Cannot add a NOT NULL column with default 
+    # value NULL: ALTER TABLE "users" ADD "persistence_token" varchar(255) NOT NULL
+    #
+    # So I took the :null => false out. Have to think about possible issues here....
+    add_column :users, :persistence_token, :string
+    add_column :users, :single_access_token, :string
+    add_column :users, :perishable_token, :string
+ 
+    add_column :users, :active, :boolean, :default => false, :null => false
+ 
+    # set active users to active.
+    User.update_all("active = 1", "state = 'active'")
+ 
+    add_index :users, :perishable_token
+  end
+ 
+  def self.down
+    remove_column :users, :active
+    remove_column :users, :perishable_token
+    remove_column :users, :single_access_token
+    remove_column :users, :persistence_token
+    remove_column :users, :last_login_ip
+    remove_column :users, :current_login_ip
+    remove_column :users, :last_login_at
+    remove_column :users, :current_login_at
+    remove_column :users, :last_request_at
+    remove_column :users, :failed_login_count
+    remove_column :users, :login_count
+ 
+    rename_column :users, :password_salt, :salt
+    rename_column :users, :old_activation_code, :activation_code
+    rename_column :users, :old_remember_token, :remember_token
+    rename_column :users, :old_remember_token_expires_at, :remember_token_expires_at
+  end
 end

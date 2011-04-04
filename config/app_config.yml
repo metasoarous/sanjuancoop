@@ -1,0 +1,8 @@
+development:
+  domain: localhost:3000
+
+test:
+  domain: localhost:3000
+
+production:
+  domain: www.sanjuancoop.org
