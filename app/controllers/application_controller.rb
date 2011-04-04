@@ -8,9 +8,6 @@ class ApplicationController < ActionController::Base
   layout :determined_by_response
   
   helper_method :admin?, :logged_in?, :current_user_session, :current_user
-
-  # Scrub sensitive parameters from your log
-  filter_parameter_logging :password
   
   protected
   

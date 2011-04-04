@@ -9,6 +9,9 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 module Sanjuancoop
 	class Application < Rails::Application
 		
+		# Replaced filter_parameter_logging in ActionController with this (new rails smoothness)
+		config.filter_parameters += [:password] 
+		
 		config.time_zone = 'UTC'
 		
 		config.active_record.observers = :user_observer, :newsletter_observer, :forum_post_observer
