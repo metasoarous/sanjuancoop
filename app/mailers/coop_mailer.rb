@@ -6,13 +6,13 @@ class CoopMailer < ActionMailer::Base
 	
 	# Delivers signup notifications
 	def signup_notification(user)
-		@url = "http://#{WEBSITEURL}/activate/#{user.activation_code}"
+		@url = "http://#{APP_CONFIG[:domain]}/activate/#{user.activation_code}"
 		mail :to => user.email, :subject => "Please activate your new account"
 	end
 	
 	# delivers account activations
 	def activation(user)
-		@url	= "http://#{WEBSITEURL}/"
+		@url	= "http://#{APP_CONFIG[:domain]}/"
 		mail :to => user.email, :subject => "Website Registration: Your account has been activated!"
 	end
 	
